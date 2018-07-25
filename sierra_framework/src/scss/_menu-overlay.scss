@@ -1,0 +1,47 @@
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+  float:  left;
+
+.menu {
+  pointer-events: none;
+  z-index: 2;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%;
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto;
+  font-size: $font-size-base;
+  font: $basefont;
+}
+
+
+}
+.menu .logo-header {
+  color: $brand-secondary;
+
+  float: left
+  font-weight: $heading-weight;
+}
+
+.menu ul {
+    pointer-events: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20em;
+    float:right;
+    text-align: right;
+}
+
+.menu li a {
+    pointer-events: auto;
+    display: block;
+    color: $brand-light;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.menu li a:hover {
+    color: $brand-secondary;
+}
