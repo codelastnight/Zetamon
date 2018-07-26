@@ -80,8 +80,21 @@
 
 .menu .footer {
   bottom: 1em;
-  font-size: 1rem;
-  font-weight: $font-size-base;
+  font-size: 0.85rem;
+  font-weight: $subheading-weight;
   position: absolute;
+  margin: 0em 5em;
+  display: flex;
 
+
+}
+.menu .footer a{
+  color: $brand-light;
+ padding-right: 1em;
+}
+.menu .footer p{
+  font-weight: $subheading-weight;
+  padding: 0em 1em;
+  color: $brand-secondary;
+  margin-bottom: 0;
 }
