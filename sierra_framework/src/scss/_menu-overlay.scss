@@ -14,8 +14,8 @@
   float: left;
   font-size: 1.25rem;
   font: $basefont;
-  padding: 0.5em;
-  margins: 1em 0em;
+  padding: 0.5em 2.5em 0.5em 0.5em;
+
 }
 
 .menu a {
@@ -67,7 +67,7 @@
     color: $brand-light;
     font-weight: $subheading-weight;
     font-size: 1.1em;
-    padding: 1em 1.25em;
+    padding: 1em 0em 1em 1em;
     text-decoration: none;
 }
 
@@ -84,6 +84,7 @@
   font-weight: $subheading-weight;
   position: absolute;
   margin: 0em 5em;
+  width: 100%;
   display: flex;
 
 
@@ -97,4 +98,10 @@
   padding: 0em 1em;
   color: $brand-secondary;
   margin-bottom: 0;
+}
+
+.menu .social {
+  position: absolute;
+  bottom: 1em;
+  right: 7.5rem;
 }
