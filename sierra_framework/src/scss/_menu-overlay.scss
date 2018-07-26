@@ -1,7 +1,8 @@
-.vertical-text {
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-  float:  left;
+.vertical {
+  transform: rotate(90deg);
+  transform-origin: 2.2em center;
+  pointer-events: auto;
+}
 
 .menu {
   pointer-events: none;
@@ -10,17 +11,44 @@
   height: 100%;
   position: fixed; /* Make it stick, even on scroll */
   overflow: auto;
-  font-size: $font-size-base;
+  float: left;
+  font-size: 1.25rem;
   font: $basefont;
+  padding: 0.5em;
+  margins: 1em 0em;
 }
 
+.menu a {
 
 }
+
 .menu .logo-header {
-  color: $brand-secondary;
+  float: left;
+  font-size: 1.5em;
 
-  float: left
+
+}
+
+.menu .logo-flex {
+  display: flex;
+  padding: 0.5em 0;
+  color: $brand-secondary ;
   font-weight: $heading-weight;
+
+}
+
+.menu h1 {
+//  transform: rotate(90deg);
+  padding:0.75em ;
+  align-self: center;
+  display:block;
+  color: $brand-secondary;
+}
+.menu .logo-icon {
+  fill: $brand-secondary;
+  height:3em;
+  margin: 0.5em;
+
 }
 
 .menu ul {
@@ -28,7 +56,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 20em;
+    width: 10em;
     float:right;
     text-align: right;
 }
@@ -37,11 +65,23 @@
     pointer-events: auto;
     display: block;
     color: $brand-light;
-    padding: 8px 16px;
+    font-weight: $subheading-weight;
+    font-size: 1.1em;
+    padding: 1em 1.25em;
     text-decoration: none;
 }
 
 /* Change the link color on hover */
 .menu li a:hover {
     color: $brand-secondary;
+}
+
+
+
+.menu .footer {
+  bottom: 1em;
+  font-size: 1rem;
+  font-weight: $font-size-base;
+  position: absolute;
+
 }
