@@ -11,7 +11,7 @@
   float: left;
   font-size: 1.25rem;
   font: $basefont;
-  padding: 0.5em 2.5em 0.5em 0.5em;
+  padding: 1em 1.75em 0.5em 0.5em;
 }
 
 .menu a {}
@@ -105,5 +105,5 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 .menu .social {
   position: fixed;
   bottom: 1em;
-  right: 3rem;
+  right: 1.75rem;
 }
