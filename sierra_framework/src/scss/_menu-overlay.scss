@@ -56,12 +56,23 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 
 }
+ .mobile-menu {
+  background-color: $brand-secondary;
+  z-index: 1;
+  width: 100%;
+  overflow: auto;
+  position: fixed;
+
+}
+
+.mobile-menu .section {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
 .menu .hamburger {
   pointer-events: auto;
   float: right;
-  fill: $brand-light;
-
 }
 
 .menu ul {
@@ -129,16 +140,20 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
       padding-left: 8em;
       padding-right: 5em;
   }
-  .menu .logo-header {
-    display: block;
-  }
+
 
 }
 @media only screen and (min-width: $screen-md-min) {
+  .menu .logo-header {
+    display: block;
+  }
+  .mobile-menu{
+    display: none;
+  }
   .container {
       padding-right: 0em;
   }
-  .menu button {
+  .menu .hamburger {
     display: none;
   }
   .menu ul {
