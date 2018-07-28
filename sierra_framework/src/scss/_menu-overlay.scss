@@ -19,6 +19,7 @@
 .menu .logo-header {
   float: left;
   font-size: 1em;
+  display: none;
 }
 
 .menu .logo-flex {
@@ -56,6 +57,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 }
 
 .menu ul {
+  display: none;
   pointer-events: auto;
   list-style-type: none;
   margin: 0;
@@ -87,7 +89,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   position: absolute;
   margin: 0 3.5em;
 //  width: 100%;
-  display: flex;
+  display: none;
 }
 
 .menu .footer a {
@@ -106,4 +108,29 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   position: fixed;
   bottom: 1em;
   right: 1.75rem;
+}
+
+//edit grid padding
+@media only screen and (min-width: $screen-xs-min) {
+
+
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .container {
+      padding-left: 120px;
+  }
+  .menu .logo-header {
+    display: block;
+  }
+
+}
+@media only screen and (min-width: $screen-md-min) {
+  .menu ul {
+    display: block;
+  }
+  .menu .footer {
+    display: flex;
+  }
+
 }
