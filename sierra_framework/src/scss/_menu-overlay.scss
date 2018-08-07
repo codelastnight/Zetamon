@@ -1,20 +1,42 @@
+@charset 'UTF-8';
+
+
 //menu on mobile
 .mobile-menu {
  font-size: 0.8em;
- background-color: $brand-light;
+ background-color: $body-bg;
  z-index: 1;
  width: 100%;
  overflow: auto;
  position: fixed;
- box-shadow: 0em 0.05em 1em 0em $brand-dark;
+ padding: 1em;
+
+// box-shadow: 0em 0.05em 1em 0em $brand-dark;
  }
 
+ .main-body {
+   padding-top: 4rem;
+ }
 
 .mobile-menu .section {
  padding-top: 0.5em;
  padding-bottom: 0.5em;
  display: flex;
  float: right;
+}
+
+.mobile-logo {
+  padding: none;
+  margin: none;
+  font-weight: $heading-weight;
+  align-self: center;
+  float: left;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding: 1em;
+  font-size: 1.8em;
+  float: left;
+
 }
 
 .menu .hamburger {
@@ -45,7 +67,7 @@
 
 .menu .logo-header {
   float: left;
-  font-size: 1em;
+  font-size: 0.8em;
   display: none;
 }
 
@@ -142,9 +164,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 //edit grid padding
 
-.main-body {
-  padding-top: 2.5em;
-}
+
 @media only screen and (min-width: $screen-xs-min) {
 
 
@@ -152,30 +172,43 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 @media only screen and (min-width: $screen-sm-min) {
   .main-body {
-      padding-left: 8em;
+      padding-left: 7em;
       padding-right: 5em;
-      padding-top: 2.5em;
+      padding-top: 2em;
 
   }
+  .menu .logo-header {
+    display: block;
+  }
+  .mobile-logo {
+    display: none;
+  }
+  .mobile-menu {
+    pointer-events: none;
+    padding-top: 2em;
+  }
+  .menu .hamburger {
+   pointer-events: auto;
+   float: right;
 
+  }
 
 }
 @media only screen and (min-width: $screen-md-min) {
 
-  .menu .logo-header {
-    display: block;
-  }
+
   .mobile-menu{
     display: none;
   }
   .main-body {
+      padding-left: 8em;
       padding-right: 0em;
-      padding-top: 0em;
+      padding-top: 1.5em;
+  }
+  .menu .logo-header {
+    font-size: 1em;
+  }
 
-  }
-  .menu .hamburger {
-    display: none;
-  }
   .menu ul {
     display: block;
   }
