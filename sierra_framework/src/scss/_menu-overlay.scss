@@ -57,6 +57,8 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 }
 
+
+
 .menu .hamburger {
   pointer-events: auto;
   float: right;
@@ -119,15 +121,21 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 }
 
 //edit grid padding
+
+.main-body {
+  padding-top: 2.5em;
+}
 @media only screen and (min-width: $screen-xs-min) {
 
 
 }
 
 @media only screen and (min-width: $screen-sm-min) {
-  .container {
+  .main-body {
       padding-left: 8em;
       padding-right: 5em;
+      padding-top: 2.5em;
+
   }
   .menu .logo-header {
     display: block;
@@ -135,8 +143,10 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 }
 @media only screen and (min-width: $screen-md-min) {
-  .container {
+  .main-body {
       padding-right: 0em;
+      padding-top: 0em;
+
   }
   .menu button {
     display: none;
