@@ -23,7 +23,7 @@ $gray-light:            $brand-secondary;
 $white:                 $brand-light;
 
 // Borders
-$border-color:          #465f78;
+$border-color:          $brand-light;
 
 // Shadows
 $shadow-color:          rgba(0, 0, 0, .2);
@@ -95,7 +95,7 @@ $screen-tablet:              $screen-sm-min;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px;
+$screen-md:                  956px;
 $screen-md-min:              $screen-md;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min;

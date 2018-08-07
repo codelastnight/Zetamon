@@ -1,4 +1,29 @@
+//menu on mobile
+.mobile-menu {
+ font-size: 0.8em;
+ background-color: $brand-light;
+ z-index: 1;
+ width: 100%;
+ overflow: auto;
+ position: fixed;
+ box-shadow: 0em 0.05em 1em 0em $brand-dark;
+ }
 
+
+.mobile-menu .section {
+ padding-top: 0.5em;
+ padding-bottom: 0.5em;
+ display: flex;
+ float: right;
+}
+
+.menu .hamburger {
+ pointer-events: auto;
+ float: right;
+
+}
+
+//large screen menu
 .menu {
   pointer-events: none;
   z-index: 2;
@@ -13,6 +38,7 @@
   font: $basefont;
   padding: 1em 1.75em 0.5em 0.5em;
 }
+
 
 .menu a {}
 
@@ -59,12 +85,6 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 
 
-.menu .hamburger {
-  pointer-events: auto;
-  float: right;
-  fill: $brand-light;
-
-}
 
 .menu ul {
   display: none;
@@ -137,18 +157,23 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
       padding-top: 2.5em;
 
   }
-  .menu .logo-header {
-    display: block;
-  }
+
 
 }
 @media only screen and (min-width: $screen-md-min) {
+
+  .menu .logo-header {
+    display: block;
+  }
+  .mobile-menu{
+    display: none;
+  }
   .main-body {
       padding-right: 0em;
       padding-top: 0em;
 
   }
-  .menu button {
+  .menu .hamburger {
     display: none;
   }
   .menu ul {
