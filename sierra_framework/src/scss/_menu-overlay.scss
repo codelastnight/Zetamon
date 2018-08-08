@@ -106,8 +106,6 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 }
 
 
-
-
 .menu ul {
   display: none;
   pointer-events: auto;
@@ -118,6 +116,8 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   float: right;
   text-align: right;
 }
+
+
 
 .menu li a {
   pointer-events: auto;
@@ -130,9 +130,11 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 }
 /* Change the link color on hover */
 
+
 .menu li a:hover {
   color: $brand-secondary;
 }
+
 
 .menu .footer {
   bottom: 1em;
@@ -186,6 +188,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   .mobile-menu {
     pointer-events: none;
     padding-top: 2em;
+    background: none;
   }
   .menu .hamburger {
    pointer-events: auto;
