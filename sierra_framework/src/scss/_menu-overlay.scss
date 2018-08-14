@@ -267,3 +267,13 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
     display: block;
   }
 }
+
+@media only screen and (min-width: $screen-xlg-min) {
+
+  .main-body {
+      padding-left: 3em;
+      padding-right: 3em;
+      padding-top: 2em;
+  }
+
+}
