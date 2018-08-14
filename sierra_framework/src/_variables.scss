@@ -271,7 +271,7 @@ $tag-bg-color:          $brand-light;
 $tag-bullet:            $body-bg;
 
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900');
 
 
 $basefont:  'Montserrat', sans-serif;
@@ -291,3 +291,5 @@ $heading-case:          none;
 $subheading-font:          $basefont;
 $subheading-weight:        700;
 $subheading-case:          none;
+
+$subsubheading-weight:     600;

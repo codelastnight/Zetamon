@@ -47,18 +47,31 @@
 
 //large screen menu
 .menu {
-  pointer-events: none;
   z-index: 2;
   width: 100%;
   /* Full width (cover the whole page) */
   height: 100%;
-  position: fixed;
   /* Make it stick, even on scroll */
   overflow: auto;
   float: left;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font: $basefont;
   padding: 1em 1.75em 0.5em 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.center-menu-div {
+  margin: 0 auto;
+  max-width: $container-maxwidth + 500px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 
@@ -67,7 +80,7 @@
 
 .menu .logo-header {
   float: left;
-  font-size: 0.8em;
+  font-size: 1.5em;
   display: none;
 }
 
@@ -107,25 +120,29 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 
 .menu ul {
+  padding-top: 0.5em;
   display: none;
   pointer-events: auto;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 10em;
   float: right;
   text-align: right;
+
 }
 
+.menu li {
+  margin-bottom: 0em;
 
+}
 
 .menu li a {
   pointer-events: auto;
   display: block;
   color: $brand-light;
-  font-weight: $subheading-weight;
-  font-size: 1.1rem;
-  padding: 1em 0 1em 1em;
+  font-weight: $subsubheading-weight;
+  font-size: 1rem;
+  padding: 1em 0em 1em 0em;
   text-decoration: none;
 }
 /* Change the link color on hover */
@@ -133,6 +150,22 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
 .menu li a:hover {
   color: $brand-secondary;
+}
+
+.subheader {
+
+  //font-size: 1rem;
+}
+
+.subheader ul {
+  display: block;
+  border-style:solid;
+  border-right-width: 0.25em;
+  border-color: $brand-light;
+}
+.subheader li a{
+  font-size: 0.9em;
+  padding: 0.8em 0.8em 0.8em 0em;
 }
 
 
@@ -214,6 +247,9 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 
   .menu ul {
     display: block;
+  }
+  .menu ul li {
+    font-size: 1.1rem;
   }
   .menu .footer {
     display: flex;
