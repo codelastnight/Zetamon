@@ -80,7 +80,7 @@
 
 .menu .logo-header {
   float: left;
-  font-size: 1.5em;
+  font-size: 1.1em;
   display: none;
 }
 
@@ -218,6 +218,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   .mobile-logo {
     display: none;
   }
+
   .mobile-menu {
     pointer-events: none;
     padding-top: 2em;
@@ -233,21 +234,17 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
 @media only screen and (min-width: $screen-md-min) {
 
 
-  .mobile-menu{
-    display: none;
-  }
+
   .main-body {
       padding-left: 8em;
       padding-right: 0em;
       padding-top: 1.5em;
   }
   .menu .logo-header {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
-  .menu ul {
-    display: block;
-  }
+
   .menu ul li {
     font-size: 1.1rem;
   }
@@ -255,4 +252,18 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
     display: flex;
   }
 
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .mobile-menu{
+    display: none;
+  }
+  .main-body {
+      padding-left: 8em;
+      padding-right: 8em;
+      padding-top: 1.5em;
+  }
+  .menu ul {
+    display: block;
+  }
 }
