@@ -1,6 +1,6 @@
 Code is in Alpha build.
 
-This repo contains source code for the rewritten website for interlake saints robotics (saintsrobotics.com)
+This repo contains source code for the rewritten website for interlake saints robotics (https://www.saintsrobotics.com)
 
 The rewrite aims to use modern web developtment philosophy by creating a responsive, fast, and user oriented webisite.
 
