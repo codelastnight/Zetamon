@@ -1,8 +1,10 @@
+Code is in Alpha build.
+
 This repo contains source code for the rewritten website for interlake saints robotics
 
-This rewrite will reduce the dependance on JS and aim for a CSS-based experience.
+The rewrite aims to use modern web developtment philosophy by creating a responsive, fast, and user oriented webisite.
 
-Current test page can be accessed her :
+Current test page can be accessed here :
 https://dottechnopath.github.io/SaintsRoboticsSite/sierra_framework/test.html
 
 pp
