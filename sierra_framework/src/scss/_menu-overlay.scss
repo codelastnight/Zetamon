@@ -162,9 +162,11 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   border-style:solid;
   border-right-width: 0.25em;
   border-color: $brand-light;
+  overflow-y: hidden;
+
 }
 .subheader li a{
-  font-size: 0.9em;
+  font-size: 0.8em;
   padding: 0.8em 0.8em 0.8em 0em;
 }
 
