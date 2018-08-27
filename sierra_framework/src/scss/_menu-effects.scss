@@ -5,10 +5,3 @@
     max-height: 20em;
   }
 }
-[data-aos="text-color"] {
-  color: $brand-light;
-  transition-property: color;
-  &.aos-animate {
-    color: $brand-light;
-  }
-}
