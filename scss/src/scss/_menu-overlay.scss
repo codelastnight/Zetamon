@@ -34,7 +34,7 @@
   padding-left: 1em;
   padding-top: 1em;
   padding: 1em;
-  font-size: 1.8em;
+  font-size: 2em;
   float: left;
 
 }
@@ -74,9 +74,7 @@
   position: fixed;
 }
 
-
 .menu a {}
-
 
 .menu .logo-header {
   float: left;
@@ -107,6 +105,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + .05em;
   align-self: center;
   display: block;
   color: $brand-secondary;
+  font-size: 1.3em;
 }
 
 .menu .logo-icon {
