@@ -5,18 +5,27 @@
   .image-slider {
 display: none;
 
+
   }
 .image-slider img {
     width: 100%;
     height: auto;
-    //object-fit: none; /* Do not scale the image */
     object-position: center;
+}
+.image-slider::before {
+  display: block;
+  position: relative;
+  background-image: linear-gradient( to top,
+            rgba( 255, 255, 255, 0 ) 0%,
+            rgba( 0,0, 0, 1 ) 100% );
+  width: 100%;
+  content: '';
 }
 
 
 @media only screen and (min-width: $screen-lg-min) {
   .landing {
-    max-width: $container-maxwidth + 00px;
+
   }
   .image-slider {
     width: 100%;
@@ -24,5 +33,11 @@ display: none;
     display: block;
     overflow: hidden;
     border-radius: 1em;
+
+  }
+  .landing-title {
+    position: absolute;
+    z-index: 2;
+    font-size: 10em;
   }
 }
