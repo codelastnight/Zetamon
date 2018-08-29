@@ -10,6 +10,8 @@
   <!-- AOS CSS and JS import-->
   <link rel="stylesheet" href="lib/aos/dist/aos.css" />
   <script src="lib/aos/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+
   <!-- Font awesome icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -68,8 +70,21 @@
 
     <div class="container landing">
         <section class="section">
+
+
             <div class="align-center">
-                <img class="main-logo" src="img/logo.png" alt="Sierra logo" />
+              <div class="image-slider">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="resources/1.jpg" alt="Smiley face"></div>
+                    <div class="swiper-slide"><img src="resources/2.jpg" alt="Smiley face"></div>
+                    <div class="swiper-slide"><img src="resources/3.jpg" alt="Smiley face"></div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
                 <div>
                     <h1 class="text-huge text-with-subtitle">Sierra <span class="text-small text-gray">v 2.0.0</span></h1>
                     <h2 class="text-medium">The smallest and lightest SCSS library</h2>
@@ -85,6 +100,6 @@
   </main>
   <!--scripts-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="lib/slidr/slidr.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="js/homepage.js"></script>
 </body>
