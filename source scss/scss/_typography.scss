@@ -4,6 +4,7 @@
 
 body {
   font: #{$font-weight-base} #{$font-size-base}/#{$line-height-base} $basefont;
+  letter-spacing: 0.05rem;
   color: $text-body;
 
   @include breakpoint(bp-medium) {
@@ -70,10 +71,10 @@ a {
   }
 
   &-big {
-    font-family: $heading-font;
+    font-family: $subheading-font;
     font-size: 24px;
-    font-weight: $heading-weight;
-    text-transform: $heading-case;
+    font-weight: $subheading-weight;
+    text-transform: $subheading-case;
 
     @include breakpoint(bp-large) {
       font-size: 28px;
@@ -81,10 +82,10 @@ a {
   }
 
   &-medium {
-    font-family: $heading-font;
+    font-family: $subheading-font;
     font-size: 20px;
-    font-weight: $heading-weight;
-    text-transform: $heading-case;
+    font-weight: $subheading-weight;
+    text-transform: $subheading-case;
   }
 
   &-small {
@@ -129,7 +130,7 @@ button.text-gray {
 }
 
 .text-normal {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .text-line-through {

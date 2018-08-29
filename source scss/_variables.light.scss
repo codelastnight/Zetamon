@@ -6,25 +6,25 @@
  */
 
 // Brand colors
-$brand-primary:         #1abc9c;
-$brand-secondary:       #9b59b6;
-$brand-dark:            #18232f;
-$brand-light:           #34495e;
+$brand-primary:         #3498db;
+$brand-secondary:       #2ecc71;
+$brand-dark:            #18537a;
+$brand-light:           #f1f1f1;
 
 $color-success:         #4caf50;
 $color-info:            #5bc0de;
 $color-warning:         #f0ad4e;
 $color-error:           #e74c3c;
 
-$body-bg:               #2c3e50;
+$body-bg:               #ffffff;
 
-$gray:                  #dee6ea;
+$gray:                  #e9e9e9;
 $gray-light:            #edf3f6;
 $deep-blue:             #171722; // Deprecated
 $white:                 #ffffff;
 
 // Borders
-$border-color:          #465f78;
+$border-color:          #dddddd;
 
 // Shadows
 $shadow-color:          rgba(0, 0, 0, .2);
@@ -48,7 +48,7 @@ $foursquare: #8fd400;
 
 // Text colors
 $text-color:            $white;       // deprecated. Use $text-body instead.
-$text-body:             $text-color;
+$text-body:             #404040;
 $text-gray:             #969da6;
 
 $text-color-map: (
@@ -62,6 +62,15 @@ $text-color-map: (
   error:                $color-error,
   warning:              $color-warning
 );
+
+
+/**
+ *  GRID SYSTEM
+ *  set $flexboxgrid to `true` to use a flexbox based grid. More info: https://github.com/kristoferjoseph/flexboxgrid
+ *  set $flexboxgrid to `false` to use Twitter bootstrap's grid. More info: https://getbootstrap.com/examples/grid/
+ */
+
+$flexboxgrid: false;
 
 
 /**
@@ -182,7 +191,7 @@ $badges-color-map: (
 );
 
 // Buttons
-$button-bg-color:       #64829f; // default color for buttons
+$button-bg-color:       #e9e9e9; // default color for buttons
 $button-text-color:     $text-body; // default color for buttons
 $button-border-color:   $body-bg;
 $button-border-radius:  2em;
@@ -224,7 +233,7 @@ $form-bg-color:               $brand-light;
 $form-text-color:             $text-body;
 
 // Loading spinner
-$loading-spinner-bg:          $white;
+$loading-spinner-bg:          $brand-primary;
 
 // Paginator
 $paginator-item-radius:       $radius;

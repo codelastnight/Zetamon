@@ -23,9 +23,18 @@
 @import 'scss/tabs';
 @import 'scss/tags';
 @import 'scss/typography';
+@import 'scss/landing';
 
+//import hamburger menu CSS
+@import 'scss/hamburgers/hamburgers';
 // Flexbox based grid. More info: https://github.com/kristoferjoseph/flexboxgrid
 //@import 'scss/flexboxgrid';
 
 // Twitter bootstrap's grid. More info: https://getbootstrap.com/examples/grid/
 @import 'scss/bootstrapgrid';
+
+// custom css should be imported below
+
+// menu css file
+@import 'scss/menu-overlay';
+@import 'scss/menu-effects';
