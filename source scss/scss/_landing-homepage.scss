@@ -3,11 +3,10 @@
   color: $brand-secondary;
   font-size: 3em;
   font-weight: $subheading-weight;
+  margin: auto;
 
 }
-.arrowdown {
 
-}
 .big-link:hover {
   color: $brand-light;
 }
@@ -72,5 +71,8 @@
     font-size: 1em;
     margin-top: 0;
     margin-bottom: 0;
+  }
+  .landing-under .section {
+    height: 100%;
   }
 }
