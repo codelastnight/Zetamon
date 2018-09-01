@@ -107,7 +107,7 @@ $landing-ratio: 73%;
   .art-text {
     position: absolute;
     right: 0em;
-    bottom: -7em;
+    bottom: -13em;
     font-weight:$heading-weight;
     font-size: 1.5em;
     transform: rotate(90deg);
@@ -120,17 +120,13 @@ $landing-ratio: 73%;
   }
   .art-box {
     height: 0.3rem;
-    width: 10rem;
-    margin: auto;
+    width: 15rem;
+    margin: auto 0.75em;
 
-  //  position: absolute;
-  //  left: 7rem;
-  //  bottom: 0.55rem;
+
 
     background-color: $brand-secondary;
   }
-
-
 }
 @media only screen and (min-width: $screen-xlg-min) {
   .container {
