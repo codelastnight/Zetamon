@@ -15,7 +15,7 @@ $(document).ready(function () {
       },
 
   })
-//  $('body').overlayScrollbars({ });
+ //$('main').overlayScrollbars({ });
 });
 
 //AOS activation script - animate on scroll
