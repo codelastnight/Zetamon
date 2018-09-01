@@ -96,7 +96,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + 0.05em;
   align-self: center;
   display: block;
   color: $brand-secondary;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .menu .logo-icon {
@@ -126,7 +126,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + 0.05em;
   display: block;
   color: $brand-light;
   font-weight: $subsubheading-weight;
-  font-size: 1rem;
+
   padding: 1em 0;
   text-decoration: none;
 }
@@ -218,7 +218,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + 0.05em;
   }
 
   .menu ul li {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
   }
 
   .menu .footer {
@@ -245,5 +245,8 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + 0.05em;
     padding-left: 3em;
     padding-right: 3em;
     padding-top: 2em;
+  }
+  .menu ul li {
+    font-size: 1.2rem;
   }
 }
