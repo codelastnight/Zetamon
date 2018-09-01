@@ -1,16 +1,20 @@
 .landing {}
 .big-link {
-  color: $brand-secondary;
+
   font-size: 1.1em;
   font-weight: $subheading-weight;
   margin: auto;
   display: block;
   max-width: 20em;
 }
+.landing-under a {
 
-.big-link:hover {
+  color: $brand-secondary;
+}
+.landing-under a:hover {
   color: $brand-light;
 }
+
 .image-slider {
   display: none;
 }
@@ -21,7 +25,9 @@
   object-position: center;
   filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
 }
-
+.relative {
+  position: relative;
+}
 .arrow-big {
   margin: 1em;
 }
@@ -60,6 +66,9 @@ $landing-ratio: 73%;
     justify-content: center;
     margin-top: 1em;
   }
+  .landing-under .section {
+    width: 100%;
+  }
   .landing-inner {
     max-width: $container-maxwidth;
     margin: 0 auto;
@@ -95,6 +104,33 @@ $landing-ratio: 73%;
     margin: auto;
 
   }
+  .art-text {
+    position: absolute;
+    right: 0em;
+    bottom: -7em;
+    font-weight:$heading-weight;
+    font-size: 1.5em;
+    transform: rotate(90deg);
+    transform-origin: right top;
+
+  }
+
+  .art-text a {
+    display: flex;
+  }
+  .art-box {
+    height: 0.3rem;
+    width: 10rem;
+    margin: auto;
+
+  //  position: absolute;
+  //  left: 7rem;
+  //  bottom: 0.55rem;
+
+    background-color: $brand-secondary;
+  }
+
+
 }
 @media only screen and (min-width: $screen-xlg-min) {
   .container {
