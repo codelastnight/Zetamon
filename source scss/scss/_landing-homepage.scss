@@ -25,9 +25,7 @@
   object-position: center;
   filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
 }
-.relative {
-  position: relative;
-}
+
 .arrow-big {
   margin: 1em;
 }
@@ -122,8 +120,6 @@ $landing-ratio: 73%;
     height: 0.3rem;
     width: 15rem;
     margin: auto 0.75em;
-
-
 
     background-color: $brand-secondary;
   }

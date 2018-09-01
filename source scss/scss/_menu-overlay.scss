@@ -14,6 +14,9 @@
 .main-body {
   padding-top: 4rem;
 }
+.relative {
+  position: relative;
+}
 
 .mobile-menu .section {
   padding-top: 0.5em;
@@ -89,6 +92,7 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + 0.05em;
   transform-origin: $rotate-origin center;
   pointer-events: auto;
 }
+
 
 .menu h1 {
   //  transform: rotate(90deg);
@@ -239,6 +243,18 @@ $rotate-origin: ($logo-size / 2) + $logo-padding + 0.05em;
 
   .menu ul {
     display: block;
+  }
+  .menu-art-box {
+    pointer-events: none;
+    width: 0.3rem;
+    height: 6rem;
+    margin: auto 0.75em;
+    margin-left: 3.5em;
+    position: absolute;
+    left: 0em;
+    top: 0;
+    bottom: 0;
+    background-color: $brand-secondary;
   }
 }
 @media only screen and (min-width: $screen-xlg-min) {
