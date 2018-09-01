@@ -61,4 +61,16 @@ display: none;
     margin-top: 0em;
     margin-bottom: 0em;
   }
+  .relative {
+    position: relative;
+  }
+  .art-text {
+    position: absolute;
+    right:0;
+
+    font-size: 1.2em;
+    font-weight: $subheading-weight;
+    color: $brand-secondary;
+
+  }
 }
