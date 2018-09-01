@@ -5,6 +5,7 @@
   font-weight: $subheading-weight;
   margin: auto;
   display: block;
+  max-width: 20em;
 }
 
 .big-link:hover {
@@ -33,20 +34,26 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom,rgba(50,233,234,0.0),rgba(0,0,0,0.4));
+    background-image: linear-gradient(to bottom,rgba(50,233,234,0.0),rgba(50,233,234,0.0),rgba(50,233,234,0.0),rgba(0,0,0,1));
     opacity: 0.6;
     z-index: 2;
   }
 }
+
+$landing-ratio: 73%;
+
 @media only screen and (min-width: $screen-lg-min) {
+  .container {
+      max-width: $container-maxwidth - 200px;
+  }
   .landing {
     max-width: $container-maxwidth - 200px;
     padding-top: 2.5rem;
-    height: 70%;
+    height: $landing-ratio;
     position: relative;
   }
   .landing-under {
-    height: 30%;
+    height: 100% - $landing-ratio;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -80,9 +87,7 @@
   .landing-under .section {
 
   }
-  .container {
-      max-width: $container-maxwidth - 200px;
-  }
+
   .big-link {
     color: $brand-secondary;
     font-size: 1.5em;
@@ -92,6 +97,9 @@
   }
 }
 @media only screen and (min-width: $screen-xlg-min) {
+  .container {
+      max-width: $container-maxwidth;
+  }
   .landing {
     max-width: $container-maxwidth + 200px;
   }
@@ -106,9 +114,12 @@
  .landing-under {
    margin-top: 1.5em;
  }
-  .container {
-      max-width: $container-maxwidth;
-  }
+ .big-link {
+
+   font-size: 2em;
+
+
+ }
 
 
 
