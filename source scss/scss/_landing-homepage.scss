@@ -1,4 +1,8 @@
-.landing {}
+.home {
+  height: 100%;
+
+}
+
 .big-link {
 
   font-size: 1.1em;
@@ -21,6 +25,7 @@
 
 .image-slider img {
   width: 100%;
+
   height: auto;
   object-position: center;
   filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
@@ -55,6 +60,8 @@ $landing-ratio: 73%;
     padding-top: 2.5rem;
     height: $landing-ratio;
     position: relative;
+    max-height: 750px;
+    margin: auto;
   }
   .landing-under {
     height: 100% - $landing-ratio;
@@ -70,6 +77,7 @@ $landing-ratio: 73%;
   .landing-inner {
     max-width: $container-maxwidth;
     margin: 0 auto;
+
   }
   .image-slider {
     width: 100%;
