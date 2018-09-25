@@ -1,0 +1,164 @@
+.home {
+  height: 100%;
+
+}
+
+.big-link {
+
+  font-size: 1.1em;
+  font-weight: $subheading-weight;
+  margin: auto;
+  display: block;
+  max-width: 20em;
+}
+.landing-under a {
+
+  color: $brand-secondary;
+}
+.landing-under a:hover {
+  color: $brand-light;
+}
+
+.image-slider {
+  display: none;
+}
+
+.image-slider img {
+  width: 100%;
+
+  height: auto;
+  object-position: center;
+  filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
+}
+
+.arrow-big {
+  margin: 1em;
+}
+
+.swiper-container {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,rgba(50,233,234,0.0),rgba(50,233,234,0.0),rgba(50,233,234,0.0),rgba(0,0,0,1));
+    opacity: 0.6;
+    z-index: 2;
+  }
+}
+
+$landing-ratio: 73%;
+
+@media only screen and (min-width: $screen-lg-min) {
+  .container {
+      max-width: $container-maxwidth - 200px;
+  }
+  .landing {
+    max-width: $container-maxwidth - 200px;
+    padding-top: 2.5rem;
+    height: $landing-ratio;
+    position: relative;
+    max-height: 750px;
+    margin: auto;
+  }
+  .landing-under {
+    height: 100% - $landing-ratio;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  .landing-under .section {
+    width: 100%;
+  }
+  .landing-inner {
+    max-width: $container-maxwidth;
+    margin: 0 auto;
+
+  }
+  .image-slider {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 1em;
+  }
+  .landing-title {
+    position: absolute;
+    z-index: 2;
+    font-size: 6em;
+    position: absolute;
+    bottom: -0.6em;
+    left: 0;
+  }
+  .landing-title .text-huge {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .landing-under .section {
+
+  }
+
+  .big-link {
+    color: $brand-secondary;
+    font-size: 1.5em;
+    font-weight: $subheading-weight;
+    margin: auto;
+
+  }
+  .art-text {
+    position: absolute;
+    right: 0em;
+    bottom: -13em;
+    font-weight:$heading-weight;
+    font-size: 1.5em;
+    transform: rotate(90deg);
+    transform-origin: right top;
+
+  }
+
+  .art-text a {
+    display: flex;
+  }
+  .art-box {
+    height: 0.3rem;
+    width: 15rem;
+    margin: auto 0.75em;
+
+    background-color: $brand-secondary;
+  }
+}
+@media only screen and (min-width: $screen-xlg-min) {
+  .container {
+      max-width: $container-maxwidth;
+  }
+  .landing {
+    max-width: $container-maxwidth + 200px;
+  }
+  .landing-title {
+    position: absolute;
+    z-index: 2;
+    font-size: 7em;
+    position: absolute;
+    bottom: -0.6em;
+    left: 0;
+  }
+ .landing-under {
+   margin-top: 1.5em;
+ }
+ .big-link {
+
+   font-size: 2em;
+
+
+ }
+
+
+
+
+
+}

@@ -1,0 +1,76 @@
+.landing {
+
+}
+
+  .image-slider {
+display: none;
+
+
+  }
+.image-slider img {
+    width: 100%;
+    height: auto;
+    object-position: center;
+
+
+}
+
+.swiper-container {
+  &:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom,rgba(50,233,234,0.0),rgba(0,0,0,0.4));
+  opacity: 0.6;
+  z-index: 2;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .landing {
+    max-width: $container-maxwidth + 200px;
+    padding-top: 2.5rem;
+    height: 70%;
+    position: relative;
+  }
+  .landing-inner {
+    max-width: $container-maxwidth;
+    margin: 0 auto;
+  }
+  .image-slider {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 1em;
+
+  }
+  .landing-title {
+    position: absolute;
+    z-index: 2;
+    font-size: 7em;
+    position: absolute;
+    bottom: -0.6em;
+    left: 0;
+  }
+  .landing-title .text-huge{
+    font-size: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  .relative {
+    position: relative;
+  }
+  .art-text {
+    position: absolute;
+    right:0;
+
+    font-size: 1.2em;
+    font-weight: $subheading-weight;
+    color: $brand-secondary;
+
+  }
+}
