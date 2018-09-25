@@ -1,4 +1,5 @@
-Code is in Alpha build.
+**THIS IS DEPRECATED CODE
+**DO NOT MERGE THIS WITH MASTER
 
 This repo contains source code for the rewritten website for interlake saints robotics (https://www.saintsrobotics.com)
 
