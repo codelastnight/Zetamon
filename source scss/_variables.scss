@@ -295,3 +295,22 @@ $subheading-weight:        700;
 $subheading-case:          none;
 
 $subsubheading-weight:     600;
+
+
+//mixins
+
+/// Mixin to prefix several properties at once
+/// @author Hugo Giraudel
+/// @param {Map} $declarations - Declarations to prefix
+/// @param {List} $prefixes (()) - List of prefixes to print
+/// https://css-tricks.com/snippets/sass/mixin-prefix-properties/
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}

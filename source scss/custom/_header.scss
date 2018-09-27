@@ -1,7 +1,57 @@
-header {
 
+//css for header overlay
+header {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  float: left;
+  box-sizing: border-box;
+  pointer-events: none;
+  a {
+    color: $brand-light;
+    pointer-events: auto;
+  }
 }
+
+
+
+
+.text-vertical {
+  height: auto;
+
+  padding: 1.2em;
+
+  @include prefix((
+      writing-mode: vertical-lr
+  ), webkit moz);
+}
+
+
+$desktopborder: 1em;
 @media only screen and (min-width: $screen-lg-min) {
+  header {
+    padding: $desktopborder;
+
+  }
+
+  .main-logo {
+    width: auto;
+    position: absolute;
+    text-align: center;
+    font-size: 1.28em;
+    font-weight: $subheading-weight;
+    color: $brand-secondary;
+    img {
+
+      width: 5em;
+      }
+  }
+  header ul {
+    text-align: right;
+    float: right;
+    right: 0;
+  }
 
 
 
