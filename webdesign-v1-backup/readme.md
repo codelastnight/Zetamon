@@ -8,4 +8,4 @@ Current test page can be accessed here :
 https://dottechnopath.github.io/SaintsRoboticsSite/webdesign-v1-backup/test.html
 
 homepage here(fullscreen on 1080p+ screensize only right now lmao):
-https://dottechnopath.github.io/SaintsRoboticsSite/webdesign-v1-backup/home.html
+https://dottechnopath.github.io/SaintsRoboticsSite/webdesign-v1-backup/home
