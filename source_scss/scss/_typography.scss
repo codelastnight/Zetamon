@@ -27,15 +27,15 @@ p {
 }
 
 a {
-  color: $brand-primary;
+  color: $brand-light;
   text-decoration: none;
 
   &:hover {
-    color: rgba($brand-primary, .8);
+    color: rgba($brand-secondary, .8);
   }
 
   &:focus {
-    color: $brand-primary;
+    color: $brand-secondary;
   }
 }
 

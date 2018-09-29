@@ -22,6 +22,7 @@ header {
   ul {}
 
   li {
+    text-transform: lowercase;
     margin-top: 0;
     margin-bottom: $menu-padding;
     pointer-events: auto;
