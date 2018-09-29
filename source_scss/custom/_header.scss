@@ -5,6 +5,9 @@
 $intended-menu-padding: 2.5em;
 $menu-padding: $intended-menu-padding / 2;
 
+//desktop border
+$desktopborder: 3em;
+
 header {
   z-index: 1;
   width: 100%;
@@ -18,8 +21,6 @@ header {
     display: block;
     padding-bottom: $menu-padding;
   }
-
-  ul {}
 
   li {
     text-transform: lowercase;
@@ -53,6 +54,38 @@ header {
   }
 }
 
+
+.header-overlay {
+
+  position: relative;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+
+  ul {
+    padding-bottom: 0.5em;
+    display: block;
+    pointer-events: auto;
+    list-style-type: none;
+    //margin: 2em;
+    padding: 0;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+  }
+}
+
+.header-mobile {
+  pointer-events: auto;
+  width: 100%;
+  position: absolute;
+  padding: 1em;
+  .hamburger {
+    float: right;
+  }
+}
+//
 .main-logo {
   display: none;
 }
@@ -63,29 +96,17 @@ header {
   padding: 1.2em;
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
-$desktopborder: 3em;
+
 @media only screen and (min-width: $screen-lg-min) {
   .header-overlay {
     margin-top: $desktopborder;
     margin-left: $desktopborder;
     margin-right: $desktopborder;
     padding-bottom: $desktopborder;
-    position: relative;
-    height: 100vh;
     display: flex;
-    flex-direction: column;
-
-    ul {
-      padding-bottom: 0.5em;
-      display: block;
-      pointer-events: auto;
-      list-style-type: none;
-      //margin: 2em;
-      padding: 0;
-      text-align: right;
-      position: absolute;
-      right: 0;
-    }
+  }
+  .header-mobile {
+    display: none;
   }
 
   .main-logo {

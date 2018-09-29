@@ -18,8 +18,3 @@ $(document).ready(function () {
   })
  //$('main').overlayScrollbars({ });
 });
-
-//AOS activation script - animate on scroll
-AOS.init({
- duration: 400
-});
