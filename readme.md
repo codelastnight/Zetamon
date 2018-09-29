@@ -5,7 +5,7 @@ This repo contains source code for the rewritten website for interlake saints ro
 The rewrite aims to use modern web development by creating a responsive, fast, and user oriented website.
 
 Current test page can be accessed here :
-https://dottechnopath.github.io/SaintsRoboticsSite/test.html
+https://dottechnopath.github.io/SaintsRoboticsSite/header.html
 
 homepage here(fullscreen on 1080p+ screensize only right now lmao):
 https://dottechnopath.github.io/SaintsRoboticsSite/home.html
