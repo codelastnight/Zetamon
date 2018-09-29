@@ -4,5 +4,6 @@ AOS.init({
 });
 
 function menuToggle(button){
-  $(button).toggleClass("is-active")
+  $(button).toggleClass("is-active");
+  $(".header-overlay").toggleClass("header-overlay-toggle")
 }

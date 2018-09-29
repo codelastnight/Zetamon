@@ -3,9 +3,7 @@
 //
 //calculate menu padding
 $intended-menu-padding: 2.5em;
-$menu-padding: $intended-menu-padding / 2;
-
-//desktop border
+$menu-padding: $intended-menu-padding / 2; //desktop border
 $desktopborder: 3em;
 
 header {
@@ -54,38 +52,38 @@ header {
   }
 }
 
-
 .header-overlay {
-
   position: relative;
   height: 100vh;
   display: none;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
 
   ul {
-    padding-bottom: 0.5em;
     display: block;
     pointer-events: auto;
     list-style-type: none;
-    //margin: 2em;
-    padding: 0;
-    text-align: right;
-    position: absolute;
-    right: 0;
     flex-direction: column;
   }
 }
+//toggles menu on mobile
+
+.header-overlay-toggle {
+  display: flex;
+}
+//mobile header
 
 .header-mobile {
+  z-index: 3;
   pointer-events: auto;
   width: 100%;
   position: absolute;
   padding: 1em;
+  display: block;
   .hamburger {
     float: right;
   }
 }
-//
+
 .main-logo {
   display: none;
 }
@@ -96,7 +94,7 @@ header {
   padding: 1.2em;
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
-
+// desktop experience
 @media only screen and (min-width: $screen-lg-min) {
   .header-overlay {
     margin-top: $desktopborder;
@@ -104,7 +102,32 @@ header {
     margin-right: $desktopborder;
     padding-bottom: $desktopborder;
     display: flex;
+    background-color: rgba(0,0,0,0.0);
+
+    ul {
+      padding: 0;
+      text-align: right;
+      position: absolute;
+      right: 0;
+
+      .subheader {
+        ul {
+          border-style: solid;
+          border-right-width: 0.15em;
+          overflow-y: hidden;
+          margin: 0;
+        }
+
+        li {
+          margin-top: 0.75rem;
+          margin-bottom: 0.75rem;
+          margin-right: 1rem;
+          font-weight: $font-weight-base;
+        }
+      }
+    }
   }
+
   .header-mobile {
     display: none;
   }
@@ -140,7 +163,7 @@ header {
       //  width: 100%;
       i {
         text-align: center;
-          font-weight: $font-weight-base;
+        font-weight: $font-weight-base;
       }
 
       a {
