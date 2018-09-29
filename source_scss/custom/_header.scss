@@ -1,57 +1,136 @@
-
 //css for header overlay
+//
+//
+//calculate menu padding
+$intended-menu-padding: 2.5em;
+$menu-padding: $intended-menu-padding / 2;
+
 header {
-  z-index: 2;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  float: left;
+  min-height: 100vh;
+  position: fixed;
   box-sizing: border-box;
   pointer-events: none;
+
   a {
     color: $brand-light;
+    display: block;
+    padding-bottom: $menu-padding;
+  }
+
+  ul {}
+
+  li {
+    margin-top: 0;
+    margin-bottom: $menu-padding;
     pointer-events: auto;
+    font-weight: $subheading-weight;
+  }
+
+  .subheader {
+    ul {
+      position: relative;
+      display: block;
+      border-style: solid;
+      border-right-width: 0.15em;
+      border-color: $brand-light;
+      overflow-y: hidden;
+      margin: 0;
+    }
+
+    li {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      margin-right: 1rem;
+      font-weight: $font-weight-base;
+
+      a {
+        padding-bottom: 0;
+      }
+    }
   }
 }
 
-
+.main-logo {
+  display: none;
+}
 
 .text-vertical {
   height: auto;
-
+  font-weight: $heading-weight;
   padding: 1.2em;
-
-  @include prefix((
-      writing-mode: vertical-lr
-  ), webkit moz);
+  @include prefix((writing-mode: vertical-lr), webkit moz);
 }
-
-
-$desktopborder: 1em;
+$desktopborder: 3em;
 @media only screen and (min-width: $screen-lg-min) {
-  header {
-    padding: $desktopborder;
+  .header-overlay {
+    margin-top: $desktopborder;
+    margin-left: $desktopborder;
+    margin-right: $desktopborder;
+    padding-bottom: $desktopborder;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
+    ul {
+      padding-bottom: 0.5em;
+      display: block;
+      pointer-events: auto;
+      list-style-type: none;
+      //margin: 2em;
+      padding: 0;
+      text-align: right;
+      position: absolute;
+      right: 0;
+    }
   }
 
   .main-logo {
+    display: block;
     width: auto;
     position: absolute;
     text-align: center;
     font-size: 1.28em;
     font-weight: $subheading-weight;
     color: $brand-secondary;
+
     img {
-
       width: 5em;
+    }
+  }
+
+  .header-footer {
+    margin-top: auto;
+    width: 100%;
+    font-weight: $subheading-weight;
+
+    .copyright {
+      font-size: 0.5rem;
+      margin-bottom: auto;
+      color: $brand-secondary;
+    }
+
+    .contact {
+      margin-top: auto;
+      text-align: right;
+      //  width: 100%;
+      i {
+        text-align: center;
+          font-weight: $font-weight-base;
       }
+
+      a {
+        pointer-events: auto;
+      }
+    }
   }
-  header ul {
-    text-align: right;
-    float: right;
-    right: 0;
+}
+@media only screen and (min-width: $screen-xlg-min) {
+  .header-footer {
+    .copyright {
+      font-size: 0.7rem;
+    }
   }
-
-
-
 }
