@@ -3,7 +3,7 @@
 //
 //calculate menu padding
 $intended-menu-padding: 2.5em;
-$menu-padding: $intended-menu-padding / 2; //desktop border
+$menu-padding: $intended-menu-padding / 3; //desktop border
 $desktopborder: 3em;
 
 header {
@@ -23,7 +23,7 @@ header {
   li {
     text-transform: lowercase;
     margin-top: 0;
-    margin-bottom: $menu-padding;
+    margin-bottom: $menu-padding + $menu-padding;
     pointer-events: auto;
     font-weight: $subheading-weight;
   }
@@ -33,7 +33,6 @@ header {
       position: relative;
       display: block;
       border-style: solid;
-      border-right-width: 0.15em;
       border-color: $brand-light;
       overflow-y: hidden;
       margin: 0;
@@ -42,7 +41,6 @@ header {
     li {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem;
-      margin-right: 1rem;
       font-weight: $font-weight-base;
 
       a {
@@ -59,7 +57,6 @@ header {
   display: flex;
   background-color: rgba(0,0,0,0.8);
   pointer-events: auto;
-
   justify-content: center;
   align-items: center;
 
@@ -74,32 +71,33 @@ header {
 // stick footer to bottom
 
 .header-footer {
-
-
   .copyright {
-
     color: $brand-secondary;
   }
 
-
-
   .contact {
-
     i {
       text-align: center;
       font-weight: $font-weight-base;
-      font-size: $font-size-base-medium;
-
+      //font-size: $font-size-base-medium;
+      font-size: $font-size-base-large;
     }
-
     a {
       width: auto;
       pointer-events: auto;
-
-    }
-    .button {
+      vertical-align: middle;
       padding: 0;
       color: $brand-light;
+    }
+  }
+}
+
+// the contact div doesnt center so here is a hack to fix it
+// has to do with font sizes along with the .contact class
+@media only screen and (min-width: 768px) {
+  .header-footer {
+    a {
+      font-size: $font-size-base;;
     }
   }
 }
@@ -131,45 +129,53 @@ header {
   }
 }
 
-
-
 .text-vertical {
   height: auto;
   font-weight: $heading-weight;
   padding: 1.2em;
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
-
 // things that happen only on mobile
 @media only screen and (max-width: $screen-md-max) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+
   .main-logo {
     display: none;
   }
+
+  .subheader {
+    ul {
+      border-left-width: 0.15em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
   .header-footer {
     z-index: 4;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 1em;
-    padding-left: 2em;
+    padding: 1em 1em 1em 2em;
+
     .copyright {
       display: none;
     }
   }
+
   .aligner-space-between {
     display: block;
     width: auto;
   }
-
 }
 // desktop experience
 @media only screen and (min-width: $screen-lg-min) {
   [data-aos-delay] {
     transition-delay: 500 !important;
   }
+
   .header-overlay {
     font-size: $font-size-base-large;
     margin-top: $desktopborder;
@@ -186,24 +192,19 @@ header {
       text-align: right;
       position: absolute;
       right: 0;
-z-index: inherit;
+      z-index: inherit;
+
       .subheader {
         ul {
-          border-style: solid;
           border-right-width: 0.15em;
-          overflow-y: hidden;
-          margin: 0;
         }
 
         li {
-          margin-top: 0.75rem;
-          margin-bottom: 0.75rem;
           margin-right: 1rem;
           font-weight: $font-weight-base;
         }
       }
     }
-
   }
 
   .header-mobile {
@@ -230,18 +231,15 @@ z-index: inherit;
     font-weight: $subheading-weight;
     position: inherit;
     padding-bottom: 1em;
+
     .copyright {
       font-size: 0.5rem;
       display: inherit;
     }
 
-
     .contact {
       text-align: right;
-
-
-      }
-
+    }
   }
 }
 @media only screen and (min-width: $screen-xlg-min) {
