@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="css/sierra.css">
   <!-- AOS CSS and JS import-->
   <link rel="stylesheet" href="lib/aos/dist/aos.css" />
-  <script src="lib/aos/dist/aos.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
   <link type="text/css" href="lib/os/css/OverlayScrollbars.min.css" rel="stylesheet" />
 
@@ -24,11 +24,10 @@
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-    </div>
 
     </button>
     </div>
-    <div class='header-overlay'>
+    <div class='header-overlay' aria-hidden="true">
 
       <div class="main-logo">
         <img src="logo.svg" alt="svg not supported">
@@ -36,7 +35,7 @@
           TEAM 1899
         </div>
       </div>
-      <ul>
+      <ul >
         <li class="subheader">
           <a href="#trigger-menu">about</a>
           <ul data-aos="menu-slide" data-aos-anchor="#trigger-menu" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
@@ -55,26 +54,24 @@
 
       </ul>
 
-      <div class='header-footer'>
-        <div class='row'>
-          <div class="col-md-11 contact">
-
-          </div>
-          <div class="col-md-1 contact">
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-          </div>
-
-        </div>
-        <div class='row'>
-          <div class='col-md-11 copyright'>
+      <div class='header-footer '>
+        <div class='aligner-space-between'>
+          <div class='copyright '>
+            <div class=' aligner-item-bottom'>
             Copyright MMXVIII Interlake Saints Robotics
+            </div>
           </div>
-          <div class='col-md-1 contact'>
 
-            <a href="">contact</a>
+          <div class='contact'>
+            <a href="" class='button button-transparent block-mobile'><i class="fab fa-instagram"></i></a>
+            <a href=""class='button button-transparent block-mobile'><i class="fab fa-facebook-f"></i></a>
+            <a href="" class='button button-transparent block-mobile '>contact</a>
           </div>
         </div>
+        <div class='row'>
+          <div class='col-lg-1 copyright-mobile'>
+              Copyright MMXVIII Interlake Saints Robotics
+          </div>
 
       </div>
 
@@ -210,6 +207,7 @@
   <!--scripts-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="lib/aos/dist/aos.js"></script>
   <script type="text/javascript" src="lib/os/js/jquery.overlayScrollbars.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/homepage.js"></script>

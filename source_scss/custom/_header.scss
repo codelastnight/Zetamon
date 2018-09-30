@@ -53,21 +53,65 @@ header {
 }
 
 .header-overlay {
+  font-size: 1.3em;
   position: relative;
   height: 100vh;
-  display: none;
+  display: flex;
   background-color: rgba(0,0,0,0.8);
+  pointer-events: auto;
+
+  justify-content: center;
+  align-items: center;
 
   ul {
-    display: block;
+    z-index: 3;
     pointer-events: auto;
     list-style-type: none;
     flex-direction: column;
+    text-align: center;
+  }
+}
+// stick footer to bottom
+
+.header-footer {
+
+
+  .copyright {
+    display: none;
+    color: $brand-secondary;
+  }
+
+  .copyright-mobile {
+    display: inherit;
+    color: $brand-secondary;
+  }
+
+  .contact {
+
+    i {
+      text-align: center;
+      font-weight: $font-weight-base;
+      font-size: $font-size-base-medium;
+
+    }
+
+    a {
+      width: auto;
+      pointer-events: auto;
+    }
   }
 }
 //toggles menu on mobile
 
-.header-overlay-toggle {
+.no-scroll {
+  overflow: hidden;
+}
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+[aria-hidden="false"] {
   display: flex;
 }
 //mobile header
@@ -79,14 +123,13 @@ header {
   position: absolute;
   padding: 1em;
   display: block;
+
   .hamburger {
     float: right;
   }
 }
 
-.main-logo {
-  display: none;
-}
+
 
 .text-vertical {
   height: auto;
@@ -94,22 +137,41 @@ header {
   padding: 1.2em;
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
+
+@media only screen and (max-width: $screen-md-max) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+  .main-logo {
+    display: none;
+  }
+  .header-footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
 // desktop experience
 @media only screen and (min-width: $screen-lg-min) {
+  [data-aos-delay] {
+    transition-delay: 500 !important;
+  }
   .header-overlay {
+    font-size: $font-size-base-large;
     margin-top: $desktopborder;
     margin-left: $desktopborder;
     margin-right: $desktopborder;
     padding-bottom: $desktopborder;
-    display: flex;
     background-color: rgba(0,0,0,0.0);
+    pointer-events: none;
+    justify-content: inherit;
+    align-items: inherit;
 
     ul {
       padding: 0;
       text-align: right;
       position: absolute;
       right: 0;
-
+z-index: inherit;
       .subheader {
         ul {
           border-style: solid;
@@ -126,6 +188,7 @@ header {
         }
       }
     }
+
   }
 
   .header-mobile {
@@ -133,7 +196,6 @@ header {
   }
 
   .main-logo {
-    display: block;
     width: auto;
     position: absolute;
     text-align: center;
@@ -149,27 +211,27 @@ header {
   .header-footer {
     margin-top: auto;
     width: 100%;
+    max-width: 100%;
     font-weight: $subheading-weight;
-
+    position: inherit;
+    padding-bottom: 1em;
     .copyright {
       font-size: 0.5rem;
-      margin-bottom: auto;
-      color: $brand-secondary;
+      display: inherit;
+    }
+
+    .copyright-mobile {
+      display: none;
     }
 
     .contact {
-      margin-top: auto;
       text-align: right;
-      //  width: 100%;
-      i {
-        text-align: center;
-        font-weight: $font-weight-base;
+
+      .button {
+        padding: 0;
+      }
       }
 
-      a {
-        pointer-events: auto;
-      }
-    }
   }
 }
 @media only screen and (min-width: $screen-xlg-min) {
