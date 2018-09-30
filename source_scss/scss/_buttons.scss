@@ -135,6 +135,10 @@ button {
   &.button-transparent {
     background-color: transparent;
     border: 1px solid transparent;
+
+    &:hover {
+      color: $brand-secondary;
+    }
   }
 
   &.button-white {
@@ -185,7 +189,7 @@ button {
     margin-left: .8em;
     margin-right: .8em;
     position: relative;
-    transition: all .3s ease;
+    //transition: all .3s ease;
 
     &:last-child {
       margin-right: 0;

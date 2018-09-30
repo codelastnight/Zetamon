@@ -29,13 +29,15 @@ p {
 a {
   color: $brand-light;
   text-decoration: none;
-
+  transition: opacity .2s ease-in-out;
   &:hover {
-    color: rgba($brand-secondary, .8);
+    color: $brand-secondary;
+    opacity: 0.8;
   }
 
   &:focus {
     color: $brand-secondary;
+    opacity: 1;
   }
 }
 

@@ -82,6 +82,9 @@ header {
       // explained like a couple of lines below
       font-weight: $font-weight-base;
       font-size: $font-size-base-large;
+      margin: 0;
+
+
     }
     a {
       width: auto;
@@ -165,6 +168,15 @@ header {
     .copyright {
       display: none;
     }
+    .contact {
+      display: inline-flex;
+      align-items: center;
+      div {
+        margin-right: 1em;
+        vertical-align: middle;
+        height: 100%;
+      }
+    }
   }
 
   .aligner-space-between {
@@ -220,9 +232,16 @@ header {
     font-size: 1.28em;
     font-weight: $subheading-weight;
     color: $brand-secondary;
-
+    pointer-events: auto;
     img {
       width: 5em;
+    }
+    a {
+      color: $brand-secondary;
+      &:hover {
+        fill: $brand-light;
+        color: $brand-light;
+      }
     }
   }
 
