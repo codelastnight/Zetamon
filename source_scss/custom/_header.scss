@@ -9,7 +9,7 @@ $desktopborder: 3em;
 header {
   z-index: 1;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   position: fixed;
   box-sizing: border-box;
   pointer-events: none;
@@ -77,14 +77,11 @@ header {
 
 
   .copyright {
-    display: none;
+
     color: $brand-secondary;
   }
 
-  .copyright-mobile {
-    display: inherit;
-    color: $brand-secondary;
-  }
+
 
   .contact {
 
@@ -98,6 +95,11 @@ header {
     a {
       width: auto;
       pointer-events: auto;
+
+    }
+    .button {
+      padding: 0;
+      color: $brand-light;
     }
   }
 }
@@ -146,8 +148,15 @@ header {
     display: none;
   }
   .header-footer {
+    z-index: 4;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    padding: 1em;
+
+  }
+  .aligner-space-between {
+    display: block;
   }
 }
 // desktop experience
@@ -220,16 +229,11 @@ z-index: inherit;
       display: inherit;
     }
 
-    .copyright-mobile {
-      display: none;
-    }
 
     .contact {
       text-align: right;
 
-      .button {
-        padding: 0;
-      }
+
       }
 
   }
