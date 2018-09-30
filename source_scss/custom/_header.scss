@@ -78,8 +78,9 @@ header {
   .contact {
     i {
       text-align: center;
+      // part of trying to fix the contact div not being vertially centered
+      // explained like a couple of lines below
       font-weight: $font-weight-base;
-      //font-size: $font-size-base-medium;
       font-size: $font-size-base-large;
     }
     a {
@@ -92,8 +93,9 @@ header {
   }
 }
 
-// the contact div doesnt center so here is a hack to fix it
+// the contact div doesnt center vertically so here is a hack to fix it
 // has to do with font sizes along with the .contact class
+// the icons need to be bigger then the text font for some weird reason
 @media only screen and (min-width: 768px) {
   .header-footer {
     a {
