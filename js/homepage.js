@@ -6,6 +6,8 @@ $(document).ready(function () {
     // Optional parameters
     direction: 'vertical',
     loop: true,
+    allowTouchMove: false,
+    speed: 700,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
