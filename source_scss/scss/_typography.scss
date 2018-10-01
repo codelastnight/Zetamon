@@ -27,16 +27,17 @@ p {
 }
 
 a {
-  color: $brand-light;
+  color: $brand-secondary;
   text-decoration: none;
   transition: opacity .2s ease-in-out;
+  font-weight: $subsubheading-weight;
   &:hover {
-    color: $brand-secondary;
+    color: $brand-light;
     opacity: 0.8;
   }
 
   &:focus {
-    color: $brand-secondary;
+    color: $brand-light;
     opacity: 1;
   }
 }
