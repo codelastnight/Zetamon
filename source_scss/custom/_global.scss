@@ -1,3 +1,33 @@
+
+a {
+  .arrow-big {
+    @extend a;
+
+    height: 0.5em;
+    max-height: 2em;
+    background-image: url(../resources/Polygondownarrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 0.3em;
+  }
+  &:hover {
+    .arrow-big {
+
+      @extend a:hover
+    }
+  }
+}
+
+
+@media only screen and (min-width: $screen-md-min) {
+  a {
+    .arrow-big {
+      height: 1em;
+    }
+  }
+}
+
+
 @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
   .container {
     padding-left: 8em;
