@@ -4,9 +4,11 @@ $(document).ready(function () {
 
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
-    direction: 'vertical',
+
     loop: true,
     allowTouchMove: false,
+    effect: 'fade',
+    spaceBetween: 30,
     speed: 700,
     pagination: {
       el: '.swiper-pagination',
