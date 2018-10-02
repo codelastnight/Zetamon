@@ -40,6 +40,10 @@ a {
     color: $brand-light;
     opacity: 1;
   }
+  &:active {
+    color: $brand-secondary;
+    opacity: 1;
+  }
 }
 
 

@@ -1,4 +1,11 @@
 
+.text-vertical {
+  height: auto;
+  font-weight: $heading-weight;
+  padding: 1.2em;
+  @include prefix((writing-mode: vertical-lr), webkit moz);
+}
+
 a {
   .arrow-big {
     @extend a;
@@ -13,8 +20,14 @@ a {
   &:hover {
     .arrow-big {
 
-      @extend a:hover
+      color: $brand-secondary;
+      opacity: 0.7;
     }
+  &:active {
+      .arrow-big {
+    opacity: 1;
+  }
+  }
   }
 }
 
@@ -30,7 +43,7 @@ a {
 
 @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
   .container {
-    padding-left: 8em;
-    padding-right:8em;
+    padding-left: 12em;
+    padding-right: 12em;
   }
 }

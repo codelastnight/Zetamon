@@ -14,6 +14,7 @@ header {
   box-sizing: border-box;
   pointer-events: none;
 
+    max-width: $container-maxwidth + 500px;
   a {
     color: $brand-light;
     display: block;
@@ -70,7 +71,7 @@ header {
     text-align: center;
   }
 }
-// stick footer to bottom
+
 
 .header-footer {
   .copyright {
@@ -101,6 +102,8 @@ header {
 // the contact div doesnt center vertically so here is a hack to fix it
 // has to do with font sizes along with the .contact class
 // the icons need to be bigger then the text font for some weird reason
+
+//update: I think i redid this so i dont need this hack but i dont remember
 @media only screen and (min-width: 768px) {
   .header-footer {
     a {
@@ -136,12 +139,6 @@ header {
   }
 }
 
-.text-vertical {
-  height: auto;
-  font-weight: $heading-weight;
-  padding: 1.2em;
-  @include prefix((writing-mode: vertical-lr), webkit moz);
-}
 // things that happen only on mobile
 @media only screen and (max-width: $screen-md-max) {
   [data-aos-delay] {
@@ -240,10 +237,10 @@ header {
     }
     a {
       color: $brand-secondary;
-      
+
     }
   }
-
+// stick footer to bottom
   .header-footer {
     margin-top: auto;
     width: 100%;
@@ -255,6 +252,7 @@ header {
     .copyright {
       font-size: 0.5rem;
       display: inherit;
+      margin-bottom: 0.5em;
     }
 
     .contact {
@@ -268,4 +266,11 @@ header {
       font-size: 0.7rem;
     }
   }
+}
+@media only screen and (min-width: $container-maxwidth + 500px) {
+  header {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
 }
