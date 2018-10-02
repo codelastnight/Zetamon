@@ -4,12 +4,12 @@ $(document).ready(function () {
 
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
-
+    direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
-    effect: 'fade',
+    effect: "fade",
     spaceBetween: 30,
-    speed: 700,
+    speed: 1500,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
