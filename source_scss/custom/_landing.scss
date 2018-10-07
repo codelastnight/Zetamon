@@ -72,7 +72,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    
+
     align-items: center;
     .text-vertical {
       padding: 0;
@@ -87,7 +87,9 @@
   }
 }
 .aligner-center-vertical {
-  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (min-width: $screen-xs-min) {
   .landing-logo {
