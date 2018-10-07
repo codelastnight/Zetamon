@@ -4,7 +4,6 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
   <link rel="shortcut icon" href="">
-  <link rel='stylesheet' href='lib/fullcalendar/dist/fullcalendar.css' />
   <link rel="stylesheet" href="lib/aos/dist/aos.css" />
   <!-- AOS CSS and JS import-->
 
@@ -106,8 +105,9 @@
 
         </div>
       </div>
-      <div class="container ">
-        <div class="section">
+      <div class="container center-vertical">
+        <div class="section ">
+          <div class="">
           <div class="row ">
             <div class="col-md-6 ">
               <div class="landing-logo">
@@ -119,10 +119,12 @@
                 <p>ROBOTICS</p>
               </div>
             </div>
-              <div class="col-md-6 ">
-            <div id='calendar'></div>
+              <div class="col-md-6 hidden-xs hidden-sm">
+                <ul id="events-upcoming">
+    </ul>
           </div>
           </div>
+        </div>
           <div class="row">
             <div class="col-md-12">
               <div class="landing-logo">
@@ -242,10 +244,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
   <script src="lib/aos/dist/aos.js"></script>
-  <script src='lib/moment/min/moment.min.js'></script>
-  <script src='lib/fullcalendar/dist/fullcalendar.js'></script>
-  <script type='text/javascript' src='lib/fullcalendar/dist/gcal.js'></script>
-
+<script src="/js/format-google-calendar.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/homepage.js"></script>
 

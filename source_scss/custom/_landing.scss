@@ -86,10 +86,18 @@
 
   }
 }
-.aligner-center-vertical {
+
+.container {
+  position: relative;
+}
+.center-vertical {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+
+  .row {
+    position: relative;
+  }
 }
 @media only screen and (min-width: $screen-xs-min) {
   .landing-logo {
@@ -107,6 +115,8 @@
     height: 100vh;
   }
 }
+
+
 @media only screen and (min-width: $screen-md-min) {
   .landing-logo {
     padding-left: 5em;
