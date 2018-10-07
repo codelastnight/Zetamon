@@ -21,27 +21,21 @@ $(document).ready(function() {
     },
 
   });
+  formatGoogleCalendar.init({
+    calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/saintsrobotics.com_31th07n6achakl2jof6th85dfs@group.calendar.google.com/events?key=AIzaSyBJJ13IeXcBSsy0-E1ls6YdCnrZkG6tmtI',
+    past: false,
+    upcoming: true,
+    sameDayTimes: true,
+    dayNames: true,
+    pastTopN: -1,
+    upcomingTopN: 3,
+    itemsTagName: 'li',
+    upcomingSelector: '#events-upcoming',
+    recurringEvents: true,
+    upcomingHeading: '<h2>Upcoming events</h2>',
 
-  $('#calendar').fullCalendar({
-    // put your options and callbacks here
-    defaultView: 'listMonth',
-    googleCalendarApiKey: 'AIzaSyBJJ13IeXcBSsy0-E1ls6YdCnrZkG6tmtI',
-    eventSources: [
-      {
-        googleCalendarId: 'saintsrobotics.com_2ha1cp70qh2dcb61rlkq1tlaas@group.calendar.google.com'
-      },
-      {
-        googleCalendarId: 'saintsrobotics.com_2ha1cp70qh2dcb61rlkq1tlaas@group.calendar.google.com'
-
-      },
-      {
-        googleCalendarId: 'saintsrobotics.com_31th07n6achakl2jof6th85dfs@group.calendar.google.com'
-
-      }
-
-    ],
-
-
+    format: ['*date*', ': ', '*summary*', ' — ', '*description*', ' in ', '*location*'],
   });
+
   //$('main').overlayScrollbars({ });
 });
