@@ -2,7 +2,6 @@ $(document).ready(function() {
   // swiper is the image gallary thing for the landing page
   //initialize swiper when document ready
 
-
   var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
@@ -17,25 +16,35 @@ $(document).ready(function() {
     },
     autoplay: {
       delay: 4000,
-      disableOnInteraction: false,
-    },
-
+      disableOnInteraction: false
+    }
   });
-  formatGoogleCalendar.init({
-    calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/saintsrobotics.com_31th07n6achakl2jof6th85dfs@group.calendar.google.com/events?key=AIzaSyBJJ13IeXcBSsy0-E1ls6YdCnrZkG6tmtI',
-    past: false,
-    upcoming: true,
-    sameDayTimes: true,
-    dayNames: true,
-    pastTopN: -1,
-    upcomingTopN: 3,
-    itemsTagName: 'li',
-    upcomingSelector: '#events-upcoming',
-    recurringEvents: true,
-    upcomingHeading: '<h2>Upcoming events</h2>',
 
-    format: ['*date*', ': ', '*summary*', ' — ', '*description*', ' in ', '*location*'],
-  });
 
   //$('main').overlayScrollbars({ });
+});
+formatGoogleCalendar.init({
+  calendarUrl: [
+    'https://www.googleapis.com/calendar/v3/calendars/saintsrobotics.com_31th07n6achakl2jof6th85dfs@group.calendar.google.com/events?key=AIzaSyBJJ13IeXcBSsy0-E1ls6YdCnrZkG6tmtI', 'https://www.googleapis.com/calendar/v3/calendars/saintsrobotics.com_2ha1cp70qh2dcb61rlkq1tlaas@group.calendar.google.com/events?key=AIzaSyBJJ13IeXcBSsy0-E1ls6YdCnrZkG6tmtI'
+  ],
+  past: false,
+  upcoming: true,
+  sameDayTimes: true,
+  dayNames: true,
+  pastTopN: -1,
+  upcomingTopN: 10,
+  itemsTagName: 'li',
+  upcomingSelector: '#events-upcoming',
+  recurringEvents: true,
+  upcomingHeading: '<h2>Upcoming events</h2>',
+
+  format: [
+    '*date*',
+    ': ',
+    '*summary*',
+    ' — ',
+    '*description*',
+    ' in ',
+    '*location*'
+  ]
 });
