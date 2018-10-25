@@ -7,7 +7,7 @@ $menu-padding: $intended-menu-padding / 3; //desktop border
 $desktopborder: 3em;
 
 header {
-  z-index: 1;
+  z-index: 80;
   width: 100%;
   min-height: 100vh;
   position: fixed;
@@ -64,7 +64,7 @@ header {
   align-items: center;
 
   ul {
-    z-index: 3;
+    z-index: 81;
     pointer-events: auto;
     list-style-type: none;
     flex-direction: column;
