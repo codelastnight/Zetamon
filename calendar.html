@@ -1,0 +1,104 @@
+<head>
+  <title>Calendar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="lib/aos/dist/aos.css" />
+  <!-- AOS CSS and JS import-->
+    <link rel="stylesheet" type="text/css" media="all" href="lib/fullcalendar/dist/fullcalendar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <!-- Sierra library CSS stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="css/sierra.css">
+
+  <!-- Font awesome icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <div class='header-mobile '>
+      <button class="hamburger hamburger--elastic" type="button" aria-label="Menu" aria-controls="navigation" onclick="menuToggle(this)">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+
+      </button>
+    </div>
+    <div class='header-overlay' aria-hidden="true">
+
+      <div class="main-logo">
+        <a href=""><img src="logo.svg" alt="svg not supported">
+          <div class="text-vertical">
+            TEAM 1899
+          </div>
+        </a>
+
+      </div>
+      <ul>
+        <li class="subheader">
+
+          <a href="home.html">about</a>
+
+        </li>
+        <li><a href="news.asp">timeline</a></li>
+        <li><a href="contact.asp">reference</a></li>
+        <li><a href="#">calender</a></li>
+
+      </ul>
+
+      <div class='header-footer '>
+        <div class='aligner-space-between'>
+          <div class='copyright '>
+            <div class=' aligner-item-bottom'>
+              Copyright MMXVIII Interlake Saints Robotics
+            </div>
+          </div>
+
+          <div class='contact'>
+            <div>
+              <a href="" class='button button-transparent'><i class="fab fa-instagram"></i></a>
+              <a href="" class='button button-transparent '><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div>
+              <a href="" class='button button-transparent '>contact</a>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+  <main>
+    <div class="container">
+
+        <h1 class="text-huge page-title" id="trigger-menu">CALENDAR</h1>
+
+        <div class="row">
+          <div id="calendar" class="calendar-full">
+
+            </div>
+          </div>
+
+      </div>
+  </main>
+  <!--scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="lib/aos/dist/aos.js"></script>
+  <script src='lib/moment/min/moment.min.js'></script>
+
+<script src="lib/fullcalendar/dist/fullcalendar.js"></script>
+<script src='lib/fullcalendar/dist/gcal.js'></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendarpage.js"></script>
+
+
+
+</body>
