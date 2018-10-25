@@ -47,6 +47,7 @@ $foursquare: #8fd400;
 
 // Text colors
 $text-body:             $brand-light;
+$text-body-dark:        $brand-dark;
 $text-gray:             $brand-light;
 
 $text-color-map: (
@@ -222,7 +223,7 @@ $button-sizes: (
 
 // Forms
 $form-bg-color:               $brand-light;
-$form-text-color:             $text-body;
+$form-text-color:             $text-body-dark;
 
 // Loading spinner
 $loading-spinner-bg:          $white;
@@ -266,7 +267,7 @@ $background-color-map: map-merge($background-color-map, (
 // Tables
 $table-bg-color:        $brand-light;
 $table-header-bg-color: $body-bg;
-$table-text-color:      $text-body;
+$table-text-color:      $text-body-dark;
 
 // Tags
 $tag-text-color:        $text-body;

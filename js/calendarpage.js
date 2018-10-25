@@ -1,8 +1,10 @@
 function dynamic_calendar(x) {
   if (x.matches) { // if desktop
     $('#calendar').fullCalendar('option', 'aspectRatio', 1.8);
+        $('#calendar').fullCalendar('changeView', 'month');
   } else { //if mobile
     $('#calendar').fullCalendar('option', 'aspectRatio', 1);
+    $('#calendar').fullCalendar('changeView', 'listMonth');
 
   }
 }

@@ -1,5 +1,12 @@
 .calendar-full {
+margin-right: 0.5rem;
+margin-left: 0.5rem;
+
+}
+@media only screen and (min-width: $screen-lg-min) {
+.calendar-full {
 margin-right: 4rem;
 margin-left: 4rem;
 
+}
 }
