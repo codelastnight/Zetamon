@@ -1,107 +1,21 @@
-<head>
-  <title>Saints Robotics test page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package saintsrobotics
+ */
 
-  <link rel="shortcut icon" href="">
-
-  <!-- Sierra library CSS stylesheets -->
-  <link rel="stylesheet" type="text/css" media="all" href="css/sierra.css">
-  <!-- AOS CSS and JS import-->
-  <link rel="stylesheet" href="lib/aos/dist/aos.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
-  <link type="text/css" href="lib/os/css/OverlayScrollbars.min.css" rel="stylesheet" />
-
-  <!-- Font awesome icons-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-</head>
-
-<body>
-  <header id="header-dynamic">
-
-    <div class='header-mobile '>
-      <button class="hamburger hamburger--elastic" type="button" aria-label="Menu" aria-controls="navigation" onclick="menuToggle(this)">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-
-      </button>
-    </div>
-    <div class='header-overlay' aria-hidden="true">
+get_header();
+?>
 
 
-      <ul>
-        <li class="subheader">
-
-          <a href="home.html">about</a>
-          <div>
-            <ul data-aos="menu-slide" data-aos-anchor="#trigger-menu" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
-
-              <li><a href="default.asp">Who We Are</a></li>
-              <li><a href="news.asp">Our Community</a></li>
-              <li><a href="contact.asp">Organiation</a></li>
-              <li><a href="about.asp">Sponsors</a></li>
-              <li><a href="about.asp">About First</a></li>
-
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="subheader"><a href="news.asp">timeline</a></li>
-        <li class="subheader"><a href="contact.asp">reference</a></li>
-        <li class="subheader"><a href="#">calender</a></li>
-
-      </ul>
-
-      <div class='header-footer '>
-        <div class='aligner-space-between'>
-          <div>
-          </div>
-          <div class='contact'>
-            <div>
-              <a href="" class='button button-transparent'><i class="fab fa-youtube"></i></a>
-              <a href="" class='button button-transparent'><i class="fab fa-instagram"></i></a>
-              <a href="" class='button button-transparent '><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <div>
-              <a href="" class='button button-transparent '>contact</a>
-            </div>
-
-          </div>
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-  </header>
-
-  <header class="header-disable-dynamic-color disable-mobile">
-    <div class='header-overlay'>
-      <div class="main-logo">
-        <a href=""><img src="logo.svg" alt="svg not supported">
-          <div class="text-vertical">
-            TEAM 1899
-          </div>
-        </a>
-      </div>
-      <div class='header-footer '>
-        <div class='aligner-space-between'>
-          <div class='copyright '>
-            <div class=' aligner-item-bottom'>
-              Copyright MMXVIII Interlake Saints Robotics
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-  </header>
 
 
   <div class='container main-body'>
@@ -227,12 +141,4 @@
     </section>
   </div>
   </main>
-  <!--scripts-->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-  <script src="lib/aos/dist/aos.js"></script>
-  <script type="text/javascript" src="lib/os/js/jquery.overlayScrollbars.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/homepage.js"></script>
-
-</body>
+  
