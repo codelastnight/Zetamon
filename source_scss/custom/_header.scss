@@ -166,7 +166,9 @@ header {
     left: 0;
     padding: 1em 1em 1em 2em;
 
-    
+    .copyright {
+      display: none;
+    }
 
     .contact {
       display: inline-flex;

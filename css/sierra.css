@@ -3480,6 +3480,8 @@ header .subheader li a, header .subheader li a .arrow-big, a header .subheader l
     top: 0;
     left: 0;
     padding: 1em 1em 1em 2em; }
+  .header-footer .copyright {
+    display: none; }
   .header-footer .contact {
     display: inline-flex;
     align-items: center; }
