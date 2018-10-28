@@ -13,15 +13,17 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-  <title>Saints Robotics test page</title>
+<?php wp_head(); ?>
   	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/sierra.css'; ?>">
-<?php wp_head(); ?>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/lib/aos/dist/aos.css'; ?>" />
+
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/sierra.css'; ?>" />
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -93,7 +95,7 @@
 	<header class="header-disable-dynamic-color disable-mobile">
 		<div class='header-overlay'>
 			<div class="main-logo">
-				<a href=""><img src="<?php echo get_stylesheet_directory_uri().'lib/aos/dist/aos.js'; ?>" alt="svg not supported">
+				<a href=""><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
 					<div class="text-vertical">
 						TEAM 1899
 					</div>
@@ -115,4 +117,4 @@
 
 
 
-	  <div class='container main-body'>
+  <main>
