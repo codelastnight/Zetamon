@@ -1,15 +1,15 @@
 <?php
 /**
- * The template for displaying the static front page
+ *  The front page template file
  *
- * static font page
- *
+ * If the user has selected a static page for their homepage, this is what will
+ * appear.
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package saintsrobotics
  */
 
-?>
+get_header(); ?>
 <div class="landing">
   <div class="image-slider">
     <div class="swiper-container">
