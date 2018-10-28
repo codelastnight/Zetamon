@@ -1,8 +1,10 @@
-//AOS activation script - animate on scroll
+
 
 
 function menuToggle(button) {
   $(button).toggleClass("is-active");
+  $('#header-dynamic').toggleClass("header-disable-dynamic-color")
+
 //  $('body').toggleClass("no-scroll");
 
   var $listSort = $('.header-overlay');
@@ -21,6 +23,9 @@ $(".header-overlay").click(function(e){
   $('.hamburger').removeClass("is-active");
   $('body').removeClass("no-scroll");
 });
+
+
+
 // shows menu on desktops
 function menuDesktop(x) {
   if (x.matches) { // if desktop

@@ -6,6 +6,12 @@ $intended-menu-padding: 2.5em;
 $menu-padding: $intended-menu-padding / 3; //desktop border
 $desktopborder: 3em;
 
+.header-disable-dynamic-color {
+
+  mix-blend-mode: normal;
+
+
+}
 header {
   z-index: 80;
   width: 100%;
@@ -14,13 +20,15 @@ header {
   box-sizing: border-box;
   pointer-events: none;
   max-width: $container-maxwidth + 500px;
+    mix-blend-mode: exclusion;
+
 
   a {
     color: $brand-light;
     display: block;
     padding-bottom: $menu-padding;
     font-weight: $subheading-weight;
-    mix-blend-mode: exclusion;
+
   }
 
   li {
@@ -135,13 +143,13 @@ header {
 }
 // things that happen only on mobile
 @media only screen and (max-width: $screen-md-max) {
+  .disable-mobile {
+    display: none;
+  }
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 
-  .main-logo {
-    display: none;
-  }
 
   .subheader {
     ul {
@@ -158,9 +166,7 @@ header {
     left: 0;
     padding: 1em 1em 1em 2em;
 
-    .copyright {
-      display: none;
-    }
+    
 
     .contact {
       display: inline-flex;
@@ -184,6 +190,8 @@ header {
   [data-aos-delay] {
     transition-delay: 500 !important;
   }
+
+
 
   .header-overlay {
     font-size: $font-size-base-large;
@@ -228,6 +236,7 @@ header {
     font-weight: $subheading-weight;
     color: $brand-secondary;
     pointer-events: auto;
+    mix-blend-mode: none;
 
     img {
       width: 5em;
