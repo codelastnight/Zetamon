@@ -13,13 +13,14 @@ header {
   position: fixed;
   box-sizing: border-box;
   pointer-events: none;
+  max-width: $container-maxwidth + 500px;
 
-    max-width: $container-maxwidth + 500px;
   a {
     color: $brand-light;
     display: block;
     padding-bottom: $menu-padding;
     font-weight: $subheading-weight;
+    mix-blend-mode: exclusion;
   }
 
   li {
@@ -27,7 +28,6 @@ header {
     margin-top: 0;
     margin-bottom: $menu-padding + $menu-padding;
     pointer-events: auto;
-
   }
 
   .subheader {
@@ -43,7 +43,6 @@ header {
     li {
       margin-top: 0.75rem;
       margin-bottom: 0.75rem;
-
 
       a {
         font-weight: $font-weight-base;
@@ -72,7 +71,6 @@ header {
   }
 }
 
-
 .header-footer {
   .copyright {
     color: $brand-secondary;
@@ -86,11 +84,8 @@ header {
       font-weight: $font-weight-base;
       font-size: $font-size-base-large;
       margin: 0;
-
-
-
-
     }
+
     a {
       width: auto;
       pointer-events: auto;
@@ -100,16 +95,14 @@ header {
     }
   }
 }
-
 // the contact div doesnt center vertically so here is a hack to fix it
 // has to do with font sizes along with the .contact class
 // the icons need to be bigger then the text font for some weird reason
-
 //update: I think i redid this so i dont need this hack but i dont remember
 @media only screen and (min-width: 768px) {
   .header-footer {
     a {
-      font-size: $font-size-base;;
+      font-size: $font-size-base;
     }
   }
 }
@@ -140,7 +133,6 @@ header {
     float: right;
   }
 }
-
 // things that happen only on mobile
 @media only screen and (max-width: $screen-md-max) {
   [data-aos-delay] {
@@ -169,9 +161,11 @@ header {
     .copyright {
       display: none;
     }
+
     .contact {
       display: inline-flex;
       align-items: center;
+
       div {
         margin-right: 1em;
         vertical-align: middle;
@@ -234,15 +228,17 @@ header {
     font-weight: $subheading-weight;
     color: $brand-secondary;
     pointer-events: auto;
+
     img {
       width: 5em;
     }
+
     a {
       color: $brand-secondary;
-
     }
   }
-// stick footer to bottom
+  // stick footer to bottom
+
   .header-footer {
     margin-top: auto;
     width: 100%;
@@ -274,5 +270,4 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
   }
-
 }
