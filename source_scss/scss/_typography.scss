@@ -29,16 +29,17 @@ p {
 a {
   color: $brand-secondary;
   text-decoration: none;
-  transition: opacity .2s ease-in-out;
+  transition: color .1s ease-in-out;
   font-weight: $subsubheading-weight;
   &:hover {
     color: $brand-secondary;
-    opacity: 0.7;
+    //opacity: 0.7;
   }
 
   &:focus {
-    color: $brand-light;
-    opacity: 1;
+    //color: $brand-light;
+    //opacity: 1;
+    color: $brand-secondary;
   }
   &:active {
     color: $brand-secondary;

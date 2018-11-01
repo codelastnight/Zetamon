@@ -12,6 +12,7 @@
 get_header(); ?>
 <div class="landing">
   <div class="image-slider">
+  <?php echo do_shortcode('[swiper_slider id="39"]'); ?>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -45,7 +46,7 @@ get_header(); ?>
         </div>
           <div class="col-md-6 hidden-xs hidden-sm">
             <ul id="events-upcoming">
-</ul>
+            </ul>
       </div>
       </div>
     </div>
@@ -166,3 +167,4 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+?>

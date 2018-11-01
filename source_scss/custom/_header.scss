@@ -120,13 +120,7 @@ header {
   overflow: hidden;
 }
 
-[aria-hidden="true"] {
-  display: none;
-}
 
-[aria-hidden="false"] {
-  display: flex;
-}
 //mobile header
 
 .header-mobile {
@@ -281,4 +275,12 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
   }
+}
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+[aria-hidden="false"] {
+  display: flex;
 }

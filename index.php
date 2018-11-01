@@ -18,7 +18,7 @@ get_header();
 
 
 
-  
+
     <?php
 		if ( have_posts() ) :
 
@@ -43,7 +43,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+	//		the_posts_navigation();
 
 		else :
 

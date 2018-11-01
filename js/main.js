@@ -42,6 +42,9 @@ menuDesktop(x)
 x.addListener(menuDesktop)
 
 $(document).ready(function() {
+  $('.current-menu-item .subheader').removeAttr('aria-hidden');
+  $('.current-menu-item ul').attr('data-aos','menu-slide')
+  $('.current-menu-item ul').attr('data-aos-anchor','#trigger-menu');
   AOS.init({
 
     duration: 500
