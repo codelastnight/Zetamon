@@ -8,12 +8,21 @@
  *
  * @package saintsrobotics
  */
-
+function frontPageContent($pagename) {
+  $your_query = new WP_Query( 'pagename='.$pagename );
+  // "loop" through query (even though it's just one page)
+  while ( $your_query->have_posts() ) : $your_query->the_post();
+      the_title('<h1 class="text-huge" id='.$pagename.'>', '</h1>' );
+      the_content();
+  endwhile;
+  // reset post data (important!)
+  wp_reset_postdata();
+}
 get_header(); ?>
 <div class="landing">
   <div class="image-slider">
   <?php echo do_shortcode('[swiper_slider id="39"]'); ?>
-    <div class="swiper-container">
+    <!-- <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="resources/1.jpg" alt="Smiley" />
@@ -26,17 +35,18 @@ get_header(); ?>
           <div class="swiper-lazy-preloader"></div>
         </div>
       </div>
-      <!-- Add Pagination -->
 
-    </div>
+
+    </div> -->
   </div>
+
   <div class="container center-vertical">
     <div class="section ">
       <div class="">
       <div class="row ">
         <div class="col-md-6 ">
           <div class="landing-logo">
-            <!-- the use of br is valid in this specific instance-->
+
             <p>INTERLAKE</p>
 
             <p>SAINTS</p>
@@ -89,81 +99,54 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
+
 <div class='container'>
+  <section class="section" id="trigger-menu">
 
-
-  <h1 class="text-huge" id="trigger-menu">ALPHA SITE</h1>
-  <section class="section">
-    <h2 class="text-big">*asking nervously* can i have 6 large cokes and a bbq sauce</h2>
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <h2 class="text-medium text-gray"></h2>
-        <p>
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor <a href="#" title="in reprehenderit">in reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <h2 class="text-big">we only have pepsi, is that fine</h2>
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <h2 class="text-medium text-gray">Default</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute
-          irure dolor <a href="#" title="in reprehenderit">in reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
-
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <h2 class="text-big">*looks down in dissapointment, ears drooping* i guess thats fine</h2>
-    <div class="row">
-      <div class="col-xs-12 col-md-6" x>
-        <h2 class="text-medium text-gray">Default</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute
-          irure dolor <a href="#" title="in reprehenderit">in reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
-
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <h2 class="text-big">ok. *hands you 6 large cokes and a pepsi*</h2>
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <h2 class="text-medium text-gray">Default</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute
-          irure dolor <a href="#" title="in reprehenderit">in reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
-
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h2 class="text-medium text-gray">Default</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute
-          irure dolor <a href="#" title="in reprehenderit">in reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.s
-        </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+  <div class="row">
+    <div class="col-md-12">
+    <?php
+  frontPageContent("about-us")
+      ?>
       </div>
     </div>
   </section>
 </div>
+<div class='container'>
+  <section class="section">
+
+  <div class="row">
+    <div class="col-md-12">
+    <?php
+    frontPageContent("community-outreach") ?>
+      </div>
+    </div>
+  </section>
+</div>
+<div class='container'>
+  <section class="section">
+  <div class="row">
+    <div class="col-md-12">
+      <?php
+      frontPageContent("organization") ?>
+      </div>
+    </div>
+  </section>
+</div>
+<div class='container'>
+  <section class="section">
+
+  <div class="row">
+    <div class="col-md-12">
+      <?php
+      frontPageContent("sponsors") ?>
+      </div>
+    </div>
+  </section>
+</div>
+
+
 <?php
 get_sidebar();
 get_footer();

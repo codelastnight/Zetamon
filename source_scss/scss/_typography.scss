@@ -183,3 +183,7 @@ h3,
 h4 {
   font-weight: $heading-weight;
 }
+
+.text-huge {
+  @extend .text-uppercase
+}

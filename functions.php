@@ -16,12 +16,11 @@ if (!function_exists('saintsrobotics_setup')): /**
  */
     function saintsrobotics_setup()
     {
-        function register_my_menus()
-        {
-            register_nav_menus(array(
 
-            ));
-        }
+
+        /*
+          submenus should only appear on that page
+        */
         class Sublevel_Walker extends Walker_Nav_Menu
           {
             function start_lvl( &$output, $depth = 0, $args = array() ) {
@@ -33,7 +32,7 @@ if (!function_exists('saintsrobotics_setup')): /**
                 $output .= "$indent</ul></div>\n";
             }
           }
-        add_action('init', 'register_my_menus');
+
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -125,16 +124,19 @@ add_action('after_setup_theme', 'saintsrobotics_content_width', 0);
 function saintsrobotics_widgets_init()
 {
     register_sidebar(array(
-        'name' => esc_html__('Sidebar', 'saintsrobotics'),
-        'id' => 'sidebar-1',
+        'name' => esc_html__('unused', 'saintsrobotics'),
+        'id' => 'front-page',
         'description' => esc_html__('Add widgets here.', 'saintsrobotics'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'before_widget' => '<section id="%1$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>'
+        'before_title' => '',
+        'after_title' => ''
     ));
+
 }
 add_action('widgets_init', 'saintsrobotics_widgets_init');
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -179,4 +181,5 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
 ?>

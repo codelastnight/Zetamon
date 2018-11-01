@@ -43,8 +43,9 @@ x.addListener(menuDesktop)
 
 $(document).ready(function() {
   $('.current-menu-item .subheader').removeAttr('aria-hidden');
-  $('.current-menu-item ul').attr('data-aos','menu-slide')
-  $('.current-menu-item ul').attr('data-aos-anchor','#trigger-menu');
+  $('.current-menu-item ul').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
+  $('.current-menu-parent').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
+  $('.current-menu-parent .subheader').removeAttr('aria-hidden');
   AOS.init({
 
     duration: 500

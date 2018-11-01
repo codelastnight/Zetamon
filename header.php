@@ -45,29 +45,6 @@
 
 )); ?>
 
-			<!-- <ul>
-				<li class="subheader">
-
-					<a href="home.html">about</a>
-					<div>
-						<ul data-aos="menu-slide" data-aos-anchor="#trigger-menu" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
-
-							<li><a href="default.asp">Who We Are</a></li>
-							<li><a href="news.asp">Our Community</a></li>
-							<li><a href="contact.asp">Organiation</a></li>
-							<li><a href="about.asp">Sponsors</a></li>
-							<li><a href="about.asp">About First</a></li>
-
-						</ul>
-					</div>
-				</li>
-
-
-				<li class="subheader"><a href="news.asp">timeline</a></li>
-				<li class="subheader"><a href="contact.asp">reference</a></li>
-				<li class="subheader"><a href="#">calender</a></li>
-
-			</ul> -->
 
 			<div class='header-footer '>
 				<div class='aligner-space-between'>
