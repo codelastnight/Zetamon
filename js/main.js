@@ -42,10 +42,13 @@ menuDesktop(x)
 x.addListener(menuDesktop)
 
 $(document).ready(function() {
-  $('.current-menu-item .subheader').removeAttr('aria-hidden');
-  $('.current-menu-item ul').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
-  $('.current-menu-parent').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
-  $('.current-menu-parent .subheader').removeAttr('aria-hidden');
+  $('.current-menu-item .subheader, .current-menu-parent .subheader').removeAttr('aria-hidden');
+  $('.current-menu-item ul, .current-menu-parent').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
+//  $('').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
+//  $('').removeAttr('aria-hidden');
+  $('.close-div').on('click', function(event) {
+    $(this).closest(".message-bar").remove();
+  });
   AOS.init({
 
     duration: 500

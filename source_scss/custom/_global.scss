@@ -34,14 +34,27 @@ a {
   }
 }
 
+
+//messagebar
 .absolute-top {
   position: absolute;
-  top: 2.5em;
+  top: 3.5em;
 
   z-index: 2;
   width: 100%;
-
-
+  pointer-events: none;
+  .message-bar {
+    
+    pointer-events: auto;
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      color: $brand-light;
+    }
+  }
 }
 @media only screen and (min-width: $screen-md-min) {
   a {
@@ -55,6 +68,9 @@ a {
     padding-left: 12em;
     padding-right: 12em;
   }
+  .absolute-top {
+    top: 2.5em;
+  }
 }
 @media only screen and (max-width: $screen-sm-max) {
   .hidden-mobile {
@@ -64,6 +80,9 @@ a {
 @media only screen and (min-width: $screen-lg-min) {
   .absolute-top {
     top: 0.5em;
+    .message-bar {
+      margin: 0 1em;
+    }
    }
 
   .page-title:first-child {

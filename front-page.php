@@ -42,7 +42,7 @@ get_header(); ?>
   <div class="absolute-top ">
     <div class="container">
       <div class="section">
-      <div class="message-bar background-success"><p>Success message</p></div>
+      <div class="message-bar background-success"><p>Success message</p><a href="#" class='close-div'><span class="glyphicon glyphicon-remove" ></span></a></div>
       </div>
     </div>
   </div>
