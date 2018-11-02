@@ -21,7 +21,7 @@ function frontPageContent($pagename) {
 get_header(); ?>
 <div class="landing">
   <div class="image-slider">
-  <?php echo do_shortcode('[swiper_slider id="21"]'); ?>
+  <?php echo do_shortcode('[swiper_slider id="39"]'); ?>
     <!-- <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -127,7 +127,7 @@ get_header(); ?>
         <h4 class="text-big text-gray">just for one day</h4>
     </div>
 </div>
-<div class='container background-dark '>
+<div class='container '>
   <section class="section ">
 
   <div class="row">
