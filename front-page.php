@@ -21,7 +21,7 @@ function frontPageContent($pagename) {
 get_header(); ?>
 <div class="landing">
   <div class="image-slider">
-  <?php echo do_shortcode('[swiper_slider id="39"]'); ?>
+  <?php echo do_shortcode('[swiper_slider id="21"]'); ?>
     <!-- <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -39,8 +39,16 @@ get_header(); ?>
 
     </div> -->
   </div>
-
+  <div class="absolute-top ">
+    <div class="container">
+      <div class="section">
+      <div class="message-bar background-success"><p>Success message</p></div>
+      </div>
+    </div>
+  </div>
   <div class="container center-vertical">
+
+
     <div class="section ">
       <div class="">
       <div class="row ">
@@ -113,8 +121,14 @@ get_header(); ?>
     </div>
   </section>
 </div>
-<div class='container'>
-  <section class="section">
+<div class="section background-dark" style="background-color: #fff">
+    <div class="container text-center">
+        <h3 class="text-huge text-white text-with-subtitle">We can be heroes</h3>
+        <h4 class="text-big text-gray">just for one day</h4>
+    </div>
+</div>
+<div class='container background-dark '>
+  <section class="section ">
 
   <div class="row">
     <div class="col-md-12">
