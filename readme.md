@@ -1,6 +1,8 @@
 Code now in BETA!
+
 What does this mean?
  - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
+
  What works?
  - Home page has a landing page, and is editable ( though kind of janky)
  - Menu, animation js, header is functional
