@@ -24,7 +24,67 @@ function saintsrobotics_customize_register( $wp_customize ) {
 			'selector'        => '.site-description',
 			'render_callback' => 'saintsrobotics_customize_partial_blogdescription',
 		) );
+		//addingsection in wordpress customizer
+	$wp_customize->add_section('front_settings_section', array(
+	 'title'          => 'Manage Front Page'
+	));
+
+	//adding setting for slider shortcode selection
+	$wp_customize->add_setting('landing_slider_shortcode', array(
+	'default'        => '21',
+	));
+
+	$wp_customize->add_control('landing_slider_shortcode', array(
+	'label'   => 'Insert Landing Slider shortcode here',
+	 'section' => 'front_settings_section',
+	'type'    => 'text',
+	));
+	//messagebar
+	$wp_customize->add_setting( 'landing_message_style', array(
+  'capability' => 'edit_theme_options',
+  'sanitize_callback' => 'saintsrobotics_sanitize_select',
+  'default' => 'none',
+) );
+
+	$wp_customize->add_control( 'landing_message_style', array(
+	  'type' => 'select',
+	  'section' => 'front_settings_section', // Add a default or your own section
+	  'label' => __( 'Messege Type (color)' ),
+	  'description' => __( 'This is a custom select option.' ),
+	  'choices' => array(
+			'none' => __( 'No Message' ),
+	    'success' => __( 'Success' ),
+	    'danger' => __( 'Danger' ),
+	    'warning' => __( 'Warning' ),
+			'info' => __( 'Info' ),
+
+	  ),
+	) );
+	//adding text for messges
+	$wp_customize->add_setting('landing_message', array(
+	'default'        => '',
+	));
+
+	$wp_customize->add_control('landing_message', array(
+	'label'   => 'Message alert content ',
+	 'section' => 'front_settings_section',
+	'type'    => 'textarea',
+	));
+
+	function saintsrobotics_sanitize_select( $input, $setting ) {
+
+	  // Ensure input is a slug.
+	  $input = sanitize_key( $input );
+
+	  // Get list of choices from the control associated with the setting.
+	  $choices = $setting->manager->get_control( $setting->id )->choices;
+
+	  // If the input is a valid key, return it; otherwise, return the default.
+	  return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
+	};
+
+
 }
 add_action( 'customize_register', 'saintsrobotics_customize_register' );
 

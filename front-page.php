@@ -21,7 +21,9 @@ function frontPageContent($pagename) {
 get_header(); ?>
 <div class="landing">
   <div class="image-slider">
-  <?php echo do_shortcode('[swiper_slider id="39"]'); ?>
+  <?php
+  $shortcode = get_theme_mod('landing_slider_shortcode', 'none');
+  echo do_shortcode('[swiper_slider id='.$shortcode.']'); ?>
     <!-- <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -39,10 +41,19 @@ get_header(); ?>
 
     </div> -->
   </div>
-  <div class="absolute-top ">
+  <?php
+  $messageHidden = "";
+  $messageColor = get_theme_mod('landing_message_style', 'none');
+  $messageData = get_theme_mod('landing_message', '');
+  if ($messageColor == "none") {
+     $messageHidden = "aria-hidden='true'";
+  };
+?>
+  <div class="absolute-top " <?= $messageHidden ?>>
     <div class="container">
       <div class="section">
-      <div class="message-bar background-success"><p>Success message</p><a href="#" class='close-div'><span class="glyphicon glyphicon-remove" ></span></a></div>
+
+      <div class="message-bar background-<?= $messageColor ?>" <?= $messageHidden ?>><p ><?= $messageData?></p><a href="#" class='close-div'><span class="glyphicon glyphicon-remove" ></span></a></div>
       </div>
     </div>
   </div>
