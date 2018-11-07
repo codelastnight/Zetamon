@@ -41,9 +41,7 @@
 			</button>
 		</div>
 		<div class='header-overlay' aria-hidden="true">
-      <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,
-
-)); ?>
+      <?php wp_nav_menu(array('container' => '','walker' => new Sublevel_Walker,)); ?>
 
 
 			<div class='header-footer '>
@@ -51,14 +49,15 @@
 					<div>
 					</div>
 					<div class='contact'>
+            <div>
+              <a href="" class='button button-transparent '>contact</a>
+            </div>
 						<div>
 							<a href="" class='button button-transparent'><i class="fab fa-youtube"></i></a>
 							<a href="" class='button button-transparent'><i class="fab fa-instagram"></i></a>
 							<a href="" class='button button-transparent '><i class="fab fa-facebook-f"></i></a>
 						</div>
-						<div>
-							<a href="" class='button button-transparent '>contact</a>
-						</div>
+
 
 					</div>
 				</div>
