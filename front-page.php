@@ -171,26 +171,9 @@ get_header(); ?>
   </section>
 </div>
 
-<div class="container">
-  <div class="section post-list-flex">
-    <div class="col-md-6 post-preview">
-      <img src="resources/1.jpg" />
-      <div class="content">
-        <div class="date-year">
-          2018
-        </div>
-        <div class="post-title">
-          Auburn owowowo
-        </div>
-        <div class="date-day">
-          March 27-29
-        </div>
-      </div>
-    </div>
-  </div>
 
 </div>
 <?php
-get_sidebar();
+
 get_footer();
 ?>
