@@ -31,7 +31,7 @@ function saintsrobotics_customize_register( $wp_customize ) {
 
 	//adding setting for slider shortcode selection
 	$wp_customize->add_setting('landing_slider_shortcode', array(
-	'default'        => '21',
+	'default'        => '',
 	));
 
 	$wp_customize->add_control('landing_slider_shortcode', array(
@@ -54,7 +54,7 @@ function saintsrobotics_customize_register( $wp_customize ) {
 	  'choices' => array(
 			'none' => __( 'No Message' ),
 	    'success' => __( 'Success' ),
-	    'danger' => __( 'Danger' ),
+	    'error' => __( 'Error' ),
 	    'warning' => __( 'Warning' ),
 			'info' => __( 'Info' ),
 

@@ -49,14 +49,15 @@
 					<div>
 					</div>
 					<div class='contact'>
+            <div>
+              <a href="" class='button button-transparent '>contact</a>
+            </div>
 						<div>
 							<a href="" class='button button-transparent'><i class="fab fa-youtube"></i></a>
 							<a href="" class='button button-transparent'><i class="fab fa-instagram"></i></a>
 							<a href="" class='button button-transparent '><i class="fab fa-facebook-f"></i></a>
 						</div>
-						<div>
-							<a href="" class='button button-transparent '>contact</a>
-						</div>
+
 
 					</div>
 				</div>
