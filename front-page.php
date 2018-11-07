@@ -82,7 +82,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-md-12">
           <div class="landing-logo">
-            <a href="#trigger-menu"> who the heck are we
+            <a href="#trigger-menu"> who are we
               <div class='arrow-big'>
 
               </div>

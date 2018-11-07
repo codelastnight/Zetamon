@@ -38,15 +38,13 @@
 					<span class="hamburger-inner"></span>
 				</span>
 
-			</button>
+			</button> vv
 		</div>
-		<div class='header-overlay' aria-hidden="true">
-      <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,
-
-)); ?>
+		<div class='header-overlay' data-aos="fade-in" aria-hidden="true">
+      <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,)); ?>
 
 
-			<div class='header-footer '>
+			<div class='header-footer  ' >
 				<div class='aligner-space-between'>
 					<div>
 					</div>
@@ -73,17 +71,17 @@
 
 	<header class="header-disable-dynamic-color disable-mobile">
 		<div class='header-overlay'>
-			<div class="main-logo">
+			<div class="main-logo" data-aos="fade-in">
 				<a href=""><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
 					<div class="text-vertical">
 						TEAM 1899
 					</div>
 				</a>
 			</div>
-			<div class='header-footer '>
+			<div class='header-footer ' >
 				<div class='aligner-space-between'>
 					<div class='copyright '>
-						<div class=' aligner-item-bottom'>
+						<div class=' aligner-item-bottom' >
 							Copyright MMXVIII Interlake Saints Robotics
 						</div>
 					</div>
