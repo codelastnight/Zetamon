@@ -14,7 +14,7 @@
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 		 <div class="img-container" style=" background-image: linear-gradient(to bottom,rgba(50,233,234,0.0),rgba(0,0,0,0.7)), url('<?php echo $image[0]; ?>')">
 		 <?php else: ?>
-
+			 <div class="img-container" style=" background-image: linear-gradient(to bottom,rgba(50,233,234,0.0),rgba(0,0,0,0.7)), url('<?php echo $image[0]; ?>')">
 
 <?php endif; ?>
 			 <div class="content">
