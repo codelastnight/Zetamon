@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The home template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -14,7 +14,12 @@
 
 get_header();
 ?>
+
+<div class="container">
+
+    	<h1 class=" text-huge page-title screen-reader-text"><?php single_post_title(); ?></h1>
   <div class="container">
+
     <div class="post">
 
     <?php
@@ -22,9 +27,7 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+        <?php //the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
 				<?php
 			endif;
 
