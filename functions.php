@@ -188,10 +188,10 @@ if (defined('JETPACK__VERSION')) {
 require_once get_template_directory() . '/lib/TGM/class-tgm-plugin-activation.php';
 
 function saintsrobotics_plugin_register_required_plugins() {
-    
+
     $plugins = array(
       // This is an example of how to include a plugin pre-packaged with a theme.
-     
+
       // This is an example of how to include a plugin from the WordPress Plugin Repository.
       array(
         'name'      => 'Swiper Slider and Carousel',
@@ -199,7 +199,14 @@ function saintsrobotics_plugin_register_required_plugins() {
         'required'  => true,
         // 'force_activation'   => true,
       ),
-    
+      array(
+        'name'      => 'mousewheel Smooth Scroll',
+        'slug'      => 'mousewheel-smooth-scroll',
+        'required'  => true,
+        // 'force_activation'   => true,
+      ),
+
+
     );
     /*
 	 * Array of configuration settings. Amend each line as needed.
@@ -222,82 +229,8 @@ function saintsrobotics_plugin_register_required_plugins() {
 		'is_automatic' => true,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 
-		
-		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'saintsrobotics-plugin' ),
-			'menu_title'                      => __( 'Install Plugins', 'saintsrobotics-plugin' ),
-			/* translators: %s: plugin name. */
-			'installing'                      => __( 'Installing Plugin: %s', 'saintsrobotics-plugin' ),
-			/* translators: %s: plugin name. */
-			'updating'                        => __( 'Updating Plugin: %s', 'saintsrobotics-plugin' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'saintsrobotics-plugin' ),
-			'notice_can_install_required'     => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'This theme requires the following plugin: %1$s.',
-				'This theme requires the following plugins: %1$s.',
-				'saintsrobotics-plugin'
-			),
-			'notice_can_install_recommended'  => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'This theme recommends the following plugin: %1$s.',
-				'This theme recommends the following plugins: %1$s.',
-				'saintsrobotics-plugin'
-			),
-			'notice_ask_to_update'            => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
-				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'saintsrobotics-plugin'
-			),
-			'notice_ask_to_update_maybe'      => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'There is an update available for: %1$s.',
-				'There are updates available for the following plugins: %1$s.',
-				'saintsrobotics-plugin'
-			),
-			'notice_can_activate_required'    => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'The following required plugin is currently inactive: %1$s.',
-				'The following required plugins are currently inactive: %1$s.',
-				'saintsrobotics-plugin'
-			),
-			'notice_can_activate_recommended' => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'The following recommended plugin is currently inactive: %1$s.',
-				'The following recommended plugins are currently inactive: %1$s.',
-				'saintsrobotics-plugin'
-			),
-			'install_link'                    => _n_noop(
-				'Begin installing plugin',
-				'Begin installing plugins',
-				'saintsrobotics-plugin'
-			),
-			'update_link' 					  => _n_noop(
-				'Begin updating plugin',
-				'Begin updating plugins',
-				'saintsrobotics-plugin'
-			),
-			'activate_link'                   => _n_noop(
-				'Begin activating plugin',
-				'Begin activating plugins',
-				'saintsrobotics-plugin'
-			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'saintsrobotics-plugin' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'saintsrobotics-plugin' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'saintsrobotics-plugin' ),
-			/* translators: 1: plugin name. */
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'saintsrobotics-plugin' ),
-			/* translators: 1: plugin name. */
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'saintsrobotics-plugin' ),
-			/* translators: 1: dashboard link. */
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'saintsrobotics-plugin' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'saintsrobotics-plugin' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'saintsrobotics-plugin' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'saintsrobotics-plugin' ),
 
-			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
-		),
-		
+
 	);
 		tgmpa( $plugins, $config );
 
