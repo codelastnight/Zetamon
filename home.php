@@ -18,9 +18,10 @@ get_header();
 <div class="container">
 
     	<h1 class=" text-huge page-title screen-reader-text"><?php single_post_title(); ?></h1>
-  <div class="container">
 
-    <div class="post">
+
+    <div class="row post-list-flex">
+
 
     <?php
 		if ( have_posts() ) :
