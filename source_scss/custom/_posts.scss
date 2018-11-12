@@ -15,6 +15,18 @@
   padding: 0;
   article {
     padding: 1em;
+    .entry-title {
+      margin-bottom: 0rem;
+    }
+    .entry-meta {
+      margin-top: 0rem;
+    }
+  }
+  nav {
+    padding: 1em;
+    .nav-links {
+
+    }
   }
 }
 

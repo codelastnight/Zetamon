@@ -11,21 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title text-huge">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
+		<?php
+			the_title( '	<h1 class="entry-title text-huge">', '</h1>' );
+			the_date('d F, Y','<h2 class="entry-meta text-medium">','</h2>');
+			?>
+			<?php
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				saintsrobotics_posted_on();
-				
-				?>
-			</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</div><!-- .entry-header -->
 	<div class="entry-content">
@@ -43,14 +37,14 @@
 			get_the_title()
 		) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'saintsrobotics' ),
-			'after'  => '</div>',
-		) );
+		// wp_link_pages( array(
+		// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'saintsrobotics' ),
+		// 	'after'  => '</div>',
+		// ) );
 		?>
 	</div><!-- .entry-content -->
 
 	<div class="entry-footer">
-		<?php saintsrobotics_entry_footer(); ?>
+		<?php //saintsrobotics_entry_footer(); ?>
 	</div><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post- <?php the_ID(); ?> -->
