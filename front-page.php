@@ -19,27 +19,12 @@ function frontPageContent($pagename) {
   wp_reset_postdata();
 }
 get_header(); ?>
-<div class="landing">
+<div id="home"class="landing">
   <div class="image-slider">
   <?php
   $shortcode = get_theme_mod('landing_slider_shortcode', 'none');
   echo do_shortcode('[swiper_slider id='.$shortcode.']'); ?>
-    <!-- <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="resources/1.jpg" alt="Smiley" />
-          <div class="swiper-lazy-preloader"></div>
-        </div>
-        <div class="swiper-slide"><img src="resources/2.jpg" alt="Smiley face">
-          <div class="swiper-lazy-preloader"></div>
-        </div>
-        <div class="swiper-slide"><img src="resources/3.jpg" alt="Smiley face">
-          <div class="swiper-lazy-preloader"></div>
-        </div>
-      </div>
 
-
-    </div> -->
   </div>
   <?php
   $messageHidden = "";
@@ -173,6 +158,11 @@ get_header(); ?>
 
 
 </div>
+<script>
+jQuery(document).ready(function($) {
+  $('.menu-item-home > a').attr("href", "#trigger-menu");
+})
+</script>
 <?php
 
 get_footer();

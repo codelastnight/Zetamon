@@ -16,8 +16,12 @@ get_header();
 ?>
 
 <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      	<h1 class=" text-huge page-title screen-reader-text"><?php single_post_title(); ?></h1>
+    </div>
+  </div>
 
-    	<h1 class=" text-huge page-title screen-reader-text"><?php single_post_title(); ?></h1>
 
 
     <div class="row post-list-flex">

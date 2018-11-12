@@ -10,10 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<div class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title text-huge">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
@@ -23,14 +23,11 @@
 			<div class="entry-meta">
 				<?php
 				saintsrobotics_posted_on();
-				saintsrobotics_posted_by();
+				
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php saintsrobotics_post_thumbnail(); ?>
-
+	</div><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
@@ -53,7 +50,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<div class="entry-footer">
 		<?php saintsrobotics_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

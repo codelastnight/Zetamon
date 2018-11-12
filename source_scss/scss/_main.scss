@@ -8,8 +8,13 @@
   box-sizing: border-box;
   outline: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
+
   background-color: $body-bg;
   //background-image: ;
   font-weight: normal;

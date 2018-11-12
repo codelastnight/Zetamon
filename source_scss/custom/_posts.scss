@@ -1,4 +1,22 @@
+.post-container {
+  background-color: $brand-light;
+  overflow: hidden;
+  padding: 1em;
+  border-radius: 3px;
+  color: $brand-dark;
 
+
+
+}
+
+.post-single {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 0;
+  article {
+    padding: 1em;
+  }
+}
 
 .post-list-flex {
   padding-left: 2em;
@@ -18,10 +36,6 @@
       height: 15em;
       margin-right: 1em;
       margin-left: 1em;
-      background-color: $brand-light;
-      overflow: hidden;
-      padding: 1em;
-      border-radius: 3px;
       object-fit: cover;
       filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
       border-width: 4px;
@@ -73,7 +87,7 @@
   .post-list-flex {
     .post-preview {
       .img-container {
-        height: 18em;
+        height: 22em;
       }
     }
   }
