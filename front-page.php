@@ -117,10 +117,10 @@ get_header(); ?>
     </div>
   </section>
 </div>
-<div class="section background-dark" style="background-color: #fff">
+<div class="section hero-light" style="">
     <div class="container text-center">
-        <h3 class="text-huge text-white text-with-subtitle">We can be heroes</h3>
-        <h4 class="text-big text-gray">just for one day</h4>
+        <h3 class="text-huge text-with-subtitle">We can be heroes</h3>
+        <h4 class="text-big">just for one day</h4>
     </div>
 </div>
 <div class='container '>
