@@ -9,6 +9,11 @@ html {
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
 
+.hero-light {
+ color: $brand-dark;
+ background-color: $brand-light; 
+}
+
 a {
   .arrow-big {
     @extend a;
@@ -44,7 +49,7 @@ a {
   width: 100%;
   pointer-events: none;
   .message-bar {
-    
+
     pointer-events: auto;
     display: flex;
     justify-content: space-between;
