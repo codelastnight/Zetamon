@@ -1,11 +1,13 @@
-
-
-
 function menuToggle(button) {
   $(button).toggleClass("is-active");
-  $('#header-dynamic').toggleClass("header-disable-dynamic-color")
+  if ($( "#header-dynamic" ).hasClass( "header-disable-dynamic-color" )) {
+      $('#header-dynamic').removeClass("header-disable-dynamic-color");
+  } else {
+      $('#header-dynamic').addClass("header-disable-dynamic-color");
+  }
 
-//  $('body').toggleClass("no-scroll");
+
+  //  $('body').toggleClass("no-scroll");
 
   var $listSort = $('.header-overlay');
   if ($listSort.attr('aria-hidden')) {
@@ -15,13 +17,14 @@ function menuToggle(button) {
   }
 }
 
-$(".header-overlay").click(function(e){
+$(".header-overlay").click(function(e) {
   if (e.target !== this)
     return;
 
   $(this).attr('aria-hidden', true);
   $('.hamburger').removeClass("is-active");
-  $('body').removeClass("no-scroll");
+  $('#header-dynamic').removeClass("header-disable-dynamic-color");
+//  $('body').removeClass("no-scroll");
 });
 
 
@@ -43,9 +46,9 @@ x.addListener(menuDesktop)
 
 $(document).ready(function() {
   $('.current-menu-item .subheader, .current-menu-parent .subheader').removeAttr('aria-hidden');
-  $('.current-menu-item ul, .current-menu-parent').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
-//  $('').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
-//  $('').removeAttr('aria-hidden');
+  $('.current-menu-item ul, .current-menu-parent').attr('data-aos', 'menu-slide').attr('data-aos-anchor', '#trigger-menu');
+  //  $('').attr('data-aos','menu-slide').attr('data-aos-anchor','#trigger-menu');
+  //  $('').removeAttr('aria-hidden');
   $('.close-div').on('click', function(event) {
     $(this).closest(".message-bar").remove();
   });
@@ -53,4 +56,19 @@ $(document).ready(function() {
 
     duration: 500
   });
+});
+// document.addEventListener('aos:in', ({ detail }) => {
+//   $('.menu-item-home > a').attr("href", "#home");
+//   console.log('owo');
+// });
+// document.addEventListener('aos:out', ({ detail }) => {
+//   $('.menu-item-home > a').attr("href", "#trigger-menu");
+//   console.log('uwu');
+// });
+document.addEventListener('aos:in', ({ detail }) => {
+  console.log('animated in', detail);
+});
+
+document.addEventListener('aos:out', ({ detail }) => {
+  console.log('animated out', detail);
 });

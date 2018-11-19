@@ -25,7 +25,7 @@ if (!function_exists('saintsrobotics_setup')): /**
           {
             function start_lvl( &$output, $depth = 0, $args = array() ) {
                 $indent = str_repeat("\t", $depth);
-                $output .= "\n$indent<div class='subheader' aria-hidden='true' ><ul class='sub-menu' data-aos-easing='ease-in-out' data-aos-anchor-placement='top-center'>\n";
+                $output .= "\n$indent<div class='subheader' aria-hidden='true' ><ul class='sub-menu' data-aos-easing='ease-in-out'  data-aos-id='about' data-aos-anchor-placement='top-center'>\n";
             }
             function end_lvl( &$output, $depth = 0, $args = array() ) {
                 $indent = str_repeat("\t", $depth);

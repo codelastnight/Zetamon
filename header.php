@@ -11,11 +11,11 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html lang="en">
 <head>
 <?php wp_head(); ?>
   	<meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
@@ -38,7 +38,7 @@
 					<span class="hamburger-inner"></span>
 				</span>
 
-			</button> 
+			</button>
 		</div>
 		<div class='header-overlay' data-aos="fade-in" aria-hidden="true">
       <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,)); ?>
