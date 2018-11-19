@@ -9,6 +9,14 @@ html {
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
 
+.hero-light {
+  
+  background-color: $brand-light;
+  .container {
+    color: $brand-dark;
+  }
+}
+
 a {
   .arrow-big {
     @extend a;
