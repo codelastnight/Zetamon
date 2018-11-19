@@ -127,24 +127,6 @@ get_header(); ?>
     <section class="section" id="trigger-menu" >
       <div class="section">
 
-  <div class="row">
-    <div class="col-md-12">
-    <?php
-  frontPageContent("about-us")
-      ?>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="section hero-light" >
-    <div class="container text-center">
-        <h3 class="text-huge text-white text-with-subtitle">We can be heroes</h3>
-        <h4 class="text-big text-gray">just for one day</h4>
-    </div>
-</div>
-<div class='container '>
-  <section class="section ">
-
       <div class="row is-flex">
         <div class="col-md-5 ">
 
