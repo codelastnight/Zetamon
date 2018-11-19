@@ -73,7 +73,7 @@
 	<header class="header-disable-dynamic-color disable-mobile">
 		<div class='header-overlay'>
 			<div class="main-logo" data-aos="fade-in">
-				<a href=""><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
+				<a href="<?=get_home_url()?>"><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
 					<div class="text-vertical">
 						TEAM 1899
 					</div>

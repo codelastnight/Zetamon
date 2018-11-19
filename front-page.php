@@ -8,38 +8,26 @@
  *
  * @package saintsrobotics
  */
-function frontPageContent($pagename,$alignment ='') {
+ 
+function frontPageContent($pagename,$alignment ='align-left',$headercss='') {
   $your_query = new WP_Query( 'pagename='.$pagename );
   // "loop" through query (even though it's just one page)
   while ( $your_query->have_posts() ) : $your_query->the_post();
-      ?><div class='<?=$alignment?>'>
-        <?php
-      the_title('<h1 class="text-huge " id='.$pagename.'>', '</h1>' );
-      the_content();
+    ?>
+    <div class='<?=$alignment?>'>
+      <?php
+      the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
+      echo get_first_paragraph();
       ?>
-      <button class="button button-secondary" href="#">Learn more</button>
+      <a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a>
 
-    </div><?php
+    </div>
+    <?php
   endwhile;
   // reset post data (important!)
   wp_reset_postdata();
 }
-function frontPageContentLight($pagename,$alignment ='') {
-  $your_query = new WP_Query( 'pagename='.$pagename );
-  // "loop" through query (even though it's just one page)
-  while ( $your_query->have_posts() ) : $your_query->the_post();
-      ?><div class='<?=$alignment?>'>
-        <?php
-      the_title('<h1 class="text-huge text-with-subtitle" id='.$pagename.'>', '</h1>' );
-      the_content();
-      ?>
-      <button class="button button-secondary" href="#">Learn more</button>
 
-    </div><?php
-  endwhile;
-  // reset post data (important!)
-  wp_reset_postdata();
-}
 get_header(); ?>
 <div id="home" class="landing">
   <div class="image-slider">
@@ -128,19 +116,20 @@ get_header(); ?>
       <div class="section">
 
       <div class="row is-flex">
-        <div class="col-md-5 ">
-
-        <?php
-            frontPageContent("about-us","align-right")
-        ?>
-
-        </div>
-        <div class="col-md-7">
+       
+        <div class="col-md-6">
 
             <div class="div-round gmap ">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d672.2916398599913!2d-122.11685113967444!3d47.62289350181041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906dbdfa0f55b7%3A0x35a096d8775d8148!2sNorthup+Way+%26+168th+Ave+NE!5e0!3m2!1sen!2sus!4v1542588102080" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 
             </div>
+
+        </div>
+         <div class="col-md-4 ">
+
+        <?php
+            frontPageContent("about-us","")
+        ?>
 
         </div>
       </div>
@@ -149,7 +138,7 @@ get_header(); ?>
   </div>
   <div class="section hero-light" style="">
       <div class="container">
-        <?php  frontPageContentLight("community-outreach","align-center") ?>
+        <?php  frontPageContent("community-outreach","align-center"," text-with-subtitle") ?>
       </div>
   </div>
   <div class='container '>
