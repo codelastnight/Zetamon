@@ -1,6 +1,21 @@
 html {
   margin-top: 0px !important;
 }
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+.row.is-flex > [class*='col-md'] {
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+    }
+}
+
+
 
 .text-vertical {
   height: auto;
@@ -20,6 +35,7 @@ html {
 }
 .gmap {
   margin-top: 2.5em;
+  height: 100%;
   iframe {
     margin-bottom: -6px;
     min-height: 300px;
@@ -78,13 +94,18 @@ a {
       height: 1em;
     }
   }
+  #about-us {
+     word-spacing: 10em;
+
+  }
 }
-@media (max-width: $screen-md-max) {
+@media (max-width: $screen-md-min) {
   .align-right {
     text-align: center;
   }
 }
 @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+
   .container {
     padding-left: 12em;
     padding-right: 12em;
@@ -99,6 +120,7 @@ a {
   }
 }
 @media only screen and (min-width: $screen-lg-min) {
+
   .absolute-top {
     top: 0.5em;
     .message-bar {
