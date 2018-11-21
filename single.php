@@ -9,9 +9,9 @@
 
 get_header();
 ?>
-	<div class="container ">
+	<div class=" ">
 		<!-- <a href="" class='button button-transparent'><span class="glyphicon glyphicon-chevron-left"></span> Back</a> -->
-		<div class="  post-single post-container">
+		<div class="  post-single post-container container">
 			<?php
 			while ( have_posts() ) :
 				the_post();

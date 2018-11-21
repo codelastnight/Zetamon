@@ -30,6 +30,12 @@ html {
 .hero-light {
 
   background-color: $brand-light;
+  .button-secondary {
+    &:hover {
+        border-color: $brand-dark;
+    }
+
+  }
   .container {
     color: $brand-dark;
   }
@@ -47,6 +53,7 @@ html {
     margin-bottom: -6px;
     min-height: 300px;
   }
+
 }
 a {
   .arrow-big {
@@ -113,8 +120,13 @@ a {
   }
 }
 @media (max-width: $screen-md-min) {
-  .align-right {
-    text-align: center;
+  .row {
+    .align-right, .align-left {
+      text-align: center;
+    }
+  }
+  .gmap {
+    margin-bottom: 2em;
   }
 }
 @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {

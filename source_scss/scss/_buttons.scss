@@ -134,8 +134,8 @@ button {
     color: $brand-dark;
     transition: all .1s ease-in-out;
     &:hover {
-
-
+      box-shadow: $box-shadow;
+      border-color: $brand-light;
       background-color: $brand-light;
     }
   }

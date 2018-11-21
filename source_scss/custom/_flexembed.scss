@@ -35,3 +35,18 @@
   max-height: 600px;
   max-width: 100%;
 }
+
+@media (max-width: $screen-sm-max) {
+
+    .FlexEmbed--3by1:before {
+      padding-bottom: 50%;
+
+  }
+}
+@media (max-width: $screen-xs-max) {
+
+    .FlexEmbed--3by1:before {
+      padding-bottom: 75%;
+
+  }
+}
