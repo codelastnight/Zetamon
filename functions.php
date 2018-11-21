@@ -32,15 +32,17 @@ if (!function_exists('saintsrobotics_setup')): /**
                 $output .= "$indent</ul></div>\n";
             }
           }
-          
+
           /*
            * retrieve only first paragraph
            */
-          
+
 
         function get_first_paragraph() {
-        	$first_paragraph_str = wpautop(get_the_content());
-        	$first_paragraph_str = substr($first_paragraph_str, 0, strpos($first_paragraph_str, '</p>') + 4);
+          global $post;
+
+        	$first_paragraph_str = wpautop( get_the_content() );
+        	$first_paragraph_str = substr($first_paragraph_str, 0, strpos($first_paragraph_str, '</p>'));
         	$first_paragraph_str = strip_tags($first_paragraph_str, '<a><strong><em>');
         	return '<p>' . $first_paragraph_str . '</p>';
         }
