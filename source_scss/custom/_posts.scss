@@ -10,9 +10,10 @@
 }
 
 .post-single {
-  margin-top: 6em;
+
   margin-bottom: 3em;
   padding: 0;
+  //padding-top: 6em;
   article {
     padding: 1em;
     .entry-title {
@@ -100,7 +101,7 @@
   .post-single {
     margin-left: 2em;
     margin-right: 2em;
-    
+
   }
 }
 @media only screen and (min-width: $screen-lg-min) {

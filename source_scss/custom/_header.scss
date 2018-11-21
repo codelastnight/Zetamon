@@ -20,7 +20,7 @@ header {
   box-sizing: border-box;
   pointer-events: none;
   max-width: $container-maxwidth + 500px;
-    mix-blend-mode: exclusion;
+  mix-blend-mode: exclusion;
 
 
   a {
@@ -126,12 +126,14 @@ header {
 
 .header-mobile {
   z-index: 3;
-  pointer-events: auto;
+
   width: 100%;
   position: absolute;
   padding: 1em;
   display: block;
-
+  .hamburger{
+    pointer-events: auto;
+  }
   .hamburger {
     float: right;
   }

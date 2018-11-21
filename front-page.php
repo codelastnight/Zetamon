@@ -8,7 +8,7 @@
  *
  * @package saintsrobotics
  */
- 
+
 function frontPageContent($pagename,$alignment ='align-left',$headercss='') {
   $your_query = new WP_Query( 'pagename='.$pagename );
   // "loop" through query (even though it's just one page)
@@ -99,7 +99,7 @@ get_header(); ?>
           <div class="text-vertical">
             SCROLL
           </div>
-          <div class="vertical-line">
+          <div class="vertical-line hidden-xs">
 
           </div>
         </a>
@@ -116,7 +116,7 @@ get_header(); ?>
       <div class="section">
 
       <div class="row is-flex">
-       
+
         <div class="col-md-6">
 
             <div class="div-round gmap ">
@@ -126,11 +126,11 @@ get_header(); ?>
 
         </div>
          <div class="col-md-4 ">
-
+           <div class="align-left">
         <?php
             frontPageContent("about-us","")
         ?>
-
+          </div>
         </div>
       </div>
       </div>
@@ -140,17 +140,6 @@ get_header(); ?>
       <div class="container">
         <?php  frontPageContent("community-outreach","align-center"," text-with-subtitle") ?>
       </div>
-  </div>
-  <div class='container '>
-    <section class="section ">
-
-    <div class="row">
-      <div class="col-md-12">
-      <?php
-      frontPageContent("community-outreach") ?>
-        </div>
-      </div>
-    </section>
   </div>
   <div class='container'>
     <section class="section">
@@ -162,18 +151,22 @@ get_header(); ?>
       </div>
     </section>
   </div>
+
+  <div class="section hero-light" style="">
+      <div class="container">
+        <?php  frontPageContent("sponsors","align-center"," text-with-subtitle") ?>
+      </div>
+  </div>
   <div class='container'>
     <section class="section">
-
     <div class="row">
       <div class="col-md-12">
         <?php
-        frontPageContent("sponsors") ?>
+        frontPageContent("about-first") ?>
         </div>
       </div>
     </section>
   </div>
-
 
 </div>
 

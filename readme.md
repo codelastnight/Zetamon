@@ -7,7 +7,19 @@ What does this mean?
  - Home page has a landing page, and is editable ( though kind of janky)
  - Menu, animation js, header is functional
  - mobile version not broken yet
- - pages and posts will render given a link
+ - pages and posts will render given a links 
+ - you can now see multiple posts
+ 
+ 
+ 
+ Issues :
+ - optimizations:
+   - literally dies on shitty connections
+   - doesnt work on edge
+   - lags on slow machines
+ - calandar is janky as fu
+ - no contact page
+ 
 
 
 
