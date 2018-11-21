@@ -2,9 +2,12 @@
   grid-row-start: 2;
    grid-row-end: 3;
 //  padding: 1rem;
-
-  h2 {
-    font-weight: $heading-weight;
+  .section {
+    padding-bottom: 1.5em;
+    padding-top: 60px;
+  }
+  p {
+    //font-weight: $heading-weight;
     margin-bottom: 0;
   }
 }

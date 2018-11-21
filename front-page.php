@@ -9,10 +9,17 @@
  * @package saintsrobotics
  */
 
-function frontPageContent($pagename,$alignment ='align-left',$headercss='') {
+function frontPageContent($pagename,$alignment ='align-left',$headercss='',$image_hero=false) {
   $your_query = new WP_Query( 'pagename='.$pagename );
   // "loop" through query (even though it's just one page)
   while ( $your_query->have_posts() ) : $your_query->the_post();
+    if (has_post_thumbnail( $post->ID ) && $image_hero==true ): {
+				$imagea = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+				$image = $imagea[0];
+			} else: {
+				$image_hero=false;
+			}
+			endif;
     ?>
     <div class='<?=$alignment?>'>
       <?php

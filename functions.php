@@ -42,11 +42,12 @@ if (!function_exists('saintsrobotics_setup')): /**
           global $post;
 
         	$first_paragraph_str =  get_the_content() ;
-          $first_heading_str = $first_paragraph_str;
-          $first_heading_str =  substr($first_heading_str, 0, strpos($first_heading_str, '</h2>'));
-        	$first_paragraph_str = substr($first_paragraph_str, 0, strpos($first_paragraph_str, '</p>'));
+            $first_heading_str = $first_paragraph_str;
+            $first_heading_str =  substr($first_heading_str, 0, strpos($first_heading_str, '</h2>'));
+        	$first_paragraph_str = substr($first_paragraph_str, strpos($first_paragraph_str, '<p>'), strpos($first_paragraph_str, '</p>'));
         	$first_paragraph_str = strip_tags($first_paragraph_str, '<a><strong><em>');
-        	return '<h2>'$first_heading_str.'</h2><p>' . $first_paragraph_str . '</p>';
+        	$first_heading_str = strip_tags($first_heading_str, '<a><strong><em>');
+        	return '<h2 class="text-big">'.$first_heading_str.'</h2><p>' . $first_paragraph_str . '</p>';
         }
         /*
          * Make theme available for translation.

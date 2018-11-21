@@ -47,7 +47,7 @@
     .img-container {
 
       height: 15em;
-      margin-right: 1em;
+      //margin-right: 1em;
       margin-left: 1em;
       object-fit: cover;
       filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
@@ -92,7 +92,7 @@
     .post-preview {
       .img-container {
         margin-left: 2em;
-        margin-right: 2em;
+        //margin-right: 2em;
       }
     }
   }
