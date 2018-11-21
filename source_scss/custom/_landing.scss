@@ -58,6 +58,7 @@
 
 .landing-footer {
   padding-top: 0;
+  z-index: 2;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -79,7 +80,7 @@
     }
     .vertical-line {
       width: 0.3em;
-      height: 10em;
+      height: 6em;
       background-color: $brand-secondary;
       margin: 1em auto;
     }

@@ -25,14 +25,25 @@ if (!function_exists('saintsrobotics_setup')): /**
           {
             function start_lvl( &$output, $depth = 0, $args = array() ) {
                 $indent = str_repeat("\t", $depth);
-                $output .= "\n$indent<div class='subheader' aria-hidden='true' ><ul class='sub-menu' data-aos-easing='ease-in-out' data-aos-anchor-placement='top-center'>\n";
+                $output .= "\n$indent<div class='subheader' aria-hidden='true' ><ul class='sub-menu' data-aos-easing='ease-in-out'  data-aos-id='about' data-aos-anchor-placement='top-center'>\n";
             }
             function end_lvl( &$output, $depth = 0, $args = array() ) {
                 $indent = str_repeat("\t", $depth);
                 $output .= "$indent</ul></div>\n";
             }
           }
+          
+          /*
+           * retrieve only first paragraph
+           */
+          
 
+        function get_first_paragraph() {
+        	$first_paragraph_str = wpautop(get_the_content());
+        	$first_paragraph_str = substr($first_paragraph_str, 0, strpos($first_paragraph_str, '</p>') + 4);
+        	$first_paragraph_str = strip_tags($first_paragraph_str, '<a><strong><em>');
+        	return '<p>' . $first_paragraph_str . '</p>';
+        }
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.

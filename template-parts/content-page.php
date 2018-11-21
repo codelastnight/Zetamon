@@ -15,7 +15,7 @@
 		</div>
 
 	<?php saintsrobotics_post_thumbnail(); ?>
-
+<div class="container">
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -48,5 +48,6 @@
 			);
 			?>
 		</footer><!-- .entry-footer -->
+		</div>
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

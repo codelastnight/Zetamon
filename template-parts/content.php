@@ -19,7 +19,6 @@
 			<?php
 		if ( 'post' === get_post_type() ) :
 			?>
-
 		<?php endif; ?>
 	</div><!-- .entry-header -->
 	<div class="entry-content">

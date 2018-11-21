@@ -1,0 +1,24 @@
+// @media (min-width: $screen-lg-min) {
+//   .about-us {
+//     .section {
+//       padding-top: 6em;
+//       padding-bottom: 6em;
+//     }
+//   }
+// }
+
+
+.about-page {
+    .section {
+        .row {
+            h1 {
+                margin-top:0;
+            }
+            .button {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
