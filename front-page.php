@@ -116,21 +116,18 @@ get_header(); ?>
       <div class="section">
 
       <div class="row is-flex">
+        <div class="col-md-4 col-md-offset-2 ">
 
+             <?php
+               frontPageContent("about-us","align-right")
+             ?>
+           </div>
         <div class="col-md-6">
-
             <div class="div-round gmap ">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d672.2916398599913!2d-122.11685113967444!3d47.62289350181041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906dbdfa0f55b7%3A0x35a096d8775d8148!2sNorthup+Way+%26+168th+Ave+NE!5e0!3m2!1sen!2sus!4v1542588102080" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-
             </div>
-
         </div>
-         <div class="col-md-4 ">
-           <div class="align-left">
-        <?php
-            frontPageContent("about-us","")
-        ?>
-          </div>
+
         </div>
       </div>
       </div>
@@ -174,7 +171,17 @@ get_header(); ?>
 <script>
 jQuery(document).ready(function($) {
   $('.menu-item-home > a').attr("href", "#trigger-menu");
+  $(document).scroll(function() {
+   if($(window).scrollTop() <= 20) {
+     $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
+   }
+  });
 })
+document.addEventListener('aos:in:about', (function( detail ){
+  if($(window).scrollTop() >= 20) {
+  jQuery('.menu-item-home > a').html("home").attr("href", "#home");
+}
+}));
 </script>
 <?php
 

@@ -9,9 +9,8 @@ $desktopborder: 3em;
 .header-disable-dynamic-color {
 
   mix-blend-mode: normal;
-
-
 }
+
 header {
   z-index: 80;
   width: 100%;
@@ -28,6 +27,7 @@ header {
     display: block;
     padding-bottom: $menu-padding;
     font-weight: $subheading-weight;
+    pointer-events: auto;
 
   }
 

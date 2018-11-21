@@ -10,6 +10,7 @@
 }
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 
@@ -21,6 +22,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 p {
