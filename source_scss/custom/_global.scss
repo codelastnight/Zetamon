@@ -15,7 +15,12 @@ html {
     }
 }
 
-
+.site-footer {
+  h2 {
+    font-weight: $heading-weight;
+    margin-bottom: 0;
+  }
+}
 
 .page-title:first-child {
   margin-top: 0.65em;
