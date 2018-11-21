@@ -2,6 +2,9 @@ html {
   margin-top: 0px !important;
 }
 
+.page-title:first-child {
+  margin-top: 0.65em;
+}
 .text-vertical {
   height: auto;
   font-weight: $heading-weight;
@@ -11,7 +14,7 @@ html {
 
 .hero-light {
  color: $brand-dark;
- background-color: $brand-light; 
+ background-color: $brand-light;
 }
 
 a {
@@ -59,6 +62,12 @@ a {
     a {
       color: $brand-light;
     }
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .page-title:first-child {
+    margin-top: 0.6em;
   }
 }
 @media only screen and (min-width: $screen-md-min) {
