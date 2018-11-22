@@ -1,10 +1,18 @@
+
+
+
+![GitHub (pre-)release](https://img.shields.io/github/release/dottechnopath/SaintsRoboticsSite/all.svg)
+
+
+
+
 Code now in BETA!
 
 What does this mean?
  - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
 
  What works?
- - Home page has a landing page, and is editable ( though kind of janky)
+ - Home page has a landing page, and is editable
  - Menu, animation js, header is functional
  - mobile version not broken yet
  - pages and posts will render given a links 
@@ -19,6 +27,10 @@ What does this mean?
    - lags on slow machines
  - calandar is janky as fu
  - no contact page
+ - sponsors images are not pretty
+ - no members list view that is pretty
+ - no post search
+ - no way to sort posts
  
 
 
