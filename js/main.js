@@ -54,12 +54,26 @@ $(document).ready(function() {
   $('.close-div').on('click', function(event) {
     $(this).closest(".message-bar").remove();
   });
+  //fancy animatinos
   AOS.init({
-
-    duration: 500
+    easing: 'ease-out-sine',
+    duration: 400,
+    mirror: false
   });
   // replace home button with about us
-
+  // fade in images
+  $("img").each(function() {
+    var src = $(this).data("src");
+    if (src) {
+        var img = new Image();
+        img.style.display = "none";
+        img.onload = function() {
+            $(this).fadeIn(400);
+        };
+        $(this).append(img);            
+        img.src = src;
+    }
+});
 });
 
 // document.addEventListener('aos:out:about', ({ detail }) => {
@@ -68,3 +82,6 @@ $(document).ready(function() {
 // }
 
 // );
+
+
+

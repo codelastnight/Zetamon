@@ -20,8 +20,12 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 				$image_hero=false;
 			}
 			endif;
+			
+
+   
+
     ?>
-    <div class='<?=$alignment?>'>
+    <div data-aos="fade-up"class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
       echo get_first_paragraph();
@@ -36,8 +40,8 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 }
 
 get_header(); ?>
-<div id="home" class="landing">
-  <div class="image-slider">
+<div id="home" class="landing"  >
+  <div class="image-slider"  data-aos="fade" data-aos-offset="0" >
   <?php
   $shortcode = get_theme_mod('landing_slider_shortcode', 'none');
   echo do_shortcode('[swiper_slider id='.$shortcode.']'); ?>
@@ -64,11 +68,11 @@ get_header(); ?>
       <div class="row ">
         <div class="col-md-6 ">
           <div class="landing-logo">
-            <p>INTERLAKE</p>
+            <p  data-aos="fade-right" data-aos-mirror="true">INTERLAKE</p>
 
-            <p>SAINTS</p>
+            <p  data-aos="fade-right"  data-aos-delay="50" data-aos-mirror="true">SAINTS</p>
 
-            <p>ROBOTICS</p>
+            <p  data-aos="fade-right"  data-aos-delay="100" data-aos-mirror="true">ROBOTICS</p>
           </div>
         </div>
           <div class="col-md-6 hidden-xs hidden-sm">
@@ -78,7 +82,7 @@ get_header(); ?>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="landing-logo">
+          <div class="landing-logo"  data-aos="fade" data-aos-mirror="true" >
             <a href="#trigger-menu"> who are we
               <div class='arrow-big'>
 
@@ -90,14 +94,14 @@ get_header(); ?>
       </div>
 
     </div>
-    <div class="section landing-footer">
+    <div class="section landing-footer"  data-aos="fade-up" data-aos-offset="0" data-aos-mirror="true">
 
       <div class="caption">
         <h5> image caption</h5>
         <p>
           doing stuff i guess lol
         </p>
-        <div class="swiper-container">
+        <div class="swiper-container" >
           <div class="swiper-pagination"></div>
         </div>
       </div>
@@ -123,14 +127,14 @@ get_header(); ?>
       <div class="section">
 
       <div class="row is-flex">
-        <div class="col-md-4 col-md-offset-2 ">
+        <div class="col-md-5 col-md-offset-1 ">
 
              <?php
                frontPageContent("about-us","align-right")
              ?>
            </div>
         <div class="col-md-6">
-            <div class="div-round gmap ">
+            <div  data-aos="fade-up" class="div-round gmap ">
               <iframe async defer src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d672.2916398599913!2d-122.11685113967444!3d47.62289350181041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906dbdfa0f55b7%3A0x35a096d8775d8148!2sNorthup+Way+%26+168th+Ave+NE!5e0!3m2!1sen!2sus!4v1542588102080" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
@@ -176,7 +180,9 @@ get_header(); ?>
 
 
 <script>
+//menu click change
 jQuery(document).ready(function($) {
+  $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
   $('.menu-item-home > a').attr("href", "#trigger-menu");
   $(document).scroll(function() {
    if($(window).scrollTop() <= 20) {
@@ -185,7 +191,7 @@ jQuery(document).ready(function($) {
   });
 })
 document.addEventListener('aos:in:about', (function( detail ){
-  if($(window).scrollTop() >= 20) {
+  if($(window).scrollTop() >= 40) {
   jQuery('.menu-item-home > a').html("home").attr("href", "#home");
 }
 }));

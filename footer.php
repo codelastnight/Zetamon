@@ -31,9 +31,7 @@
 <!-- <script src="<?php// echo get_stylesheet_directory_uri().'/lib/aos/dist/aos.js'; ?>"></script> -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri().'/js/main.js'; ?>" async defer></script>
-<!--for developmetn, delet later -->
 
-<script src="http://192.168.0.1:8080/target/target-script-min.js#safari"></script> 
 <?php wp_footer(); ?>
 
 </body>

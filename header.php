@@ -39,7 +39,7 @@
 
 			</button>
 		</div>
-		<div data-aos="fade-in" class='header-overlay'  aria-hidden="true">
+		<div data-aos="fade-left" class='header-overlay'  aria-hidden="true">
       <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,)); ?>
 
 
@@ -71,14 +71,14 @@
 
 	<header class="header-disable-dynamic-color disable-mobile">
 		<div class='header-overlay'>
-			<div class="main-logo" data-aos="fade-in">
+			<div class="main-logo" data-aos="fade-right" data-aos-delay="50">
 				<a href="<?=get_home_url()?>"><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
 					<div class="text-vertical">
 						TEAM 1899
 					</div>
 				</a>
 			</div>
-			<div class='header-footer ' >
+			<div class='header-footer '  data-aos="fade-up" data-aos-offset="0" data-aos-delay="50">
 				<div class='aligner-space-between'>
 					<div class='copyright '>
 						<div class=' aligner-item-bottom' >

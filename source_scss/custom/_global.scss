@@ -170,3 +170,9 @@ a {
     margin-top: 0.9em;
   }
 }
+:target::before {
+  content: "";
+  display: block;
+  height: 20px; /* fixed header height*/
+  margin: -20px 0 0; /* negative fixed header height */
+}
