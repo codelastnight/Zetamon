@@ -1,3 +1,11 @@
+
+
+
+![GitHub (pre-)release](https://img.shields.io/github/release-pre/qubyte/rubidium.svg)
+
+
+
+
 Code now in BETA!
 
 What does this mean?
