@@ -26,7 +26,6 @@ get_header();
 
     <div class="row post-list-flex">
 
-	[ajax_load_more]
     <?php
 		if ( have_posts() ) :
 

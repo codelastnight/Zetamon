@@ -1,8 +1,8 @@
 .post-container {
   background-color: $brand-light;
   overflow: hidden;
-  padding: 1em;
-  border-radius: 3px;
+  //adding: 1em;
+  
   color: $brand-dark;
 
 
@@ -10,8 +10,8 @@
 }
 
 .post-single {
-
-  margin-bottom: 3em;
+  min-height: 100vh;
+  
   padding: 0;
   //padding-top: 6em;
   article {
@@ -105,6 +105,11 @@
   }
 }
 @media only screen and (min-width: $screen-lg-min) {
+  .post-single {
+    margin-bottom: 3em;
+    margin-top: 3em;
+    border-radius: 3px;
+  }
   .post-list-flex {
     .post-preview {
       .img-container {
@@ -112,4 +117,13 @@
       }
     }
   }
+}
+@media (min-width: $screen-lg-min){
+  .post-single {
+    article {
+      padding-left: 12em;
+      padding-right: 12em;
+  }
+  }
+
 }

@@ -215,7 +215,12 @@ function saintsrobotics_plugin_register_required_plugins() {
         'required'  => true,
         // 'force_activation'   => true,
       ),
-
+    array(
+        'name'      => 'Swiper Slider and Carousel',
+        'slug'      => 'swiper-slider-and-carousel',
+        'required'  => true,
+        // 'force_activation'   => true,
+      ),
 
 
     );

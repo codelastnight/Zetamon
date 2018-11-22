@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="pages "id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="container">
 		<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
 		</div>

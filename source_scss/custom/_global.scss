@@ -153,7 +153,12 @@ a {
   }
 }
 @media only screen and (min-width: $screen-lg-min) {
-
+  .pages {
+    
+      padding-left: 12em;
+      padding-right: 12em;
+    
+  }
   .absolute-top {
     top: 0.5em;
     .message-bar {
