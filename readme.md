@@ -12,7 +12,7 @@ What does this mean?
  - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
 
  What works?
- - Home page has a landing page, and is editable ( though kind of janky)
+ - Home page has a landing page, and is editable
  - Menu, animation js, header is functional
  - mobile version not broken yet
  - pages and posts will render given a links 
