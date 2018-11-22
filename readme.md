@@ -1,7 +1,7 @@
 
 
 
-![GitHub (pre-)release](https://img.shields.io/github/release-pre/qubyte/rubidium.svg)
+![GitHub (pre-)release](https://img.shields.io/github/release/dottechnopath/SaintsRoboticsSite/all.svg)
 
 
 
