@@ -215,12 +215,13 @@ function saintsrobotics_plugin_register_required_plugins() {
         'required'  => true,
         // 'force_activation'   => true,
       ),
-    array(
-        'name'      => 'Swiper Slider and Carousel',
-        'slug'      => 'swiper-slider-and-carousel',
+      array(
+  			'name'      => 'wp-customize-image-gallery-control',
+  			'slug'      => 'wp-customize-image-gallery-control',
+  			'source'    => 'https://github.com/xwp/wp-customize-image-gallery-control/archive/master.zip',
         'required'  => true,
-        // 'force_activation'   => true,
-      ),
+  		),
+
 
 
     );
