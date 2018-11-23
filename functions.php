@@ -15,9 +15,57 @@ if (!function_exists('saintsrobotics_setup')): /**
  * as indicating support for post thumbnails.
  */
     function saintsrobotics_setup()
-    {
-
-       
+    {   
+        //add_action('wp_enqueue_scripts', 'no_more_jquery');
+        
+        function front_page_gallery($atts) {
+        	
+        	global $post;
+        	$pid = $post->ID;
+        	$gallery = "";
+        
+        	if (empty($pid)) {$pid = $post['ID'];}
+        
+        	if (!empty( $atts['ids'] ) ) {
+        	   	$atts['orderby'] = 'post__in';
+        	   	$atts['include'] = $atts['ids'];
+        	}
+        
+        	extract(shortcode_atts(array('orderby' => 'menu_order ASC, ID ASC', 'include' => '', 'id' => $pid, 'itemtag' => 'dl', 'icontag' => 'dt', 'captiontag' => 'dd', 'columns' => 3, 'size' => 'large', 'link' => 'file'), $atts));
+        		
+        	$args = array('post_type' => 'attachment', 'post_status' => 'inherit', 'post_mime_type' => 'image', 'orderby' => $orderby);
+        
+        	if (!empty($include)) {$args['include'] = $include;}
+        	else {
+        	   	$args['post_parent'] = $id;
+        		$args['numberposts'] = -1;
+        	}
+        
+        	if ($args['include'] == "") { $args['orderby'] = 'date'; $args['order'] = 'asc';}
+        
+        	$images = get_posts($args);
+        		
+        	foreach ( $images as $image ) {
+        		//print_r($image); /*see available fields*/
+        		$thumbnail = wp_get_attachment_image_src($image->ID, 'large');
+        		$thumbnail = $thumbnail[0];
+        		$gallery .= "  <div class='swiper-slide'><img src='".$thumbnail."'></div>";
+        	}
+	
+        	return $gallery;
+        }
+       function the_featured_image_gallery( $atts = array() ) {
+            $setting_id = 'featured_image_gallery';
+            $ids_array = get_theme_mod( $setting_id );
+            if ( is_array( $ids_array ) && ! empty( $ids_array ) ) {
+               
+                $atts['ids'] = implode( ',', $ids_array );
+                 
+                 echo front_page_gallery( $atts );
+            }
+        }
+        
+        add_shortcode('galleryFront', 'my_new_gallery_function');
         /*
           submenus should only appear on that page
         */
@@ -161,12 +209,28 @@ add_action('widgets_init', 'saintsrobotics_widgets_init');
 
 
 /**
+ * replace wordpress jquery with updated one
+ */
+ function replace_core_jquery_version() {
+            wp_deregister_script( 'jquery' );
+            // Change the URL if you want to load a local copy of jQuery from your own server.
+            wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.3.1.min.js", array(), '3.3.1' );
+            wp_register_script( 'aos-animate', "https://unpkg.com/aos@next/dist/aos.js");
+            wp_enqueue_script('aos-animate');
+             wp_enqueue_script( 'Swiper', ("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"), array(), '4.3.5',false);
+        
+           
+ 
+        }
+add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
+/**
  * Enqueue scripts and styles.
  */
 function saintsrobotics_scripts()
 {
     wp_enqueue_style('saintsrobotics-style', get_stylesheet_uri());
-    wp_enqueue_style('saintsrobotics-style-main', get_template_directory_uri() . '/css/sierra.css', array(), '20151215', true);
+    wp_enqueue_style('saintsrobotics-style-main', get_template_directory_uri() . '/css/sierra.css');
+    
     //    wp_enqueue_script( 'saintsrobotics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
    // wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/js/ajax-pagination.js', array( 'jquery' ), '1.0', true );
     //    wp_enqueue_script( 'saintsrobotics-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -212,15 +276,7 @@ require_once get_template_directory() . '/lib/TGM/class-tgm-plugin-activation.ph
 function saintsrobotics_plugin_register_required_plugins() {
 
     $plugins = array(
-      // This is an example of how to include a plugin pre-packaged with a theme.
-
-      // This is an example of how to include a plugin from the WordPress Plugin Repository.
-      array(
-        'name'      => 'Swiper Slider and Carousel',
-        'slug'      => 'swiper-slider-and-carousel',
-        'required'  => true,
-        // 'force_activation'   => true,
-      ),
+      
       array(
   			'name'      => 'wp-customize-image-gallery-control',
   			'slug'      => 'wp-customize-image-gallery-control',

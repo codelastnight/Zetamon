@@ -118,18 +118,12 @@ header {
     }
   }
 }
-//toggles menu on mobile
-
-.no-scroll {
-  overflow: hidden;
-}
-
 
 //mobile header
 
 .header-mobile {
   z-index: 3;
-
+  will-change: transform;
   width: 100%;
   position: absolute;
   padding: 1em;
@@ -291,4 +285,11 @@ header {
 
 [aria-hidden="false"] {
   display: flex;
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .header-overlay {
+    float: right;
+    width: 50vw;
+  }
+  
 }

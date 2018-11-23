@@ -1,0 +1,69 @@
+/* Microsoft Edge Browser 12+ (All) - @supports method */
+
+@supports (-ms-ime-align:auto) {
+    @media only screen and (min-width: $screen-md-min) {
+         .header-overlay {
+             width: 20em;
+             float: right;
+         }
+    }
+  .text-vertical {
+    max-height: 10em;
+  }
+  .disable-mobile {
+    display: none;
+  }
+ 
+  .header-mobile {
+    display: block;
+  }
+  .header-overlay {
+   
+  font-size: 1.3em;
+  position: relative;
+  
+  margin: 0;
+  height: 100vh;
+  
+   background-color: rgba(0,0,0,0.8);
+   
+ // display: flex;
+  
+  pointer-events: auto;
+  justify-content: center;
+  align-items: center;
+   ul {
+      
+    z-index: 81;
+    pointer-events: auto;
+    list-style-type: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  }
+  
+  .subheader {
+    ul {
+      border-left-width: 0.15em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+  .header-footer {
+    z-index: 4;
+    
+    .contact {
+      display: inline-flex;
+     // align-items: center;
+
+      div {
+        margin-right: 1em;
+        vertical-align: middle;
+        height: 100%;
+      }
+    }
+  }
+
+
+}
