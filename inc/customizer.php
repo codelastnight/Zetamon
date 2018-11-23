@@ -10,21 +10,50 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
+
+function featured_image_gallery_customize_register( $wp_customize ) {
+ 
+    if ( ! class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
+        return;
+    }
+ 
+    $wp_customize->add_section( 'featured_image_gallery_section', array(
+        'title'      => __( 'Gallery Section' ),
+        'priority'   => 25,
+    ) );
+    $wp_customize->add_setting( 'featured_image_gallery', array(
+        'default' => array(),
+        'sanitize_callback' => 'wp_parse_id_list',
+    ) );
+    $wp_customize->add_control( new CustomizeImageGalleryControl\Control(
+        $wp_customize,
+        'featured_image_gallery',
+        array(
+            'label'    => __( 'Image Gallery Field Label' ),
+            'section'  => 'featured_image_gallery_section',
+            'settings' => 'featured_image_gallery',
+            'type'     => 'image_gallery',
+        )
+    ) );
+}
+add_action( 'customize_register', 'featured_image_gallery_customize_register' );
+
+
 function saintsrobotics_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => 'saintsrobotics_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => 'saintsrobotics_customize_partial_blogdescription',
-		) );
-		//addingsection in wordpress customizer
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector'        => '.site-title a',
+		'render_callback' => 'saintsrobotics_customize_partial_blogname',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector'        => '.site-description',
+		'render_callback' => 'saintsrobotics_customize_partial_blogdescription',
+	) );
+	//addingsection in wordpress customizer
 	$wp_customize->add_section('front_settings_section', array(
 	 'title'          => 'Manage Front Page'
 	));
@@ -41,10 +70,10 @@ function saintsrobotics_customize_register( $wp_customize ) {
 	));
 	//messagebar
 	$wp_customize->add_setting( 'landing_message_style', array(
-  'capability' => 'edit_theme_options',
-  'sanitize_callback' => 'saintsrobotics_sanitize_select',
-  'default' => 'none',
-) );
+	  'capability' => 'edit_theme_options',
+	  'sanitize_callback' => 'saintsrobotics_sanitize_select',
+	  'default' => 'none',
+	) );
 
 	$wp_customize->add_control( 'landing_message_style', array(
 	  'type' => 'select',
@@ -70,7 +99,7 @@ function saintsrobotics_customize_register( $wp_customize ) {
 	 'section' => 'front_settings_section',
 	'type'    => 'textarea',
 	));
-
+	
 	function saintsrobotics_sanitize_select( $input, $setting ) {
 
 	  // Ensure input is a slug.
@@ -83,6 +112,7 @@ function saintsrobotics_customize_register( $wp_customize ) {
 	  return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 	};
+	
 
 
 }

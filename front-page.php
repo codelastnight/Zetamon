@@ -88,10 +88,11 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 get_header(); ?>
 <div id="home" class="landing"  >
   <div class="image-slider"  data-aos="fade" data-aos-offset="0" >
-  <?php
-  $shortcode = get_theme_mod('landing_slider_shortcode', 'none');
-  echo do_shortcode('[swiper_slider id='.$shortcode.']'); ?>
-
+  <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <?php the_featured_image_gallery(); ?>
+          </div>
+      </div>
   </div>
   <?php
   $messageHidden = "";
@@ -168,7 +169,7 @@ get_header(); ?>
 
 <div class="about-page">
   <div class='container'>
-
+    
     <section class="section" id="trigger-menu" >
       <div class="section">
 
@@ -224,23 +225,10 @@ get_header(); ?>
 
 </div>
 
-
+<script src="<?php echo get_stylesheet_directory_uri().'/js/homepage.js'; ?>" async ></script>
 <script>
 //menu click change
-jQuery(document).ready(function($) {
-  $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
-  
-  $(document).scroll(function() {
-   if($(window).scrollTop() <= 40) {
-     $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
-   }
-  });
-})
-document.addEventListener('aos:in:about', (function( detail ){
-  if($(window).scrollTop() >= 40) {
-  jQuery('.menu-item-home > a').html("home").attr("href", "#home");
-}
-}));
+
 </script>
 <?php
 

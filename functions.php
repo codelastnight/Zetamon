@@ -15,9 +15,55 @@ if (!function_exists('saintsrobotics_setup')): /**
  * as indicating support for post thumbnails.
  */
     function saintsrobotics_setup()
-    {
-
-       
+    {   
+        function front_page_gallery($atts) {
+        	
+        	global $post;
+        	$pid = $post->ID;
+        	$gallery = "";
+        
+        	if (empty($pid)) {$pid = $post['ID'];}
+        
+        	if (!empty( $atts['ids'] ) ) {
+        	   	$atts['orderby'] = 'post__in';
+        	   	$atts['include'] = $atts['ids'];
+        	}
+        
+        	extract(shortcode_atts(array('orderby' => 'menu_order ASC, ID ASC', 'include' => '', 'id' => $pid, 'itemtag' => 'dl', 'icontag' => 'dt', 'captiontag' => 'dd', 'columns' => 3, 'size' => 'large', 'link' => 'file'), $atts));
+        		
+        	$args = array('post_type' => 'attachment', 'post_status' => 'inherit', 'post_mime_type' => 'image', 'orderby' => $orderby);
+        
+        	if (!empty($include)) {$args['include'] = $include;}
+        	else {
+        	   	$args['post_parent'] = $id;
+        		$args['numberposts'] = -1;
+        	}
+        
+        	if ($args['include'] == "") { $args['orderby'] = 'date'; $args['order'] = 'asc';}
+        
+        	$images = get_posts($args);
+        		
+        	foreach ( $images as $image ) {
+        		//print_r($image); /*see available fields*/
+        		$thumbnail = wp_get_attachment_image_src($image->ID, 'large');
+        		$thumbnail = $thumbnail[0];
+        		$gallery .= "  <div class='swiper-slide'><img src='".$thumbnail."'></div>";
+        	}
+	
+        	return $gallery;
+        }
+       function the_featured_image_gallery( $atts = array() ) {
+            $setting_id = 'featured_image_gallery';
+            $ids_array = get_theme_mod( $setting_id );
+            if ( is_array( $ids_array ) && ! empty( $ids_array ) ) {
+               
+                $atts['ids'] = implode( ',', $ids_array );
+                 
+                 echo front_page_gallery( $atts );
+            }
+        }
+        
+        add_shortcode('galleryFront', 'my_new_gallery_function');
         /*
           submenus should only appear on that page
         */
@@ -212,15 +258,7 @@ require_once get_template_directory() . '/lib/TGM/class-tgm-plugin-activation.ph
 function saintsrobotics_plugin_register_required_plugins() {
 
     $plugins = array(
-      // This is an example of how to include a plugin pre-packaged with a theme.
-
-      // This is an example of how to include a plugin from the WordPress Plugin Repository.
-      array(
-        'name'      => 'Swiper Slider and Carousel',
-        'slug'      => 'swiper-slider-and-carousel',
-        'required'  => true,
-        // 'force_activation'   => true,
-      ),
+      
       array(
   			'name'      => 'wp-customize-image-gallery-control',
   			'slug'      => 'wp-customize-image-gallery-control',
