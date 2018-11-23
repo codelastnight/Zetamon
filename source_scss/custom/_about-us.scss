@@ -22,3 +22,26 @@
         }
     }
 }
+
+.image-list {
+  display: flex;
+  flex-flow:row wrap;
+  flex-direction: row;
+
+  justify-content: space-around;
+  .resize {
+    height: 8em;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      margin: auto 0;
+
+    }
+  }
+
+
+}
