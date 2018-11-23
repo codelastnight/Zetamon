@@ -32,7 +32,7 @@
 	<header id="header-dynamic">
 
 		<div class='header-mobile '>
-			<button class="hamburger hamburger--elastic" type="button" aria-label="Menu" aria-controls="navigation" onclick="menuToggle(this)">
+			<button class="hamburger hamburger--slider" type="button" aria-label="Menu" aria-controls="navigation" onclick="menuToggle(this)">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>

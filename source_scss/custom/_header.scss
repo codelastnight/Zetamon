@@ -61,6 +61,7 @@ header {
 }
 
 .header-overlay {
+   
   font-size: 1.3em;
   position: relative;
   height: 100vh;
@@ -69,6 +70,7 @@ header {
   pointer-events: auto;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s;
 
   ul {
     z-index: 81;
@@ -184,11 +186,12 @@ header {
     width: auto;
   }
 }
+
 // desktop experience
 @media only screen and (min-width: $screen-lg-min) {
-  [data-aos-delay] {
-    transition-delay: 500 !important;
-  }
+  // [data-aos-delay] {
+  //   transition-delay: 500 !important;
+  // }
 
 
 
@@ -282,6 +285,7 @@ header {
 
 [aria-hidden="true"] {
   display: none;
+ background-color: rgba(0,0,0,0.0);
 }
 
 [aria-hidden="false"] {

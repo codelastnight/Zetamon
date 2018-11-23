@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
+	<div class="entry-header" data-aos="fade-up" data-aos-offset="">
 
 		<?php
 			the_title( '	<h1 class="entry-title text-huge">', '</h1>' );
@@ -21,7 +21,7 @@
 			?>
 		<?php endif; ?>
 	</div><!-- .entry-header -->
-	<div class="entry-content">
+	<div class="entry-content" data-aos="fade-up" data-aos-offset="50">
 		<?php
 		the_content( sprintf(
 			wp_kses(
