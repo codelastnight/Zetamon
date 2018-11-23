@@ -12,6 +12,7 @@ $desktopborder: 3em;
 }
 
 header {
+  will-change: transform;
   z-index: 80;
   width: 100%;
   min-height: 100vh;

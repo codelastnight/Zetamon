@@ -17,7 +17,7 @@ if (!function_exists('saintsrobotics_setup')): /**
     function saintsrobotics_setup()
     {
 
-
+       
         /*
           submenus should only appear on that page
         */
@@ -38,12 +38,18 @@ if (!function_exists('saintsrobotics_setup')): /**
            */
 
 
-        function get_first_paragraph() {
+        function get_first_paragraph($html) {
           global $post;
 
-        	$first_paragraph_str =  get_the_content() ;
+        	$first_paragraph_str =  $html ;
             $first_heading_str = $first_paragraph_str;
-            $first_heading_str =  substr($first_heading_str, 0, strpos($first_heading_str, '</h2>'));
+            //echo strpos($first_heading_str, '<h2>');
+            // echo strpos($first_paragraph_str, '<p>');
+            if (strpos($first_heading_str, '<h2>') < strpos($first_paragraph_str, '<p>')) {
+               $first_heading_str =  substr($first_heading_str, 0, strpos($first_heading_str, '</h2>')); 
+            } else {
+             $first_heading_str = "";
+            };
         	$first_paragraph_str = substr($first_paragraph_str, strpos($first_paragraph_str, '<p>'), strpos($first_paragraph_str, '</p>'));
         	$first_paragraph_str = strip_tags($first_paragraph_str, '<a><strong><em>');
         	$first_heading_str = strip_tags($first_heading_str, '<a><strong><em>');

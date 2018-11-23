@@ -9,10 +9,45 @@
  * @package saintsrobotics
  */
 
-function frontPageContent($pagename,$alignment ='align-left',$headercss='',$image_hero=false) {
+function imagelist($html) {
+  // remove <noscript> elements from html
+  $html = preg_replace("/<noscript[^>]*>(.*?)<\/noscript>/i", " ", $html);  
+  preg_match_all('/<img[^>]+>/i',$html, $result); 
+   
+   
+  if ( !$result == null ) {
+   
+    $img = array();
+    foreach ($result as $img_tag) {
+      
+      foreach ($img_tag as $b) {
+       preg_match_all('/(src)=("[^"]*")/i',$b, $img[$b]);
+      }
+      
+    }
+   
+    foreach ($img as $value) {
+      
+     // foreach($value as $a) {
+        //print_r($value[0][0]);
+        ?>
+        <div class="resize">
+        <img <?=$value[0][0];?> />
+        </div>
+        <?php
+     // }
+    }
+  }
+}
+
+function frontPageContent($pagename,$alignment ='align-left',$headercss='',$image_hero=false,$imagelist=false) {
   $your_query = new WP_Query( 'pagename='.$pagename );
   // "loop" through query (even though it's just one page)
   while ( $your_query->have_posts() ) : $your_query->the_post();
+  ob_start();
+  the_content();
+  $content = ob_get_clean();
+  
     if (has_post_thumbnail( $post->ID ) && $image_hero==true ): {
 				$imagea = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 				$image = $imagea[0];
@@ -28,16 +63,27 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
     <div data-aos="fade-up" class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
-      echo get_first_paragraph();
+      echo get_first_paragraph($content);
       ?>
       <a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a>
 
     </div>
     <?php
+    if ($imagelist==true) {
+        ?>
+          <div class="image-list" data-aos="fade-up" >
+        <?php
+           imagelist($content);
+       ?>
+         </div> 
+     <?php
+    }
+    
   endwhile;
   // reset post data (important!)
   wp_reset_postdata();
 }
+
 
 get_header(); ?>
 <div id="home" class="landing"  >
@@ -162,7 +208,7 @@ get_header(); ?>
 
   <div class="section hero-light" style="">
       <div class="container">
-        <?php  frontPageContent("sponsors","align-center"," text-with-subtitle") ?>
+        <?php  frontPageContent("sponsors","align-center"," text-with-subtitle",false, true) ?>
       </div>
   </div>
   <div class='container'>
@@ -183,9 +229,9 @@ get_header(); ?>
 //menu click change
 jQuery(document).ready(function($) {
   $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
-  $('.menu-item-home > a').attr("href", "#trigger-menu");
+  
   $(document).scroll(function() {
-   if($(window).scrollTop() <= 20) {
+   if($(window).scrollTop() <= 40) {
      $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
    }
   });
