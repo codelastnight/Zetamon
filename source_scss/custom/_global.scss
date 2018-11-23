@@ -170,9 +170,22 @@ a {
     margin-top: 0.9em;
   }
 }
+
+// fix for making # target links view correctly (mainly front page)
 :target::before {
   content: "";
   display: block;
   height: 20px; /* fixed header height*/
   margin: -20px 0 0; /* negative fixed header height */
 }
+
+//auto apply text size to posts and pages
+article {
+  h2 {
+    @extend .text-big;
+  }
+  h3 {
+    @extend .text-medium;
+  }
+}
+

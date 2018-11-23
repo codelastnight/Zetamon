@@ -9,25 +9,25 @@
 
 ?>
 
-<article class="pages " data-aos="fade" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-<div class="container" >
+<article class="pages "  id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+	<div class="container" data-aos="fade">
 		<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
 		</div>
 
 	<?php saintsrobotics_post_thumbnail(); ?>
-<div class="container">
-	<div class="entry-content">
-		<?php
-		the_content();
+	<div class="container "data-aos="fade" data-aos-offset="50">
+		<div class="entry-content">
+			<?php
+			the_content();
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'saintsrobotics' ),
-			'after'  => '</div>',
-		) );
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'saintsrobotics' ),
+				'after'  => '</div>',
+			) );
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+		<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
 			edit_post_link(

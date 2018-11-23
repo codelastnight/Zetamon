@@ -9,6 +9,7 @@
 
 
 .about-page {
+   
     .section {
         .row {
             h1 {
@@ -37,9 +38,10 @@
 
     img {
       max-height: 100%;
-      max-width: 100%;
+     max-width: 100%;
       margin: auto 0;
-
+    object-fit: scale-down;
+    
     }
   }
 

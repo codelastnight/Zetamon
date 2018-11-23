@@ -12,6 +12,7 @@ $desktopborder: 3em;
 }
 
 header {
+  will-change: transform;
   z-index: 80;
   width: 100%;
   min-height: 100vh;
@@ -285,7 +286,7 @@ header {
 
 [aria-hidden="true"] {
   display: none;
- background-color: rgba(0,0,0,0.0);
+
 }
 
 [aria-hidden="false"] {
