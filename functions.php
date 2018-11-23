@@ -73,7 +73,7 @@ if (!function_exists('saintsrobotics_setup')): /**
           {
             function start_lvl( &$output, $depth = 0, $args = array() ) {
                 $indent = str_repeat("\t", $depth);
-                $output .= "\n$indent<div class='subheader' aria-hidden='true' ><ul class='sub-menu' data-aos-easing='ease-in-out'  data-aos-id='about' data-aos-anchor-placement='top-center'>\n";
+                $output .= "\n$indent<div class='subheader' aria-hidden='true'  ><ul class='sub-menu' data-aos-easing='ease-in-out'  data-aos-id='about' data-aos-anchor-placement='top-center'>\n";
             }
             function end_lvl( &$output, $depth = 0, $args = array() ) {
                 $indent = str_repeat("\t", $depth);
@@ -215,7 +215,7 @@ add_action('widgets_init', 'saintsrobotics_widgets_init');
             wp_deregister_script( 'jquery' );
             // Change the URL if you want to load a local copy of jQuery from your own server.
             wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.3.1.min.js", array(), '3.3.1' );
-            wp_register_script( 'aos-animate', "https://unpkg.com/aos@next/dist/aos.js");
+            wp_register_script( 'aos-animate', get_stylesheet_directory_uri().'/lib/aos/dist/aos.js');
             wp_enqueue_script('aos-animate');
              wp_enqueue_script( 'Swiper', ("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"), array(), '4.3.5',false);
         

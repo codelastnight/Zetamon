@@ -27,9 +27,9 @@
 
 <body <?php body_class(); ?>>
 
+	
 
-
-	<header id="header-dynamic">
+	<header id="header-dynamic" >
 
 		<div class='header-mobile '>
 			<button class="hamburger hamburger--slider" type="button" aria-label="Menu" aria-controls="navigation" onclick="menuToggle(this)">
@@ -39,11 +39,13 @@
 
 			</button>
 		</div>
-		<div data-aos="fade-left" class='header-overlay'  aria-hidden="true">
-      <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,)); ?>
+		<div class='header-overlay'  aria-hidden="true">
+			<div data-aos="fade-left" class="header-menu">  <?php wp_nav_menu(array('container' => '','walker'         => new Sublevel_Walker,)); ?>
+			</div>
+    
 
 
-			<div class='header-footer  ' >
+			<div data-aos="fade-left" data-aos-offset="0" class='header-footer  ' >
 				<div class='aligner-space-between'>
 					<div>
 					</div>

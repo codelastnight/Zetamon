@@ -216,12 +216,14 @@ header {
     pointer-events: none;
     justify-content: inherit;
     align-items: inherit;
-
+    .header-menu {
+       position: absolute;
+      right: 0;
+    }
     ul {
       padding: 0;
       text-align: right;
-      position: absolute;
-      right: 0;
+     
       z-index: inherit;
 
       .subheader {

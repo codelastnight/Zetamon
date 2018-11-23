@@ -1,5 +1,5 @@
 <?php
-/* Template Name: posts timeline*/
+/* Template Name: calendar*/
 
 get_header();
 ?>
@@ -50,8 +50,10 @@ get_header();
 		</div>
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
-<script src="<?php echo get_stylesheet_directory_uri().'lib/fullcalendar/dist/fullcalendar.js'; ?>" defer></script>
-<script src="<?php echo get_stylesheet_directory_uri().'lib/fullcalendar/dist/gcal.js'; ?>" defer></script>
+  <script src="<?php echo get_stylesheet_directory_uri().'/lib/moment/min/moment.min.js'; ?>"></script>
+<script src="<?php echo get_stylesheet_directory_uri().'/lib/fullcalendar/dist/fullcalendar.js'; ?>" ></script>
+<script src="<?php echo get_stylesheet_directory_uri().'/lib/fullcalendar/dist/gcal.js'; ?>" ></script>
+  <script src="<?php echo get_stylesheet_directory_uri().'/js/calendarpage.js'; ?>" async></script>
 <?php
 
 get_footer();
