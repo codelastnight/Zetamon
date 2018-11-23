@@ -25,7 +25,7 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
    
 
     ?>
-    <div data-aos="fade-up"class='<?=$alignment?>'>
+    <div data-aos="fade-up" class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
       echo get_first_paragraph();
@@ -82,7 +82,7 @@ get_header(); ?>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="landing-logo"  data-aos="fade" data-aos-mirror="true" >
+          <div class="landing-logo"  data-aos="fade-up" data-aos-mirror="true" >
             <a href="#trigger-menu"> who are we
               <div class='arrow-big'>
 

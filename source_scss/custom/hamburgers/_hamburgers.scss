@@ -44,12 +44,12 @@ $hamburger-types: (
   // boring,
   // collapse,
   // collapse-r,
-  elastic,
-   elastic-r,
+ // elastic,
+ //  elastic-r,
   // emphatic,
   // emphatic-r,
   // minus,
-  // slider,
+   slider,
   // slider-r,
   // spin,
   // spin-r,
@@ -83,12 +83,12 @@ $hamburger-types: (
 //@import "types/boring";
 //@import "types/collapse";
 //@import "types/collapse-r";
-@import "types/elastic";
-@import "types/elastic-r";
+//@import "types/elastic";
+//@import "types/elastic-r";
 //@import "types/emphatic";
 //@import "types/emphatic-r";
 //@import "types/minus";
-//@import "types/slider";
+@import "types/slider";
 //@import "types/slider-r";
 //@import "types/spin";
 //@import "types/spin-r";
