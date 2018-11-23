@@ -1,20 +1,20 @@
 function dynamic_calendar(x) {
   if (x.matches) { // if desktop
     $('#calendar').fullCalendar('option', 'aspectRatio', 1.8);
-        $('#calendar').fullCalendar('changeView', 'agendaWeek');
+      //  $('#calendar').fullCalendar('changeView', 'agendaWeek');
   } else { //if mobile
     $('#calendar').fullCalendar('option', 'aspectRatio', 1);
-    $('#calendar').fullCalendar('changeView', 'listWeek');
+    //$('#calendar').fullCalendar('changeView', 'listWeek');
 
   }
 }
 $(document).ready(function() {
   $('#calendar').fullCalendar({
-    defaultView: 'agendaWeek',
+    defaultView: 'listMonth',
     nowIndicator: true,
     header: {
-      left: 'agendaWeek,agendaDay',
-      center: 'title',
+
+      //center: 'title',
       right: 'prev,next, today',
     },
     themeSystem: 'bootstrap3',
