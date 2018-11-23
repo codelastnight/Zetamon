@@ -135,6 +135,22 @@ header {
     float: right;
   }
 }
+// things that happen only on very small mobile
+
+@media only screen and (max-width: $screen-md-min) {
+ .hamburger {
+      background-color: black;
+      border-radius: 3px;
+      overflow: hidden;
+      padding-bottom: 0.74em;
+      z-index: 4;
+    }
+    
+  header {
+     mix-blend-mode: normal;
+  }
+}
+
 // things that happen only on mobile
 @media only screen and (max-width: $screen-md-max) {
   .disable-mobile {
