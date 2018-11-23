@@ -16,6 +16,8 @@ if (!function_exists('saintsrobotics_setup')): /**
  */
     function saintsrobotics_setup()
     {   
+        //add_action('wp_enqueue_scripts', 'no_more_jquery');
+        
         function front_page_gallery($atts) {
         	
         	global $post;
@@ -207,12 +209,28 @@ add_action('widgets_init', 'saintsrobotics_widgets_init');
 
 
 /**
+ * replace wordpress jquery with updated one
+ */
+ function replace_core_jquery_version() {
+            wp_deregister_script( 'jquery' );
+            // Change the URL if you want to load a local copy of jQuery from your own server.
+            wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.3.1.min.js", array(), '3.3.1' );
+            wp_register_script( 'aos-animate', "https://unpkg.com/aos@next/dist/aos.js");
+            wp_enqueue_script('aos-animate');
+             wp_enqueue_script( 'Swiper', ("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"), array(), '4.3.5',false);
+        
+           
+ 
+        }
+add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
+/**
  * Enqueue scripts and styles.
  */
 function saintsrobotics_scripts()
 {
     wp_enqueue_style('saintsrobotics-style', get_stylesheet_uri());
-    wp_enqueue_style('saintsrobotics-style-main', get_template_directory_uri() . '/css/sierra.css', array(), '20151215', true);
+    wp_enqueue_style('saintsrobotics-style-main', get_template_directory_uri() . '/css/sierra.css');
+    
     //    wp_enqueue_script( 'saintsrobotics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
    // wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/js/ajax-pagination.js', array( 'jquery' ), '1.0', true );
     //    wp_enqueue_script( 'saintsrobotics-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

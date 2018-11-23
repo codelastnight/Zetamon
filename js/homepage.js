@@ -1,14 +1,14 @@
 
 // swiper is the image gallary thing for the landing page
 //initialize swiper when document ready
-
+var menuitemlink = jQuery('.menu-item-home > a')
 jQuery(document).ready(function($) {
     var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
         autoplay: {
         delay: 5000,
         },
-        direction: 'horizontal',
+        
         loop: true,
         allowTouchMove: false,
         effect: "fade",
@@ -19,19 +19,26 @@ jQuery(document).ready(function($) {
     $('.close-div ').on('click tap', function(event) {
      $(this).closest(".message-bar").remove();
     });
-  $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
+  menuitemlink.attr("href", "#trigger-menu").html("about");
   
   $(document).scroll(function() {
-   if($(window).scrollTop() <= 40) {
-     $('.menu-item-home > a').attr("href", "#trigger-menu").html("about");
+   if($(window).scrollTop() <= 300) {
+     menuitemlink.attr("href", "#trigger-menu").html("about");
    }
+   else {
+        menuitemlink.html("home").attr("href", "#home");
+    }
+   
   });
-})
-document.addEventListener('aos:in:about', (function( detail ){
-  if($(window).scrollTop() >= 40) {
-  jQuery('.menu-item-home > a').html("home").attr("href", "#home");
-}
-}));
+  $('#gmap > iframe').attr("src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d672.2916398599913!2d-122.11685113967444!3d47.62289350181041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906dbdfa0f55b7%3A0x35a096d8775d8148!2sNorthup+Way+%26+168th+Ave+NE!5e0!3m2!1sen!2sus!4v1542588102080")
+  return false;
+});
+
+// document.addEventListener('aos:in:about', (function( detail ){
+    
+    
+// }));
+
 
 
 

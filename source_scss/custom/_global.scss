@@ -29,6 +29,7 @@ html {
 }
 .text-vertical {
   height: auto;
+  
   font-weight: $heading-weight;
   padding: 1.2em;
   @include prefix((writing-mode: vertical-lr), webkit moz);
