@@ -128,8 +128,8 @@ get_header(); ?>
       </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <div class="landing-logo"  data-aos="fade-up" data-aos-mirror="true" >
+        <div class="col-md-12" data-aos="fade-up" data-aos-mirror="true">
+          <div class="landing-logo"   >
             <a href="#trigger-menu"> who are we
               <div class='arrow-big'>
 
@@ -191,9 +191,16 @@ get_header(); ?>
       </div>
     </section>
   </div>
-  <div class="section hero-light" style="">
+  <div class="section hero hero-background" style="
+              background-image:  linear-gradient(to left,rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('<?php echo get_stylesheet_directory_uri().'/resources/1.jpg'; ?>');
+            ">
       <div class="container">
-        <?php  frontPageContent("community-outreach","align-center"," text-with-subtitle") ?>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-6">
+               <?php  frontPageContent("community-outreach","align-left"," text-with-subtitle") ?>
+          </div>
+     
+        </div>
       </div>
   </div>
   <div class='container'>

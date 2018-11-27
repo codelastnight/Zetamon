@@ -26,10 +26,10 @@
 
 .image-list {
   display: flex;
-  flex-flow:row wrap;
+  flex-flow: row wrap;
   flex-direction: row;
-
   justify-content: space-around;
+  
   .resize {
     height: 8em;
     display: flex;
@@ -37,13 +37,39 @@
     padding: 1em;
 
     img {
-      max-height: 100%;
-     max-width: 100%;
-      margin: auto 0;
-    object-fit: scale-down;
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto 0;
+        object-fit: scale-down;
     
     }
   }
 
+}
+.hero {
+    .text-big {
+        color: $brand-secondary;
+    }
+}
+.hero-light {
 
+  background-color: $brand-light;
+  .button-secondary {
+    &:hover {
+        border-color: $brand-dark;
+    }
+
+  }
+  .container {
+    
+    color: $brand-dark;
+    
+  }
+}
+
+.hero-background {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

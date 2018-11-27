@@ -55,6 +55,7 @@
     margin-bottom: 0;
     line-height: 1.3em;
   }
+  margin-bottom: -1em;
 }
 
 .landing-footer {
@@ -79,14 +80,15 @@
     .text-vertical {
       padding: 0;
     }
-    .vertical-line {
+    
+
+  }
+}
+.vertical-line {
       width: 0.3em;
       height: 6em;
       background-color: $brand-secondary;
       margin: 1em auto;
-    }
-
-  }
 }
 
 .container {

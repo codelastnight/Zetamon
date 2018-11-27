@@ -2,6 +2,17 @@
 html {
   margin-top: 0px !important;
 }
+::selection {
+  background: $brand-primary; /* WebKit/Blink Browsers */
+  color: $brand-light;
+  opacity: 1;
+}
+::-moz-selection {
+  background: $brand-secondary; /* Gecko Browsers */
+  color: $brand-primary;
+  opacity: 1;
+}
+
 .row.is-flex {
     display: flex;
     flex-wrap: wrap;
@@ -28,19 +39,6 @@ html {
   @include prefix((writing-mode: vertical-lr), webkit moz);
 }
 
-.hero-light {
-
-  background-color: $brand-light;
-  .button-secondary {
-    &:hover {
-        border-color: $brand-dark;
-    }
-
-  }
-  .container {
-    color: $brand-dark;
-  }
-}
 
 .div-round {
   border-radius: 3px;
@@ -183,3 +181,13 @@ article {
   }
 }
 
+//animation stuff
+[data-aos="expand-down"] {
+  max-height: 0;
+  transition-property: transform, max-height;
+
+  &.aos-animate {
+    max-height: 6em;
+  }
+
+}

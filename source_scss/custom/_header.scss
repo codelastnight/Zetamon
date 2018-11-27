@@ -12,7 +12,7 @@ $desktopborder: 3em;
 }
 
 header {
-  will-change: transform;
+  //will-change: transform;
   z-index: 80;
   width: 100%;
   min-height: 100vh;
@@ -123,7 +123,7 @@ header {
 
 .header-mobile {
   z-index: 3;
-  will-change: transform;
+  //will-change: transform;
   width: 100%;
   position: absolute;
   padding: 1em;
@@ -252,6 +252,9 @@ header {
     color: $brand-secondary;
     pointer-events: auto;
     mix-blend-mode: none;
+    .vertical-line {
+      margin-top: 0;
+    }
 
     img {
       width: 5em;

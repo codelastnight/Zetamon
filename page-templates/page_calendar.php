@@ -3,7 +3,7 @@
 
 get_header();
 ?>
-
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri().'/lib/fullcalendar/dist/fullcalendar.css'; ?>">
 <article class="pages "  id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<div class="container" data-aos="fade">
 		<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>

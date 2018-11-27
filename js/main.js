@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
   
   //fancy animatinos
   AOS.init({
-    easing: 'ease-out-sine',
+    easing: 'ease-out-quad',
     duration: 400,
     mirror: false
   });

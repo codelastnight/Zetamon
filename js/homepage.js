@@ -3,6 +3,7 @@
 //initialize swiper when document ready
 var menuitemlink = jQuery('.menu-item-home > a')
 jQuery(document).ready(function($) {
+    //$('html,body').scrollTop(0);
     var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
         autoplay: {

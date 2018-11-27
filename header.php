@@ -27,7 +27,29 @@
 
 <body <?php body_class(); ?>>
 
-	
+		<header class="header-disable-dynamic-color disable-mobile">
+		<div class='header-overlay'>
+			<div class="main-logo" data-aos="fade-right" data-aos-delay="100">
+				<a href="<?=get_home_url()?>"><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
+					<div class="text-vertical">
+						TEAM 1899
+					</div>
+					<div class="vertical-line " data-aos="expand-down" data-aos-delay="600" data-aos-easing="ease-out-sine" data-aos-duration="300"></div>
+				</a>
+			</div>
+			<div class='header-footer '  data-aos="fade-up" data-aos-offset="0" data-aos-delay="50">
+				<div class='aligner-space-between'>
+					<div class='copyright '>
+						<div class=' aligner-item-bottom' >
+							Copyright MMXVIII Interlake Saints Robotics
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</header>
 
 	<header id="header-dynamic" >
 
@@ -71,28 +93,7 @@
 
 	</header>
 
-	<header class="header-disable-dynamic-color disable-mobile">
-		<div class='header-overlay'>
-			<div class="main-logo" data-aos="fade-right" data-aos-delay="50">
-				<a href="<?=get_home_url()?>"><img src="<?php echo get_stylesheet_directory_uri().'/resources/logo.svg'; ?>" alt="svg not supported">
-					<div class="text-vertical">
-						TEAM 1899
-					</div>
-				</a>
-			</div>
-			<div class='header-footer '  data-aos="fade-up" data-aos-offset="0" data-aos-delay="50">
-				<div class='aligner-space-between'>
-					<div class='copyright '>
-						<div class=' aligner-item-bottom' >
-							Copyright MMXVIII Interlake Saints Robotics
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-
-	</header>
 
 
 
