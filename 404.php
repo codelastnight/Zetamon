@@ -15,7 +15,7 @@ get_header();
 	<div class="section background-dark">
 		<div class="container text-center">
 			<h3 class="text-huge text-white text-with-subtitle">Nothing here</h3>
-			<h4 class="text-big text-gray">OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko boingo! The code monkeys at our headquaters are working VEWY HAWD to fix this.</h4>
+			<h4 class="text-big text-gray">page not found</h4>
 		</div>
 	</div>
 </div>
