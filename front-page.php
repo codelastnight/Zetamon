@@ -219,8 +219,9 @@ get_header(); ?>
         <?php  frontPageContent("sponsors","align-center"," text-with-subtitle",false, true) ?>
       </div>
   </div>
-  <div class='container'>
-    <section class="section">
+
+    <section class="section hero-light">
+        <div class='container'>
     <div class="row">
       <div class="col-md-12">
         <?php
