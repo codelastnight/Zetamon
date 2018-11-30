@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-	<div class=" " data-aos="fade"></a>>
+	<div class=" " data-aos="fade"></a>
 		<!-- <a href="" class='button button-transparent'><span class="glyphicon glyphicon-chevron-left"></span> Back</a> -->
 		<div class="  post-single post-container container">
 			<?php

@@ -18,7 +18,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="section hero-light">
 		<div class="container">
-			<p class="align-center">
+			<p class="align-center text-small">
 				Made with <span class="accent">❤</span> by Simon Zhang
 			</p>
 

@@ -288,7 +288,7 @@ function saintsrobotics_plugin_register_required_plugins() {
   			'name'      => 'Github Updater for WP',
   			'slug'      => 'github-updater',
   			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
-        'required'  => true,
+        'required'  => false,
   		),
 
 

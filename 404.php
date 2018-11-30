@@ -12,10 +12,10 @@ get_header();
 
 <div class="section">
 
-	<div class="section background-dark">
+	<div class="section ">
 		<div class="container text-center">
-			<h3 class="text-huge text-white text-with-subtitle">Nothing here</h3>
-			<h4 class="text-big text-gray">page not found</h4>
+			<h3 class="text-huge text-white text-with-subtitle">Nothing here :(</h3>
+			<h4 class="text-medium text-gray">its pretty empty</h4>
 		</div>
 	</div>
 </div>
