@@ -41,7 +41,7 @@ function imagelist($html) {
 }
 
 function frontPageContent($pagename,$alignment ='align-left',$headercss='',$image_hero=false,$imagelist=false) {
-  $your_query = new WP_Query( 'pagename='.$pagename );
+  $your_query = new WP_Query( 'pagename=about/'.$pagename );
   // "loop" through query (even though it's just one page)
   while ( $your_query->have_posts() ) : $your_query->the_post();
   ob_start();

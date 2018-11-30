@@ -278,10 +278,16 @@ function saintsrobotics_plugin_register_required_plugins() {
 
     $plugins = array(
       
-      array(
+        array(
   			'name'      => 'wp-customize-image-gallery-control',
   			'slug'      => 'wp-customize-image-gallery-control',
   			'source'    => 'https://github.com/xwp/wp-customize-image-gallery-control/archive/master.zip',
+        'required'  => true,
+  		),
+        array(
+  			'name'      => 'Github Updater for WP',
+  			'slug'      => 'github-updater',
+  			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
         'required'  => true,
   		),
 
