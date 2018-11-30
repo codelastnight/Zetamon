@@ -197,7 +197,7 @@ get_header(); ?>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
-               <?php  frontPageContent("community-outreach","align-left"," text-with-subtitle") ?>
+               <?php  frontPageContent("community","align-left"," text-with-subtitle") ?>
           </div>
      
         </div>
