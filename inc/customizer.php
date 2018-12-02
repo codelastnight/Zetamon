@@ -16,9 +16,16 @@ function featured_image_gallery_customize_register( $wp_customize ) {
     if ( ! class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
         return;
     }
+    $wp_customize->add_panel( 'panel_id', array(
+    'priority'       => 10,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '',
+    'title'          => 'zds',
+    'description'    => '',
+) );
  
     $wp_customize->add_section( 'featured_image_gallery_section', array(
-        'title'      => __( 'Gallery Section' ),
+        'title'      => __( 'Front Page Landing' ),
         'priority'   => 25,
     ) );
     $wp_customize->add_setting( 'featured_image_gallery', array(

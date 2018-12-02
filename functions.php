@@ -166,7 +166,8 @@ if (!function_exists('saintsrobotics_setup')): /**
             'flex-width' => true,
             'flex-height' => true
         ));
-    }
+        
+    };
 endif;
 add_action('after_setup_theme', 'saintsrobotics_setup');
 
@@ -215,6 +216,7 @@ add_action('widgets_init', 'saintsrobotics_widgets_init');
             wp_deregister_script( 'jquery' );
             // Change the URL if you want to load a local copy of jQuery from your own server.
             wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.3.1.min.js", array(), '3.3.1' );
+            wp_enqueue_script('jquery');
           //  wp_register_script( 'aos-animate', get_stylesheet_directory_uri().'/lib/aos/dist/aos.js');
              wp_register_script( 'aos-animate','https://unpkg.com/aos@next/dist/aos.js');
             wp_enqueue_script('aos-animate');
