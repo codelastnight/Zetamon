@@ -6,7 +6,7 @@
 
 
 
-Code now in BETA!
+Code released stable v1 
 
 What does this mean?
  - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
