@@ -292,6 +292,11 @@ function saintsrobotics_plugin_register_required_plugins() {
   			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
         'required'  => false,
   		),
+  		array(
+  			'name'      => 'Gutenburg',
+  			'slug'      => 'gutenburg',
+  			'required'  => true,
+  		),
 
 
 

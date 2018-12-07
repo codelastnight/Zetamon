@@ -11,12 +11,18 @@
 
 <article class="pages "  id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<div class="container" data-aos="fade">
-		<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
+		<div class="row">
+			<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
+			</div>
 		</div>
+
 
 	<?php saintsrobotics_post_thumbnail(); ?>
 	<div class="container "data-aos="fade" data-aos-offset="50">
-		<div class="entry-content">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+		
+				<div class="entry-content">
 			<?php
 			the_content();
 
@@ -25,7 +31,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+			</div><!-- .entry-content -->
+			</div>
+			</div>
 
 		<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
