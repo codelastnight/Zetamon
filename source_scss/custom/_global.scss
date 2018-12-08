@@ -191,3 +191,18 @@ article {
   }
 
 }
+
+
+form {
+  
+  label {
+    @extend .label;
+  }
+  input, textarea {
+    @extend input;
+  }
+  span {
+    color: $color-error;
+  }
+  
+}

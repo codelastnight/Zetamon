@@ -73,12 +73,12 @@
 					</div>
 					<div class='contact'>
             <div>
-              <a href="" class='button button-transparent '>contact</a>
+              <a href="contact" class='button button-transparent '>contact</a>
             </div>
 						<div>
-							<a href="" class='button button-transparent'><i class="fab fa-youtube"></i></a>
-							<a href="" class='button button-transparent'><i class="fab fa-instagram"></i></a>
-							<a href="" class='button button-transparent '><i class="fab fa-facebook-f"></i></a>
+							<a href="<?= get_theme_mod('youtube_link', '');?>" class='button button-transparent'><i class="fab fa-youtube"></i></a>
+							<a href="<?= get_theme_mod('instagram_link', '');?>" class='button button-transparent'><i class="fab fa-instagram"></i></a>
+							<a href="<?= get_theme_mod('facebook_link', '');?>" class='button button-transparent '><i class="fab fa-facebook-f"></i></a>
 						</div>
 
 

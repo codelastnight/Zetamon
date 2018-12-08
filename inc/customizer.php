@@ -16,19 +16,8 @@ function featured_image_gallery_customize_register( $wp_customize ) {
     if ( ! class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
         return;
     }
-    $wp_customize->add_panel( 'panel_id', array(
-    'priority'       => 10,
-    'capability'     => 'edit_theme_options',
-    'theme_supports' => '',
-    'title'          => 'zds',
-    'description'    => '',
-) );
- 
-    $wp_customize->add_section( 'featured_image_gallery_section', array(
-        'title'      => __( 'Front Page Landing' ),
-        'priority'   => 25,
-    ) );
-    $wp_customize->add_setting( 'featured_image_gallery', array(
+    // featured gallery
+	 $wp_customize->add_setting( 'featured_image_gallery', array(
         'default' => array(),
         'sanitize_callback' => 'wp_parse_id_list',
     ) );
@@ -37,13 +26,13 @@ function featured_image_gallery_customize_register( $wp_customize ) {
         'featured_image_gallery',
         array(
             'label'    => __( 'Image Gallery Field Label' ),
-            'section'  => 'featured_image_gallery_section',
+            'section'  => 'front_settings_section',
             'settings' => 'featured_image_gallery',
             'type'     => 'image_gallery',
         )
     ) );
 }
-add_action( 'customize_register', 'featured_image_gallery_customize_register' );
+	add_action( 'customize_register', 'featured_image_gallery_customize_register' );
 
 
 function saintsrobotics_customize_register( $wp_customize ) {
@@ -60,21 +49,47 @@ function saintsrobotics_customize_register( $wp_customize ) {
 		'selector'        => '.site-description',
 		'render_callback' => 'saintsrobotics_customize_partial_blogdescription',
 	) );
+	
 	//addingsection in wordpress customizer
 	$wp_customize->add_section('front_settings_section', array(
-	 'title'          => 'Manage Front Page'
+	 'title'          => 'Manage Front Page',
+	 'priority'   => 25,
 	));
+	
+	
 
-	//adding setting for slider shortcode selection
-	$wp_customize->add_setting('landing_slider_shortcode', array(
+
+	//adding social links
+	$wp_customize->add_setting('facebook_link', array(
 	'default'        => '',
 	));
 
-	$wp_customize->add_control('landing_slider_shortcode', array(
-	'label'   => 'Insert Landing Slider shortcode here',
+	$wp_customize->add_control('facebook_link', array(
+	'label'   => 'facebook link',
+	 'section' => 'front_settings_section',
+	'type'    => 'text',
+	'description' => __( 'remember to add https:// in front of links' ),
+	  
+	));
+	$wp_customize->add_setting('instagram_link', array(
+	'default'        => '',
+	));
+
+	$wp_customize->add_control('instagram_link', array(
+	'label'   => 'instagram link',
 	 'section' => 'front_settings_section',
 	'type'    => 'text',
 	));
+	$wp_customize->add_setting('youtube_link', array(
+	'default'        => '',
+	));
+
+	$wp_customize->add_control('youtube_link', array(
+	'label'   => 'youtube link',
+	 'section' => 'front_settings_section',
+	'type'    => 'text',
+	));
+	
 	//messagebar
 	$wp_customize->add_setting( 'landing_message_style', array(
 	  'capability' => 'edit_theme_options',
@@ -86,7 +101,7 @@ function saintsrobotics_customize_register( $wp_customize ) {
 	  'type' => 'select',
 	  'section' => 'front_settings_section', // Add a default or your own section
 	  'label' => __( 'Messege Type (color)' ),
-	  'description' => __( 'This is a custom select option.' ),
+	  'description' => __( 'add a message to the front page' ),
 	  'choices' => array(
 			'none' => __( 'No Message' ),
 	    'success' => __( 'Success' ),

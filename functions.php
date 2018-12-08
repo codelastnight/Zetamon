@@ -293,8 +293,8 @@ function saintsrobotics_plugin_register_required_plugins() {
         'required'  => false,
   		),
   		array(
-  			'name'      => 'Gutenburg',
-  			'slug'      => 'gutenburg',
+  			'name'      => 'Gutenberg',
+  			'slug'      => 'gutenberg',
   			'required'  => true,
   		),
 

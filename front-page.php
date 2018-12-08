@@ -60,22 +60,25 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
    
 
     ?>
+    <div class="row">
     <div data-aos="fade-up" class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
       echo get_first_paragraph($content);
       ?>
       <a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a>
-
+    </div>
     </div>
     <?php
     if ($imagelist==true) {
         ?>
+          <div class="row">
           <div class="image-list" data-aos="fade-up" >
         <?php
            imagelist($content);
        ?>
          </div> 
+         </div>
      <?php
     }
     
@@ -88,20 +91,20 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 get_header(); ?>
 <div id="home" class="landing"  >
   <div class="image-slider"  data-aos="fade" data-aos-offset="0" >
-  <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <?php the_featured_image_gallery(); ?>
-          </div>
-      </div>
-  </div>
-  <?php
-  $messageHidden = "";
-  $messageColor = get_theme_mod('landing_message_style', 'none');
-  $messageData = get_theme_mod('landing_message', '');
-  if ($messageColor == "none") {
-     $messageHidden = "aria-hidden='true'";
-  };
-  ?>
+    <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <?php the_featured_image_gallery(); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+    $messageHidden = "";
+    $messageColor = get_theme_mod('landing_message_style', 'none');
+    $messageData = get_theme_mod('landing_message', '');
+    if ($messageColor == "none") {
+       $messageHidden = "aria-hidden='true'";
+    };
+    ?>
   <div class="absolute-top " <?= $messageHidden ?>>
     <div class="container">
       <div class="section">
@@ -208,7 +211,7 @@ get_header(); ?>
     <div class="row">
       <div class="col-md-12">
         <?php
-        frontPageContent("organization") ?>
+        frontPageContent("organization","col-md-6") ?>
         </div>
       </div>
     </section>
@@ -223,9 +226,10 @@ get_header(); ?>
     <section class="section hero-light">
         <div class='container'>
     <div class="row">
+      <hr>
       <div class="col-md-12">
         <?php
-        frontPageContent("about-first") ?>
+        frontPageContent("about-first", "align-center  col-md-8 col-md-offset-2") ?>
         </div>
       </div>
     </section>
@@ -234,10 +238,7 @@ get_header(); ?>
 </div>
 
 <script src="<?php echo get_stylesheet_directory_uri().'/js/homepage.js'; ?>" async ></script>
-<script>
-//menu click change
 
-</script>
 <?php
 
 get_footer();

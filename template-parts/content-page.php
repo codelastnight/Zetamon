@@ -10,17 +10,19 @@
 ?>
 
 <article class="pages "  id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-	<div class="container" data-aos="fade">
+	<div class="container-medium" data-aos="fade">
 		<div class="row">
+			<div class="col-md-12">
 			<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
+			</div>
 			</div>
 		</div>
 
 
 	<?php saintsrobotics_post_thumbnail(); ?>
-	<div class="container "data-aos="fade" data-aos-offset="50">
+	<div class="container-medium "data-aos="fade" data-aos-offset="50">
 		<div class="row">
-			<div class="col-md-offset-2 col-md-8">
+			<div class="col-md-12">
 		
 				<div class="entry-content">
 			<?php
