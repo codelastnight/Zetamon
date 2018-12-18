@@ -33,7 +33,7 @@ function menuDesktop(x) {
       if (e.target !== this)
         return;
 
-      $(this).attr('aria-hidden', true);
+      headerOverlay.attr('aria-hidden', true);
       hamburger.removeClass("is-active");
       headerDynamic.removeClass("header-disable-dynamic-color");
       
