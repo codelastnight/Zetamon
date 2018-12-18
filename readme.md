@@ -5,9 +5,6 @@
 
 
 
-
-Code released stable v1 
-
 What does this mean?
  - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
 
@@ -26,8 +23,7 @@ What does this mean?
    - doesnt work on edge
    - lags on slow machines
  - calandar is janky as fu
- - no contact page
- - sponsors images are not pretty
+ - gutenburg images are not pretty
  - no members list view that is pretty
  - no post search
  - no way to sort posts
