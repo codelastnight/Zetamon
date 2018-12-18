@@ -14,13 +14,13 @@ What does this mean?
  - mobile version not broken yet
  - pages and posts will render given a links 
  - you can now see multiple posts
- 
+ - "works" on edge
  
  
  Issues :
  - optimizations:
    - literally dies on shitty connections
-   - doesnt work on edge
+  
    - lags on slow machines
  - calandar is janky as fu
  - gutenburg images are not pretty
