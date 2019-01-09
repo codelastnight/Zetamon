@@ -203,7 +203,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-md-6">
             
-              <div class="resize" style="height: 21em;">
+              <div class="resize" style="height: 100%;">
                 <img src="<?php echo get_stylesheet_directory_uri().'/resources/SHARE.png' ?>" />
             </div>
               
