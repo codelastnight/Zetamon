@@ -40,7 +40,7 @@ function imagelist($html) {
   }
 }
 
-function frontPageContent($pagename,$alignment ='align-left',$headercss='',$image_hero=false,$imagelist=false) {
+function frontPageContent($pagename,$alignment ='align-left',$headercss='',$image_hero=false,$imagelist=false, $overrideFormat=false) {
   $your_query = new WP_Query( 'pagename=about/'.$pagename );
   // "loop" through query (even though it's just one page)
   while ( $your_query->have_posts() ) : $your_query->the_post();
@@ -58,9 +58,8 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 			
 
    
-
-    ?>
-    
+  if ($overrideFormat=false) { ?> <div class="row"> <?php } ?>
+     
     <div data-aos="fade-up" class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
@@ -70,6 +69,8 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
     </div>
     
     <?php
+    if ($overrideFormat=false) { ?> </div> <?php }
+    
     if ($imagelist==true) {
         ?>
           <div class="row border-top border-bottom">
@@ -181,7 +182,7 @@ get_header(); ?>
         <div class="col-md-5 col-md-offset-1 ">
 
              <?php
-               frontPageContent("about-us","align-right")
+               frontPageContent("about-us","align-right",$overrideFormat=true)
              ?>
            </div>
         <div class="col-md-6">
@@ -209,7 +210,7 @@ get_header(); ?>
               
             </div>
             <div class="col-md-6 ">
-                 <?php  frontPageContent("community","align-left"," text-with-subtitle") ?>
+                 <?php  frontPageContent("community","align-left"," text-with-subtitle",$overrideFormat=true) ?>
             </div>
            </div>
         </div>
@@ -217,29 +218,28 @@ get_header(); ?>
   </div>
   <div class='container'>
     <section class="section">
-    <div class="row">
-      <div class="col-md-12">
+
+      
         <?php
         frontPageContent("organization","col-md-6") ?>
-        </div>
-      </div>
+
     </section>
   </div>
 
   <div class="section hero-light" style="">
       <div class="container">
-        <?php  frontPageContent("sponsors","align-center col-md-6 col-md-offset-3"," text-with-subtitle",false, true) ?>
+        
+          <?php  frontPageContent("sponsors","align-center col-md-6 col-md-offset-3"," text-with-subtitle",false, true) ?>
+        
       </div>
   </div>
 
     <section class="section hero-light">
-        <div class='container'>
-    <div class="row">
+        <div class='container border-top'>
       <hr>
-      <div class="col-md-12">
+      
         <?php
         frontPageContent("about-first", "align-center  col-md-8 col-md-offset-2") ?>
-        </div>
       </div>
     </section>
   </div>
