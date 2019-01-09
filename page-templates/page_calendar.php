@@ -12,10 +12,11 @@ get_header();
 
   <div class="container">
 
-    <div id="calendar" class="calendar-full">
   </div>
 	<div class="container "data-aos="fade" data-aos-offset="50">
 		<div class="entry-content">
+		    <div id="calendar" class="calendar-full">
+			</div>
 			<?php
 			the_content();
 

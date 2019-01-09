@@ -10,7 +10,7 @@ function dynamic_calendar(x) {
 }
 $(document).ready(function() {
   $('#calendar').fullCalendar({
-    defaultView: 'listMonth',
+    defaultView: 'month',
     nowIndicator: true,
     header: {
 
