@@ -182,7 +182,7 @@ get_header(); ?>
         <div class="col-md-5 col-md-offset-1 ">
 
              <?php
-               frontPageContent("about-us","align-right",$overrideFormat=true)
+               frontPageContent("about-us","align-right",'',$overrideFormat=true)
              ?>
            </div>
         <div class="col-md-6">
