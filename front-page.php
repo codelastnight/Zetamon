@@ -60,7 +60,7 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
    
 
     ?>
-    <div class="row">
+    
     <div data-aos="fade-up" class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
@@ -68,7 +68,7 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
       ?>
       <a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a>
     </div>
-    </div>
+    
     <?php
     if ($imagelist==true) {
         ?>
@@ -203,9 +203,9 @@ get_header(); ?>
           <div class="row">
             <div class="col-md-6">
             
-              <div class="resize" style="height: 100%;">
+             
                 <img src="<?php echo get_stylesheet_directory_uri().'/resources/SHARE.png' ?>" />
-            </div>
+            
               
             </div>
             <div class="col-md-6 ">
