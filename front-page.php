@@ -11,23 +11,23 @@
 
 function imagelist($html) {
   // remove <noscript> elements from html
-  $html = preg_replace("/<noscript[^>]*>(.*?)<\/noscript>/i", " ", $html);  
-  preg_match_all('/<img[^>]+>/i',$html, $result); 
-   
-   
+  $html = preg_replace("/<noscript[^>]*>(.*?)<\/noscript>/i", " ", $html);
+  preg_match_all('/<img[^>]+>/i',$html, $result);
+
+
   if ( !$result == null ) {
-   
+
     $img = array();
     foreach ($result as $img_tag) {
-      
+
       foreach ($img_tag as $b) {
        preg_match_all('/(src)=("[^"]*")/i',$b, $img[$b]);
       }
-      
+
     }
-   
+
     foreach ($img as $value) {
-      
+
      // foreach($value as $a) {
         //print_r($value[0][0]);
         ?>
@@ -47,7 +47,7 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
   ob_start();
   the_content();
   $content = ob_get_clean();
-  
+
     if (has_post_thumbnail( $post->ID ) && $image_hero==true ): {
 				$imagea = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 				$image = $imagea[0];
@@ -55,11 +55,11 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 				$image_hero=false;
 			}
 			endif;
-			
 
-   
-  if ($overrideFormat=false) { ?> <div class="row"> <?php } ?>
-     
+
+
+  if ($overrideFormat==false) { ?> <div class="row"> <?php } ?>
+
     <div data-aos="fade-up" class='<?=$alignment?>'>
       <?php
       the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
@@ -67,10 +67,10 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
       ?>
       <a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a>
     </div>
-    
+
     <?php
-    if ($overrideFormat=false) { ?> </div> <?php }
-    
+    if ($overrideFormat==false) { ?> </div> <?php }
+
     if ($imagelist==true) {
         ?>
           <div class="row border-top border-bottom">
@@ -78,11 +78,11 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
         <?php
            imagelist($content);
        ?>
-         </div> 
+         </div>
          </div>
      <?php
     }
-    
+
   endwhile;
   // reset post data (important!)
   wp_reset_postdata();
@@ -173,9 +173,9 @@ get_header(); ?>
 
 <div class="about-page">
   <div class='container'>
-    
+
     <section class="section" id="trigger-menu" >
-      
+
 
       <div class="row is-flex">
         <div class="section">
@@ -203,11 +203,11 @@ get_header(); ?>
          <section class="section">
           <div class="row">
             <div class="col-md-6">
-            
-             
+
+
                 <img src="<?php echo get_stylesheet_directory_uri().'/resources/SHARE.png' ?>" />
-            
-              
+
+
             </div>
             <div class="col-md-6 ">
                  <?php  frontPageContent("community","align-left"," text-with-subtitle",$overrideFormat=true) ?>
@@ -219,7 +219,7 @@ get_header(); ?>
   <div class='container'>
     <section class="section">
 
-      
+
         <?php
         frontPageContent("organization","col-md-6") ?>
 
@@ -228,16 +228,16 @@ get_header(); ?>
 
   <div class="section hero-light" style="">
       <div class="container">
-        
+
           <?php  frontPageContent("sponsors","align-center col-md-6 col-md-offset-3"," text-with-subtitle",false, true) ?>
-        
+
       </div>
   </div>
 
     <section class="section hero-light">
         <div class='container border-top'>
       <hr>
-      
+
         <?php
         frontPageContent("about-first", "align-center  col-md-8 col-md-offset-2") ?>
       </div>
