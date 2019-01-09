@@ -72,7 +72,7 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
     <?php
     if ($imagelist==true) {
         ?>
-          <div class="row">
+          <div class="row border-top border-bottom">
           <div class="image-list" data-aos="fade-up" >
         <?php
            imagelist($content);
@@ -146,15 +146,15 @@ get_header(); ?>
     </div>
     <div class="section landing-footer"  data-aos="fade-up" data-aos-offset="0" data-aos-mirror="true">
 
-      <div class="caption">
-        <h5> image caption</h5>
-        <p>
-          doing stuff i guess lol
-        </p>
-        <div class="swiper-container" >
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
+      <!--<div class="caption">-->
+      <!--  <h5> image caption</h5>-->
+      <!--  <p>-->
+      <!--    doing stuff i guess lol-->
+      <!--  </p>-->
+      <!--  <div class="swiper-container" >-->
+      <!--    <div class="swiper-pagination"></div>-->
+      <!--  </div>-->
+      <!--</div>-->
       <div class="scroll-btn">
         <a href="#trigger-menu">
           <div class="text-vertical">
@@ -174,9 +174,10 @@ get_header(); ?>
   <div class='container'>
     
     <section class="section" id="trigger-menu" >
-      <div class="section">
+      
 
       <div class="row is-flex">
+        <div class="section">
         <div class="col-md-5 col-md-offset-1 ">
 
              <?php
@@ -198,11 +199,19 @@ get_header(); ?>
               background-image:  linear-gradient(to left,rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('<?php echo get_stylesheet_directory_uri().'/resources/1.jpg'; ?>');
             ">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-6">
-               <?php  frontPageContent("community","align-left"," text-with-subtitle") ?>
-          </div>
-     
+         <section class="section">
+          <div class="row">
+            <div class="col-md-6">
+            
+              <div class="resize" style="height: 21em;">
+                <img src="<?php echo get_stylesheet_directory_uri().'/resources/SHARE.png' ?>" />
+            </div>
+              
+            </div>
+            <div class="col-md-6 ">
+                 <?php  frontPageContent("community","align-left"," text-with-subtitle") ?>
+            </div>
+           </div>
         </div>
       </div>
   </div>
