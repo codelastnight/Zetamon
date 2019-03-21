@@ -1,4 +1,4 @@
-#what is this
+# what is this
 
 ![GitHub (pre-)release](https://img.shields.io/github/release/dottechnopath/SaintsRoboticsSite/all.svg)
 
@@ -15,7 +15,7 @@ website is now live and can be accessed at https://www.saintsrobotics.com
 
 
 
-#update/changelog type thing
+# update/changelog type thing
 
 What does this mean?
  - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
