@@ -14,7 +14,7 @@ What does this mean?
  - mobile version not broken yet
  - pages and posts will render given a links 
  - you can now see multiple posts
- - "works" on edge
+
  
  
  Issues :
@@ -27,6 +27,7 @@ What does this mean?
  - no members list view that is pretty
  - no post search
  - no way to sort posts
+ - edge and firefox broken again
  
 
 
