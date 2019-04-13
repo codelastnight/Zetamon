@@ -33,7 +33,7 @@
 					<div class="text-vertical">
 						TEAM 1899
 					</div>
-					<div class="vertical-line " data-aos="expand-down" data-aos-delay="600" data-aos-easing="ease-out-sine" data-aos-duration="300"></div>
+					<div class="vertical-line " ></div>
 				</a>
 			</div>
 			<div class='header-footer '  data-aos="fade-up" data-aos-offset="0" data-aos-delay="50">

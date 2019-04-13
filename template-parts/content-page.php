@@ -15,8 +15,8 @@
 			<div class="col-md-12">
 			<?php the_title( '<h1 class="text-huge page-title">', '</h1>' ); ?>
 			</div>
-			</div>
 		</div>
+	</div>
 
 
 	<?php saintsrobotics_post_thumbnail(); ?>
