@@ -1,28 +1,28 @@
 .post-container {
   background-color: $brand-light;
   overflow: hidden;
-  //adding: 1em;
-  
   color: $brand-dark;
-
-
 
 }
 
 .post-single {
   min-height: 100vh;
-  
+
   padding: 0;
+
   //padding-top: 6em;
   article {
     padding: 1em;
+
     .entry-title {
       margin-bottom: 0rem;
     }
+
     .entry-meta {
       margin-top: 0rem;
     }
   }
+
   nav {
     // padding: 1em;
     // .nav-links {
@@ -39,11 +39,12 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     margin-top: 2em;
-    
+
     .post-container {
       padding: 1em;
       border-radius: 3px;
     }
+
     &:hover {
       opacity: 0.7;
       transition: opacity .2s ease-in-out;
@@ -80,10 +81,12 @@
           bottom: 1.3em;
           color: $brand-light;
           margin-right: 3em;
+
           .date-day {
             font-weight: $font-weight-base;
 
           }
+
           h1 {
             font-size: 1.8em;
           }
@@ -92,6 +95,7 @@
     }
   }
 }
+
 @media only screen and (min-width: $screen-md-min) {
   .post-list-flex {
     .post-preview {
@@ -102,6 +106,7 @@
     }
   }
 }
+
 @media (min-width: $screen-md-min) and (max-width: $screen-md-min) {
   .post-single {
     margin-left: 2em;
@@ -109,12 +114,14 @@
 
   }
 }
+
 @media only screen and (min-width: $screen-lg-min) {
   .post-single {
     margin-bottom: 3em;
     margin-top: 3em;
     border-radius: 3px;
   }
+
   .post-list-flex {
     .post-preview {
       .img-container {
@@ -123,12 +130,13 @@
     }
   }
 }
-@media (min-width: $screen-lg-min){
+
+@media (min-width: $screen-lg-min) {
   .post-single {
     article {
       padding-left: 12em;
       padding-right: 12em;
-  }
+    }
   }
 
 }

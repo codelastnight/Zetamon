@@ -1,0 +1,23 @@
+{
+  "name": "zetamon",
+  "version": "1.0.0",
+  "description": "![GitHub (pre-)release](https://img.shields.io/github/release/dottechnopath/SaintsRoboticsSite/all.svg)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch source_scss:css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotTechnopath/Zetamon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotTechnopath/Zetamon/issues"
+  },
+  "homepage": "https://github.com/dotTechnopath/Zetamon#readme"
+}

@@ -19,7 +19,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" async defer>
-  <!-- <link rel="stylesheet" href="<?php //echo get_stylesheet_directory_uri().'/lib/aos/dist/aos.css'; ?>" /> -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/sierra.css'; ?>" />
 
@@ -41,7 +40,7 @@
 				<div class='aligner-space-between'>
 					<div class='copyright '>
 						<div class=' aligner-item-bottom' >
-							Copyright MMXVIII Interlake Saints Robotics
+							Copyright MMXIX Interlake Saints Robotics
 						</div>
 					</div>
 				</div>
@@ -52,7 +51,6 @@
 	</header>
 
 	<header id="header-dynamic" >
-
 		<div class='header-mobile '>
 			<button class="hamburger hamburger--slider" type="button" aria-label="Menu" aria-controls="navigation" onclick="menuToggle(this)">
 				<span class="hamburger-box">

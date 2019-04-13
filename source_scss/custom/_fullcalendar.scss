@@ -1,28 +1,29 @@
 .calendar-full {
-margin-right: 0.5rem;
-margin-left: 0.5rem;
-padding-bottom: 3em;
-.fc-view-container {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  padding-bottom: 3em;
+
+  .fc-view-container {
     background-color: #fff;
     border-radius: 3px;
     padding: 1rem;
-    th, tr{
+
+    th,
+    tr {
       color: #9B9B9B;
     }
-    .fc-axis, .fc-day-header {
+
+    .fc-axis,
+    .fc-day-header {
       color: $brand-dark;
     }
+
     .fc-content {
       color: $brand-light;
     }
-}
+  }
 
 }
 
 
-@media only screen and (min-width: $screen-lg-min) {
-.calendar-full {
-
-
-}
-}
+@media only screen and (min-width: $screen-lg-min) {}

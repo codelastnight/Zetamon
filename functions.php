@@ -17,7 +17,7 @@ if (!function_exists('saintsrobotics_setup')): /**
     function saintsrobotics_setup()
     {   
         //add_action('wp_enqueue_scripts', 'no_more_jquery');
-        
+        //code to integreate the front page gallary to the customizer controller thing 
         function front_page_gallery($atts) {
         	
         	global $post;
@@ -81,27 +81,27 @@ if (!function_exists('saintsrobotics_setup')): /**
             }
           }
 
-          /*
-           * retrieve only first paragraph
-           */
+          
 
-
+        /*
+        * retrieve only first paragraph, used for the front-page summary parts
+         */
         function get_first_paragraph($html) {
           global $post;
 
-        	$first_paragraph_str =  $html ;
+        	$first_paragraph_str = $html ;
             $first_heading_str = $first_paragraph_str;
-            //echo strpos($first_heading_str, '<h2>');
-            // echo strpos($first_paragraph_str, '<p>');
-            if (strpos($first_heading_str, '<h2>') < strpos($first_paragraph_str, '<p>')) {
-               $first_heading_str =  substr($first_heading_str, 0, strpos($first_heading_str, '</h2>')); 
-            } else {
-             $first_heading_str = "";
-            };
-        	$first_paragraph_str = substr($first_paragraph_str, strpos($first_paragraph_str, '<p>'), strpos($first_paragraph_str, '</p>'));
-        	$first_paragraph_str = strip_tags($first_paragraph_str, '<a><strong><em>');
-        	$first_heading_str = strip_tags($first_heading_str, '<a><strong><em>');
-        	return '<h2 class="text-big">'.$first_heading_str.'</h2><p>' . $first_paragraph_str . '</p>';
+            // if (strpos($first_heading_str, '<h2>') < strpos($first_paragraph_str, '<p>')) {
+            //    $first_heading_str =  substr($first_heading_str, 0, strpos($first_heading_str, '</h2>')); 
+            // } else {
+            //  $first_heading_str = "";
+            // };
+            //$first_paragraph_str = substr($first_paragraph_str, strpos($first_paragraph_str, '<p>'), strpos($first_paragraph_str, '</p>'));
+            $first_paragraph_str = substr($first_paragraph_str, 0, strpos($first_paragraph_str, '</p>'));
+        	$first_paragraph_str = strip_tags($first_paragraph_str, '<h2><p><a><strong><em>');
+        	// $first_heading_str = strip_tags($first_heading_str, '<a><strong><em>');
+           // return '<h2 class="text-big">'.$first_heading_str.'</h2><p>' . $first_paragraph_str . '</p>';
+            return $first_paragraph_str ;
         }
         /*
          * Make theme available for translation.
@@ -276,6 +276,7 @@ if (defined('JETPACK__VERSION')) {
  */
 require_once get_template_directory() . '/lib/TGM/class-tgm-plugin-activation.php';
 
+// required plugins for the theme to work. assumes you are using gutenburg
 function saintsrobotics_plugin_register_required_plugins() {
 
     $plugins = array(
@@ -292,11 +293,7 @@ function saintsrobotics_plugin_register_required_plugins() {
   			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
         'required'  => false,
   		),
-  		array(
-  			'name'      => 'Gutenberg',
-  			'slug'      => 'gutenberg',
-  			'required'  => true,
-  		),
+  		
 
 
 

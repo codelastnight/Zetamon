@@ -14,7 +14,6 @@ function imagelist($html) {
   $html = preg_replace("/<noscript[^>]*>(.*?)<\/noscript>/i", " ", $html);
   preg_match_all('/<img[^>]+>/i',$html, $result);
 
-
   if ( !$result == null ) {
 
     $img = array();
@@ -23,19 +22,14 @@ function imagelist($html) {
       foreach ($img_tag as $b) {
        preg_match_all('/(src)=("[^"]*")/i',$b, $img[$b]);
       }
-
     }
 
     foreach ($img as $value) {
-
-     // foreach($value as $a) {
-        //print_r($value[0][0]);
         ?>
         <div class="resize">
         <img <?=$value[0][0];?> />
         </div>
         <?php
-     // }
     }
   }
 }
@@ -56,17 +50,15 @@ function frontPageContent($pagename,$alignment ='align-left',$headercss='',$imag
 			}
 			endif;
 
+    if ($overrideFormat==false) { ?> <div class="row about-us"> <?php } ?>
 
-
-  if ($overrideFormat==false) { ?> <div class="row"> <?php } ?>
-
-    <div data-aos="fade-up" class='<?=$alignment?>'>
-      <?php
-      the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
-      echo get_first_paragraph($content);
-      ?>
-      <a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a>
-    </div>
+      <div data-aos="fade-up" class='<?=$alignment?>'>
+        <?php
+        the_title('<h1 class="text-huge'.$headercss.' " id='.$pagename.'>', '</h1>' );
+        echo get_first_paragraph($content);
+        ?>
+        <p><a class="button button-secondary" href="<?=the_permalink() ?>">Learn more</a></p>
+      </div>
 
     <?php
     if ($overrideFormat==false) { ?> </div> <?php }
@@ -147,15 +139,6 @@ get_header(); ?>
     </div>
     <div class="section landing-footer"  data-aos="fade-up" data-aos-offset="0" data-aos-mirror="true">
 
-      <!--<div class="caption">-->
-      <!--  <h5> image caption</h5>-->
-      <!--  <p>-->
-      <!--    doing stuff i guess lol-->
-      <!--  </p>-->
-      <!--  <div class="swiper-container" >-->
-      <!--    <div class="swiper-pagination"></div>-->
-      <!--  </div>-->
-      <!--</div>-->
       <div class="scroll-btn">
         <a href="#trigger-menu">
           <div class="text-vertical">
@@ -202,11 +185,7 @@ get_header(); ?>
       <div class="container">
          <section class="section">
           <div class="row">
-            <div class="col-md-6">
-
-
-                <img src="<?php echo get_stylesheet_directory_uri().'/resources/SHARE.png' ?>" />
-
+            <div class="home-image col-md-6" style="background-image: url('<?php echo get_stylesheet_directory_uri().'/resources/HELPING-HOUNDS-LOGO.png' ?>') ">
 
             </div>
             <div class="col-md-6 ">
