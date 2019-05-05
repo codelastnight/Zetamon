@@ -26,7 +26,7 @@
 			bottom: 0;
 			left: 0;
 
-			background-color: #000;
+			background-color: $brand-dark;
 			opacity: 0.7;
 			z-index: 2;
 		}
@@ -111,11 +111,11 @@
 
 @media only screen and (min-width: $screen-sm-min) {
 	.landing {
-		min-height: 100vh;
+		height: 100vh;
 	}
 
 	.image-slider {
-		height: 100%;
+		height: 100vh;
 	}
 }
 
