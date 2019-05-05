@@ -13,12 +13,19 @@ https://dottechnopath.github.io/SaintsRoboticsSite/home.html
 website is now live and can be accessed at https://www.saintsrobotics.com
 
 
+# how 2 develop
+
+1. Create a local wordress server enviroment. I found [this tutorial](https://www.themeum.com/install-wordpress-localhost/) to be really simple and easy, but you can totally use whatever you want. 
+2. Clone this repo into the `wp-content/themes/` folder under the wordpress installation directory.
+3. Start the server and open ur favorite code editor. 
+
+This theme utalizes [SCSS](https://sass-lang.com/), a css precompiler. In order to start messing with the css, you need to have both npm and sass installed. 
+
+4. run `npm run sass` in a new terminal inside the repo directory. This is a script shortcut that will tell the SASS program to automatically compile the SASS files in `source_scss` into `css`.
 
 
 # update/changelog type thing
-
-What does this mean?
- - I have successfully converted the design into a wordpress theme to work seamlessly with our current website setup
+![GitHub (pre-)release](https://img.shields.io/github/release/dottechnopath/SaintsRoboticsSite/all.svg)
 
  What works?
  - Home page has a landing page, and is editable
