@@ -1,165 +1,150 @@
 .landing {
-  height: 90vh;
+	height: 90vh;
 
-  .container {
-    height: 100%;
-  }
+	.container {
+		height: 100%;
+	}
 }
 
 //wow
 .image-slider {
-  display: flex;
-  position: absolute;
-  z-index: -1;
-  height: 90vh;
-  overflow-x: hidden;
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	height: 90vh;
+	overflow-x: hidden;
 
-  .swiper-container {
-    width: 100vw;
-    height: 100%;
+	.swiper-container {
+		width: 100vw;
+		height: 100%;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 
-      background-color: #000;
-      opacity: 0.75;
-      z-index: 2;
-    }
-  }
+			background-color: #000;
+			opacity: 0.7;
+			z-index: 2;
+		}
+	}
 
-  img {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
-  }
+	img {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
+	}
 }
 
 .landing-logo {
-  margin-top: 0.5em;
-  margin-bottom: -1em;
+	margin-top: 0.5em;
+	margin-bottom: -1em;
 
-  a {
-    margin-left: 2px;
-    font-size: 1.5em;
-  }
+	a {
+		margin-left: 2px;
+		font-size: 1.5em;
+	}
 
-  p {
-    font-weight: $heading-weight;
-    font-size: 2rem;
-    margin-bottom: 0;
-    line-height: 1.3em;
-  }
-
-
+	p {
+		font-weight: $heading-weight;
+		font-size: 2rem;
+		margin-bottom: 0;
+		line-height: 1.3em;
+	}
 }
 
 .landing-footer {
-  padding-top: 0;
-  z-index: 2;
-  position: absolute;
-  bottom: 7em;
-  right: 0;
-  margin-right: 3em;
-  overflow-y: visible;
+	padding-top: 0;
+	z-index: 2;
+	position: absolute;
+	bottom: 7em;
+	right: 0;
+	margin-right: 3em;
+	overflow-y: visible;
 
-  .caption {
-    margin-right: 1.5em; // no overlap with scroll btn, dont touch this
-    padding-right: 1.5em; //spacing to make things look nice, touch this instead
-    text-align: right;
-  }
+	.caption {
+		//depreciated, caption doesnt exist anymore (so sad)
+		margin-right: 1.5em; // no overlap with scroll btn, dont touch this
+		padding-right: 1.5em; //spacing to make things look nice, touch this instead
+		text-align: right;
+	}
 
-  .scroll-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
+	.scroll-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
 
-    align-items: center;
+		align-items: center;
 
-    .text-vertical {
-      padding: 0;
-    }
-
-
-  }
-}
-
-.vertical-line {
-  width: 0.3em;
-  height: 6em;
-  background-color: $brand-secondary;
-  margin: 1em auto;
+		.text-vertical {
+			padding: 0;
+		}
+	}
 }
 
 .container {
-  position: relative;
+	position: relative;
 }
 
 .center-vertical {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-  .row {
-    position: relative;
-  }
+	.row {
+		position: relative;
+	}
 }
 
 @media only screen and (min-width: $screen-xs-min) {
-  .landing-logo {
-    p {
-      font-size: 2.5rem;
-    }
-  }
+	.landing-logo {
+		p {
+			font-size: 2.5rem;
+		}
+	}
 }
 
 @media only screen and (min-width: $screen-sm-min) {
+	.landing {
+		min-height: 100vh;
+	}
 
-  .landing {
-    min-height: 100vh;
-  }
-
-  .image-slider {
-    height: 100%;
-  }
+	.image-slider {
+		height: 100%;
+	}
 }
 
-
 @media only screen and (min-width: $screen-md-min) {
-  .landing-logo {
-    padding-left: 5em;
+	.landing-logo {
+		padding-left: 5em;
 
-    a {
-      font-size: 1.1em;
-    }
-  }
-
-
+		a {
+			font-size: 1.1em;
+		}
+	}
 }
 
 @media only screen and (min-width: $screen-lg-min) {
-  .landing-footer {
-    margin-right: 12em;
-  }
+	.landing-footer {
+		margin-right: 12em;
+	}
 }
 
 @media only screen and (min-width: $screen-xlg-min) {
-  .landing-logo {
-    padding-left: 1em;
+	.landing-logo {
+		padding-left: 1em;
 
-    p {
-      font-size: 4rem;
-    }
-  }
+		p {
+			font-size: 4rem;
+		}
+	}
 
-  .landing-footer {
-    margin-right: 3em;
-  }
-
+	.landing-footer {
+		margin-right: 3em;
+	}
 }

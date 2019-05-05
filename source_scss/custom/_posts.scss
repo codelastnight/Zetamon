@@ -1,142 +1,129 @@
 .post-container {
-  background-color: $brand-light;
-  overflow: hidden;
-  color: $brand-dark;
-
+	background-color: $brand-light;
+	overflow: hidden;
+	color: $brand-dark;
 }
 
 .post-single {
-  min-height: 100vh;
+	min-height: 100vh;
 
-  padding: 0;
+	padding: 0;
 
-  //padding-top: 6em;
-  article {
-    padding: 1em;
+	//padding-top: 6em;
+	article {
+		padding: 1em;
 
-    .entry-title {
-      margin-bottom: 0rem;
-    }
+		.entry-title {
+			margin-bottom: 0rem;
+		}
 
-    .entry-meta {
-      margin-top: 0rem;
-    }
-  }
-
-  nav {
-    // padding: 1em;
-    // .nav-links {
-    //
-    // }
-  }
+		.entry-meta {
+			margin-top: 0rem;
+		}
+	}
 }
 
 .post-list-flex {
-  padding-left: 2em;
-  padding-right: 2em;
+	padding-left: 2em;
+	padding-right: 2em;
 
-  .post-preview {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-top: 2em;
+	.post-preview {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		margin-top: 2em;
 
-    .post-container {
-      padding: 1em;
-      border-radius: 3px;
-    }
+		.post-container {
+			padding: 1em;
+			border-radius: 3px;
+		}
 
-    &:hover {
-      opacity: 0.7;
-      transition: opacity .2s ease-in-out;
-    }
+		&:hover {
+			opacity: 0.7;
+			transition: opacity 0.2s ease-in-out;
+		}
 
-    .img-container {
+		.img-container {
+			height: 15em;
+			//margin-right: 1em;
+			margin-left: 1em;
+			object-fit: cover;
+			filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
+			border-width: 4px;
+			border-color: $brand-light;
+			background-size: cover;
+			background-repeat: no-repeat;
 
-      height: 15em;
-      //margin-right: 1em;
-      margin-left: 1em;
-      object-fit: cover;
-      filter: contrast(130%) saturate(80%) hue-rotate(10deg) grayscale(10%);
-      border-width: 4px;
-      border-color: $brand-light;
-      background-size: cover;
-      background-repeat: no-repeat;
+			.content {
+				font-weight: $heading-weight;
 
+				.date-year {
+					position: absolute;
+					top: 1em;
+					color: $brand-dark;
+					background-color: $brand-light;
+					border-radius: 4px;
+					padding-left: 0.5em;
+					padding-right: 0.5em;
+				}
 
-      .content {
-        font-weight: $heading-weight;
+				.post-title {
+					position: absolute;
+					bottom: 1.3em;
+					color: $brand-light;
+					margin-right: 3em;
 
-        .date-year {
-          position: absolute;
-          top: 1em;
-          color: $brand-dark;
-          background-color: $brand-light;
-          border-radius: 4px;
-          padding-left: 0.5em;
-          padding-right: 0.5em;
-        }
+					.date-day {
+						font-weight: $font-weight-base;
+					}
 
-        .post-title {
-          position: absolute;
-          bottom: 1.3em;
-          color: $brand-light;
-          margin-right: 3em;
-
-          .date-day {
-            font-weight: $font-weight-base;
-
-          }
-
-          h1 {
-            font-size: 1.8em;
-          }
-        }
-      }
-    }
-  }
+					h1 {
+						font-size: 1.8em;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: $screen-md-min) {
-  .post-list-flex {
-    .post-preview {
-      .img-container {
-        margin-left: 2em;
-        //margin-right: 2em;
-      }
-    }
-  }
+	.post-list-flex {
+		.post-preview {
+			.img-container {
+				margin-left: 2em;
+				//margin-right: 2em;
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-md-min) and (max-width: $screen-md-min) {
-  .post-single {
-    margin-left: 2em;
-    margin-right: 2em;
-
-  }
+	.post-single {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
 }
 
 @media only screen and (min-width: $screen-lg-min) {
-  .post-single {
-    margin-bottom: 3em;
-    margin-top: 3em;
-    border-radius: 3px;
-  }
+	.post-single {
+		margin-bottom: 3em;
+		margin-top: 3em;
+		border-radius: 3px;
+	}
 
-  .post-list-flex {
-    .post-preview {
-      .img-container {
-        height: 22em;
-      }
-    }
-  }
+	.post-list-flex {
+		.post-preview {
+			.img-container {
+				height: 22em;
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-lg-min) {
-  .post-single {
-    article {
-      padding-left: 12em;
-      padding-right: 12em;
-    }
-  }
-
+	.post-single {
+		article {
+			padding-left: 12em;
+			padding-right: 12em;
+		}
+	}
 }

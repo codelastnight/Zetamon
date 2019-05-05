@@ -10,7 +10,7 @@
 @import 'scss/main';
 
 @import 'scss/background-colors';
-@import 'scss/badges';
+//@import 'scss/badges';
 @import 'scss/buttons';
 @import 'scss/forms';
 @import 'scss/helpers';
@@ -19,10 +19,10 @@
 //@import 'scss/loading-spinner';
 @import 'scss/message-bars';
 @import 'scss/paginator';
-@import 'scss/rating-circle';
+//@import 'scss/rating-circle';
 @import 'scss/tables';
-@import 'scss/tabs';
-@import 'scss/tags';
+//@import 'scss/tabs';
+//@import 'scss/tags';
 @import 'scss/typography';
 
 // Flexbox based grid. More info: https://github.com/kristoferjoseph/flexboxgrid
@@ -45,6 +45,5 @@
 @import 'custom/fullcalendar';
 @import 'custom/posts';
 @import 'custom/about-us';
-
 
 @import 'custom/ie-support';

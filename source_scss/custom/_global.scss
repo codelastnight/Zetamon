@@ -1,208 +1,200 @@
-
 html {
-  margin-top: 0px !important;
+	margin-top: 0px !important;
 }
 ::selection {
-  background: $brand-primary; /* WebKit/Blink Browsers */
-  color: $brand-light;
-  opacity: 1;
+	background: $brand-primary; /* WebKit/Blink Browsers */
+	color: $brand-light;
+	opacity: 1;
 }
 ::-moz-selection {
-  background: $brand-secondary; /* Gecko Browsers */
-  color: $brand-primary;
-  opacity: 1;
+	background: $brand-secondary; /* Gecko Browsers */
+	color: $brand-primary;
+	opacity: 1;
 }
 
 .row.is-flex {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 .row.is-flex > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .row.is-flex > [class*='col-md'] {
-    @media (max-width: $screen-md-min) {
-      width: 100%;
-    }
+	@media (max-width: $screen-md-min) {
+		width: 100%;
+	}
 }
-
 
 .page-title:first-child {
-  margin-top: 0.65em;
+	margin-top: 0.65em;
 }
 .text-vertical {
-  height: auto;
-  
-  font-weight: $heading-weight;
-  padding: 1.2em;
-  @include prefix((writing-mode: vertical-lr), webkit moz);
-}
+	height: auto;
 
+	font-weight: $heading-weight;
+	padding: 1.2em;
+	@include prefix(
+		(
+			writing-mode: vertical-lr
+		),
+		webkit moz
+	);
+}
 
 .div-round {
-  border-radius: 3px;
-  overflow: hidden;
-
+	border-radius: 3px;
+	overflow: hidden;
 }
 .gmap {
-  //margin-top: 2.5em;
-  height: 100%;
-  iframe {
-    margin-bottom: -6px;
-    min-height: 300px;
-  }
-
+	//margin-top: 2.5em;
+	height: 100%;
+	iframe {
+		margin-bottom: -6px;
+		min-height: 300px;
+	}
 }
 a {
-  .arrow-big {
-    @extend a;
-    height: 0.5em;
-    max-height: 2em;
-    background-image: url("../resources/Polygondownarrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 0.3em;
-  }
+	.arrow-big {
+		@extend a;
+		height: 0.5em;
+		max-height: 2em;
+		background-image: url('../resources/Polygondownarrow.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-top: 0.3em;
+	}
 
-  &:hover {
-    .arrow-big {
-      color: $brand-secondary;
-      opacity: 1;
-    }
+	&:hover {
+		.arrow-big {
+			color: $brand-secondary;
+			opacity: 1;
+		}
 
-    &:active {
-      .arrow-big {
-        opacity: 1;
-      }
-    }
-  }
+		&:active {
+			.arrow-big {
+				opacity: 1;
+			}
+		}
+	}
 }
-
 
 //messagebar
 .absolute-top {
-  position: absolute;
-  top: 3.5em;
+	position: absolute;
+	top: 3.5em;
 
-  z-index: 2;
-  width: 100%;
-  pointer-events: none;
-  .message-bar {
-
-    pointer-events: auto;
-    display: flex;
-    justify-content: space-between;
-    p {
-      margin-bottom: 0;
-    }
-    a {
-      color: $brand-light;
-    }
-  }
+	z-index: 2;
+	width: 100%;
+	pointer-events: none;
+	.message-bar {
+		pointer-events: auto;
+		display: flex;
+		justify-content: space-between;
+		p {
+			margin-bottom: 0;
+		}
+		a {
+			color: $brand-light;
+		}
+	}
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
-  .page-title:first-child {
-    margin-top: 0.6em;
-  }
+	.page-title:first-child {
+		margin-top: 0.6em;
+	}
 }
 @media only screen and (min-width: $screen-md-min) {
-  a {
-    .arrow-big {
-      height: 1em;
-    }
-  }
-  #about-us {
-     word-spacing: 10em;
-
-  }
+	a {
+		.arrow-big {
+			height: 1em;
+		}
+	}
+	#about-us {
+		word-spacing: 10em;
+	}
 }
 @media (max-width: $screen-md-min) {
-  .row {
-    .align-right, .align-left {
-      text-align: center;
-    }
-  }
-  .gmap {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+	.row {
+		.align-right,
+		.align-left {
+			text-align: center;
+		}
+	}
+	.gmap {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 }
 @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
-
-  .container {
-    padding-left: 12em;
-    padding-right: 12em;
-  }
-  .absolute-top {
-    top: 2.5em;
-  }
+	.container {
+		padding-left: 12em;
+		padding-right: 12em;
+	}
+	.absolute-top {
+		top: 2.5em;
+	}
 }
 @media only screen and (max-width: $screen-sm-max) {
-  .hidden-mobile {
-    display: none;
-  }
+	.hidden-mobile {
+		display: none;
+	}
 }
 @media only screen and (min-width: $screen-lg-min) {
-  .pages {
-    
-      padding-left: 12em;
-      padding-right: 12em;
-    
-  }
-  .absolute-top {
-    top: 0.5em;
-    .message-bar {
-      margin: 0 1em;
-    }
-   }
+	.pages {
+		padding-left: 12em;
+		padding-right: 12em;
+	}
+	.absolute-top {
+		top: 0.5em;
+		.message-bar {
+			margin: 0 1em;
+		}
+	}
 
-  .page-title:first-child {
-    margin-top: 0.9em;
-  }
+	.page-title:first-child {
+		margin-top: 0.9em;
+	}
 }
 
 // fix for making # target links view correctly (mainly front page)
 :target::before {
-  content: "";
-  display: block;
-  height: 20px; /* fixed header height*/
-  margin: -20px 0 0; /* negative fixed header height */
+	content: '';
+	display: block;
+	height: 20px; /* fixed header height*/
+	margin: -20px 0 0; /* negative fixed header height */
 }
 
 //auto apply text size to posts and pages
 article {
-  h2 {
-    @extend .text-big;
-  }
-  h3 {
-    @extend .text-medium;
-  }
+	h2 {
+		@extend .text-big;
+	}
+	h3 {
+		@extend .text-medium;
+	}
 }
 
 //animation stuff
-[data-aos="expand-down"] {
-  max-height: 0;
-  transition-property: transform, max-height;
+[data-aos='expand-down'] {
+	max-height: 0;
+	transition-property: transform, max-height;
 
-  &.aos-animate {
-    max-height: 6em;
-  }
-
+	&.aos-animate {
+		max-height: 6em;
+	}
 }
 
-
 form {
-  
-  label {
-    @extend .label;
-  }
-  input, textarea {
-    @extend input;
-  }
-  span {
-    color: $color-error;
-  }
-  
+	label {
+		@extend .label;
+	}
+	input,
+	textarea {
+		@extend input;
+	}
+	span {
+		color: $color-error;
+	}
 }

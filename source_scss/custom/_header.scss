@@ -1,316 +1,315 @@
 //css for header overlay
 //
 //
+
 //calculate menu padding
 $intended-menu-padding: 2.5em;
 $menu-padding: $intended-menu-padding / 3; //desktop border
 $desktopborder: 3em;
 
+// disables the fancy color swap
 .header-disable-dynamic-color {
-
-  mix-blend-mode: normal;
+	mix-blend-mode: normal;
 }
 
 header {
-  //will-change: transform;
-  z-index: 80;
-  width: 100%;
-  min-height: 100vh;
-  position: fixed;
-  box-sizing: border-box;
-  pointer-events: none;
-  max-width: $container-maxwidth + 500px;
-  mix-blend-mode: exclusion;
+	z-index: 80;
+	width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	box-sizing: border-box;
+	pointer-events: none;
+	max-width: $container-maxwidth + 500px;
+	mix-blend-mode: exclusion;
 
+	a {
+		color: $brand-light;
+		display: block;
+		padding-bottom: $menu-padding;
+		font-weight: $subheading-weight;
+		pointer-events: auto;
+	}
 
-  a {
-    color: $brand-light;
-    display: block;
-    padding-bottom: $menu-padding;
-    font-weight: $subheading-weight;
-    pointer-events: auto;
+	li {
+		text-transform: lowercase;
+		margin-top: 0;
+		margin-bottom: $menu-padding + $menu-padding;
+		pointer-events: auto;
+	}
 
-  }
+	.subheader {
+		ul {
+			position: relative;
+			display: block;
+			border-style: solid;
+			border-color: $brand-light;
+			overflow-y: hidden;
+			margin: 0;
+		}
 
-  li {
-    text-transform: lowercase;
-    margin-top: 0;
-    margin-bottom: $menu-padding + $menu-padding;
-    pointer-events: auto;
-  }
+		li {
+			margin-top: 0.75rem;
+			margin-bottom: 0.75rem;
 
-  .subheader {
-    ul {
-      position: relative;
-      display: block;
-      border-style: solid;
-      border-color: $brand-light;
-      overflow-y: hidden;
-      margin: 0;
-    }
-
-    li {
-      margin-top: 0.75rem;
-      margin-bottom: 0.75rem;
-
-      a {
-        font-weight: $font-weight-base;
-        padding-bottom: 0;
-      }
-    }
-  }
+			a {
+				font-weight: $font-weight-base;
+				padding-bottom: 0;
+			}
+		}
+	}
 }
 
 .header-overlay {
-   
-  font-size: 1.3em;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  background-color: rgba(0,0,0,0.8);
-  pointer-events: auto;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.2s;
+	font-size: 1.3em;
+	position: relative;
+	height: 100vh;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.8);
+	pointer-events: auto;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s;
 
-  ul {
-    z-index: 81;
-    pointer-events: auto;
-    list-style-type: none;
-    flex-direction: column;
-    text-align: center;
-  }
+	ul {
+		z-index: 81;
+		pointer-events: auto;
+		list-style-type: none;
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 .header-footer {
-  .copyright {
-    color: $brand-secondary;
-  }
+	.copyright {
+		color: $brand-secondary;
+	}
 
-  .contact {
-    i {
-      text-align: center;
-      // part of trying to fix the contact div not being vertially centered
-      // explained like a couple of lines below
-      font-weight: $font-weight-base;
-      font-size: $font-size-base-large;
-      margin: 0;
-    }
+	.contact {
+		i {
+			text-align: center;
+			// part of trying to fix the contact div not being vertially centered
+			// explained like a couple of lines below
+			font-weight: $font-weight-base;
+			font-size: $font-size-base-large;
+			margin: 0;
+		}
 
-    a {
-      width: auto;
-      pointer-events: auto;
-      vertical-align: middle;
-      padding: 0;
-      color: $brand-light;
-      display: inline-flex;
-    }
-  }
+		a {
+			width: auto;
+			pointer-events: auto;
+			vertical-align: middle;
+			padding: 0;
+			color: $brand-light;
+			display: inline-flex;
+		}
+	}
 }
+
 // the contact div doesnt center vertically so here is a hack to fix it
 // has to do with font sizes along with the .contact class
 // the icons need to be bigger then the text font for some weird reason
 //update: I think i redid this so i dont need this hack but i dont remember
 @media only screen and (min-width: 768px) {
-  .header-footer {
-    a {
-      font-size: $font-size-base;
-    }
-  }
+	.header-footer {
+		a {
+			font-size: $font-size-base;
+		}
+	}
 }
 
 //mobile header
 
 .header-mobile {
-  z-index: 3;
-  //will-change: transform;
-  width: 100%;
-  position: absolute;
-  padding: 1em;
-  display: block;
-  .hamburger{
-    pointer-events: auto;
-  }
-  .hamburger {
-    float: right;
-  }
+	z-index: 3;
+	//will-change: transform;
+	width: 100%;
+	position: absolute;
+	padding: 1em;
+	display: block;
+	.hamburger {
+		pointer-events: auto;
+	}
+	.hamburger {
+		float: right;
+	}
 }
 // things that happen only on very small mobile
 
 @media only screen and (max-width: $screen-md-min) {
- .hamburger {
-      background-color: black;
-      border-radius: 3px;
-      overflow: hidden;
-      padding-bottom: 0.74em;
-      z-index: 4;
-    }
-    
-  header {
-     mix-blend-mode: normal;
-  }
+	.hamburger {
+		background-color: black;
+		border-radius: 3px;
+		overflow: hidden;
+		padding-bottom: 0.74em;
+		z-index: 4;
+	}
+
+	header {
+		mix-blend-mode: normal;
+	}
 }
 
 // things that happen only on mobile
 @media only screen and (max-width: $screen-md-max) {
-  .disable-mobile {
-    display: none;
-  }
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
+	.disable-mobile {
+		display: none;
+	}
+	[data-aos-delay] {
+		transition-delay: 0 !important;
+	}
 
+	.subheader {
+		ul {
+			border-left-width: 0.15em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
 
-  .subheader {
-    ul {
-      border-left-width: 0.15em;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-  }
+	.header-footer {
+		z-index: 4;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1em 1em 1em 2em;
 
-  .header-footer {
-    z-index: 4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1em 1em 1em 2em;
+		.copyright {
+			display: none;
+		}
 
-    .copyright {
-      display: none;
-    }
+		.contact {
+			display: inline-flex;
+			align-items: center;
 
-    .contact {
-      display: inline-flex;
-      align-items: center;
+			div {
+				margin-right: 1em;
+				vertical-align: middle;
+				height: 100%;
+			}
+		}
+	}
 
-      div {
-        margin-right: 1em;
-        vertical-align: middle;
-        height: 100%;
-      }
-    }
-  }
-
-  .aligner-space-between {
-    display: block;
-    width: auto;
-  }
+	.aligner-space-between {
+		display: block;
+		width: auto;
+	}
+}
+.vertical-line {
+	width: 0.15em;
+	height: 7em;
+	background-color: $brand-secondary;
+	margin: 1em auto;
 }
 
 // desktop experience
 @media only screen and (min-width: $screen-lg-min) {
-  // [data-aos-delay] {
-  //   transition-delay: 500 !important;
-  // }
+	// [data-aos-delay] {
+	//   transition-delay: 500 !important;
+	// }
 
+	.header-overlay {
+		font-size: $font-size-base-large;
+		margin-top: $desktopborder;
+		margin-left: $desktopborder;
+		margin-right: $desktopborder;
+		padding-bottom: $desktopborder;
+		background-color: rgba(0, 0, 0, 0);
+		pointer-events: none;
+		justify-content: inherit;
+		align-items: inherit;
+		.header-menu {
+			position: absolute;
+			right: 0;
+		}
+		ul {
+			padding: 0;
+			text-align: right;
 
+			z-index: inherit;
 
-  .header-overlay {
-    font-size: $font-size-base-large;
-    margin-top: $desktopborder;
-    margin-left: $desktopborder;
-    margin-right: $desktopborder;
-    padding-bottom: $desktopborder;
-    background-color: rgba(0,0,0,0.0);
-    pointer-events: none;
-    justify-content: inherit;
-    align-items: inherit;
-    .header-menu {
-       position: absolute;
-      right: 0;
-    }
-    ul {
-      padding: 0;
-      text-align: right;
-     
-      z-index: inherit;
+			.subheader {
+				ul {
+					border-right-width: 0.15em;
+				}
 
-      .subheader {
-        ul {
-          border-right-width: 0.15em;
-        }
+				li {
+					margin-right: 1rem;
+					font-weight: $font-weight-base;
+				}
+			}
+		}
+	}
 
-        li {
-          margin-right: 1rem;
-          font-weight: $font-weight-base;
-        }
-      }
-    }
-  }
+	.header-mobile {
+		display: none;
+	}
 
-  .header-mobile {
-    display: none;
-  }
+	.main-logo {
+		width: auto;
+		position: absolute;
+		text-align: center;
+		font-size: 1.28em;
+		font-weight: $subheading-weight;
+		color: $brand-secondary;
+		pointer-events: auto;
+		mix-blend-mode: none;
+		.vertical-line {
+			margin-top: 0;
+		}
 
-  .main-logo {
-    width: auto;
-    position: absolute;
-    text-align: center;
-    font-size: 1.28em;
-    font-weight: $subheading-weight;
-    color: $brand-secondary;
-    pointer-events: auto;
-    mix-blend-mode: none;
-    .vertical-line {
-      margin-top: 0;
-    }
+		img {
+			width: 4em;
+		}
 
-    img {
-      width: 5em;
-    }
+		a {
+			color: $brand-secondary;
+		}
+	}
+	// stick footer to bottom
 
-    a {
-      color: $brand-secondary;
-    }
-  }
-  // stick footer to bottom
+	.header-footer {
+		margin-top: auto;
+		width: 100%;
+		max-width: 100%;
+		font-weight: $subheading-weight;
+		position: inherit;
+		padding-bottom: 1em;
 
-  .header-footer {
-    margin-top: auto;
-    width: 100%;
-    max-width: 100%;
-    font-weight: $subheading-weight;
-    position: inherit;
-    padding-bottom: 1em;
+		.copyright {
+			font-size: 0.5rem;
+			display: inherit;
+			margin-bottom: 0.5em;
+		}
 
-    .copyright {
-      font-size: 0.5rem;
-      display: inherit;
-      margin-bottom: 0.5em;
-    }
-
-    .contact {
-      text-align: right;
-    }
-  }
+		.contact {
+			text-align: right;
+		}
+	}
 }
 @media only screen and (min-width: $screen-xlg-min) {
-  .header-footer {
-    .copyright {
-      font-size: 0.7rem;
-    }
-  }
+	.header-footer {
+		.copyright {
+			font-size: 0.7rem;
+		}
+	}
 }
 @media only screen and (min-width: $container-maxwidth + 500px) {
-  header {
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
+	header {
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 }
 
-[aria-hidden="true"] {
-  display: none;
-
+[aria-hidden='true'] {
+	display: none;
 }
 
-[aria-hidden="false"] {
-  display: flex;
+[aria-hidden='false'] {
+	display: flex;
 }
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-  .header-overlay {
-    float: right;
-    width: 50vw;
-  }
-  
+	.header-overlay {
+		float: right;
+		width: 50vw;
+	}
 }
