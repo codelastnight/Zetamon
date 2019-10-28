@@ -8,7 +8,7 @@ The rewrite aims to use modern web development by creating a responsive, fast, a
 
 example page can be accessed here :
 
-https://dottechnopath.github.io/SaintsRoboticsSite/home.html
+https://dottechnopath.github.io/Zetamon/home.html
 
 website is now live and can be accessed at https://www.saintsrobotics.com
 
